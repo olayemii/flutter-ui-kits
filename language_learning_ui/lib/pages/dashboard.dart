@@ -91,7 +91,17 @@ class _DashboardState extends State<Dashboard> {
                     scrollDirection: Axis.horizontal,
                     itemCount: 2,
                     itemBuilder: (BuildContext context, int index) {
-                      return TopicCard();
+                      return TopicCard(
+                        color: Constants.primaryColor,
+                        boxShadow: [
+                          BoxShadow(
+                            color: Color.fromRGBO(255, 99, 128, 0.6),
+                            spreadRadius: 0,
+                            blurRadius: 6,
+                            offset: Offset(0, 2), // changes position of shadow
+                          ),
+                        ],
+                      );
                     },
                   ),
                 )
