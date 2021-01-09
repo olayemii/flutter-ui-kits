@@ -20,6 +20,7 @@ class CourseCard extends StatelessWidget {
                 color: this.course.color,
                 borderRadius: BorderRadius.circular(8.0),
               ),
+              child: Image.asset(course.image),
             ),
           ),
           SizedBox(
