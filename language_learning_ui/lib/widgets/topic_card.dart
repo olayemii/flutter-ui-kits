@@ -10,7 +10,7 @@ class TopicCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: ScreenUtil().setHeight(136.0),
-      width: ScreenUtil().setHeight(246.0),
+      width: ScreenUtil().setWidth(246.0),
       decoration: BoxDecoration(
         color: this.topic.color,
         borderRadius: BorderRadius.circular(8.0),

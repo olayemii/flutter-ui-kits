@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:language_learning_ui/constants.dart';
 import 'package:language_learning_ui/models/topic_model.dart';
 import 'package:language_learning_ui/widgets/border_text_field.dart';
+import 'package:language_learning_ui/widgets/course_card.dart';
 import 'package:language_learning_ui/widgets/topic_card.dart';
 
 class Dashboard extends StatefulWidget {
