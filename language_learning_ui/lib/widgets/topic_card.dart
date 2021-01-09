@@ -23,8 +23,24 @@ class TopicCard extends StatelessWidget {
       child: Row(
         children: [
           Expanded(
-            child: Column(
-              children: [],
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Container(
+                        width: 30.0,
+                        height: 30.0,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.white,
+                        ),
+                      )
+                    ],
+                  )
+                ],
+              ),
             ),
           ),
           Expanded(
