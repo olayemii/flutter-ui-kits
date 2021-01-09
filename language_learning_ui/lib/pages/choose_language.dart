@@ -12,36 +12,31 @@ List<LanguageModel> languages = [
   LanguageModel(
     language: "Spanish",
     imagePath: "assets/images/spain.png",
-    isActive: false,
   ),
   LanguageModel(
     language: "English",
     imagePath: "assets/images/england.png",
-    isActive: false,
   ),
   LanguageModel(
     language: "German",
     imagePath: "assets/images/germany.png",
-    isActive: false,
   ),
   LanguageModel(
     language: "Korean",
     imagePath: "assets/images/korea.png",
-    isActive: false,
   ),
   LanguageModel(
     language: "Polish",
     imagePath: "assets/images/poland.png",
-    isActive: false,
   ),
   LanguageModel(
     language: "Italian",
     imagePath: "assets/images/italy.png",
-    isActive: false,
   ),
 ];
 
 class _ChooseLanguageState extends State<ChooseLanguage> {
+  int _activeIndex = -1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,10 +64,18 @@ class _ChooseLanguageState extends State<ChooseLanguage> {
                   height: 35.0,
                 ),
                 ...languages.map((language) {
-                  return LanguageSelector(
-                    isActive: language.isActive,
-                    language: language.language,
-                    imagePath: language.imagePath,
+                  int _currentIndex = languages.indexOf(language);
+                  return GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        _activeIndex = _currentIndex;
+                      });
+                    },
+                    child: LanguageSelector(
+                      isActive: _activeIndex == _currentIndex,
+                      language: language.language,
+                      imagePath: language.imagePath,
+                    ),
                   );
                 }).toList()
               ],

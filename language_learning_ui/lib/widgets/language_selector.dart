@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_screenutil/screenutil.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:language_learning_ui/constants.dart';
 
 class LanguageSelector extends StatelessWidget {
@@ -48,9 +46,13 @@ class LanguageSelector extends StatelessWidget {
                 ),
               ),
               Spacer(),
-              Icon(
-                FlutterIcons.check_circle_mdi,
-                color: Constants.primaryColor,
+              Container(
+                child: isActive
+                    ? Icon(
+                        FlutterIcons.check_circle_mdi,
+                        color: Constants.primaryColor,
+                      )
+                    : SizedBox.shrink(),
               ),
             ],
           ),
