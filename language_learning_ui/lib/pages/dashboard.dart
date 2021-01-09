@@ -3,6 +3,7 @@ import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:language_learning_ui/constants.dart';
 import 'package:language_learning_ui/models/course_model.dart';
+import 'package:language_learning_ui/models/instructor_model.dart';
 import 'package:language_learning_ui/models/topic_model.dart';
 import 'package:language_learning_ui/widgets/border_text_field.dart';
 import 'package:language_learning_ui/widgets/course_card.dart';
@@ -68,6 +69,23 @@ class _DashboardState extends State<Dashboard> {
       color: Color.fromRGBO(255, 133, 125, 1),
       image: "assets/images/course-5.png",
     ),
+  ];
+  List<InstructorModel> instructors = [
+    InstructorModel(
+      name: "Jennifer Lee",
+      occupation: "UI Designer",
+      image: "assets/images/person-1.png",
+    ),
+    InstructorModel(
+      name: "Olayemii Garuba",
+      occupation: "Software Developer",
+      image: "assets/images/person-2.png",
+    ),
+    InstructorModel(
+      name: "Christopher Gary",
+      occupation: "Software Developer",
+      image: "assets/images/person-3.png",
+    )
   ];
   @override
   Widget build(BuildContext context) {
@@ -205,6 +223,33 @@ class _DashboardState extends State<Dashboard> {
                   ),
                 ),
                 SizedBox(height: 20.0),
+                Container(
+                  height: ScreenUtil().setHeight(167.0),
+                  child: ListView.separated(
+                    separatorBuilder: (BuildContext context, int index) {
+                      return SizedBox(
+                        width: 10.0,
+                      );
+                    },
+                    scrollDirection: Axis.horizontal,
+                    itemCount: courses.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      return CourseCard(
+                        course: courses[index],
+                      );
+                    },
+                  ),
+                ),
+                SizedBox(height: 20.0),
+                Text(
+                  "Instructors",
+                  style: TextStyle(
+                    fontSize: 21.0,
+                    color: Constants.primaryTextColor,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+                SizedBox(height: 10.0),
                 Container(
                   height: ScreenUtil().setHeight(167.0),
                   child: ListView.separated(
