@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_screenutil/screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -8,8 +9,9 @@ class LanguageSelector extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       child: Container(
+        padding: EdgeInsets.symmetric(horizontal: 16.0),
         width: double.infinity,
-        height: ScreenUtil().setHeight(50.0),
+        height: ScreenUtil().setHeight(83.0),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(8.0),
@@ -25,7 +27,22 @@ class LanguageSelector extends StatelessWidget {
         child: Center(
           child: Row(
             children: [
-              SvgPicture.asset("assets/images/spain.png"),
+              Image.asset(
+                "assets/images/spain.png",
+              ),
+              SizedBox(
+                width: 10.0,
+              ),
+              Text(
+                "Spanish",
+                style: TextStyle(
+                  fontSize: 20.0,
+                  color: Color.fromRGBO(34, 40, 60, 1),
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              Spacer(),
+              Icon(FlutterIcons.check_circle_mdi),
             ],
           ),
         ),
