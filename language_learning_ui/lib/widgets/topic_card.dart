@@ -1,31 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:language_learning_ui/constants.dart';
+import 'package:language_learning_ui/models/topic_model.dart';
 
 class TopicCard extends StatelessWidget {
-  final String topic;
-  final String points;
-  final String time;
-  final String image;
-  final Color color;
-  final List<BoxShadow> boxShadow;
-  TopicCard({
-    this.time,
-    this.topic,
-    this.points,
-    this.image,
-    this.color,
-    this.boxShadow,
-  });
+  final TopicModel topic;
+  TopicCard({this.topic});
   @override
   Widget build(BuildContext context) {
     return Container(
       height: ScreenUtil().setHeight(136.0),
       width: ScreenUtil().setHeight(246.0),
       decoration: BoxDecoration(
-        color: this.color,
+        color: this.topic.color,
         borderRadius: BorderRadius.circular(8.0),
-        boxShadow: this.boxShadow,
+        boxShadow: this.topic.boxShadow,
       ),
       child: Row(
         children: [
@@ -46,7 +35,7 @@ class TopicCard extends StatelessWidget {
                         ),
                         child: Center(
                           child: Text(
-                            this.points,
+                            this.topic.points,
                             style: TextStyle(
                               color: Constants.primaryTextColor,
                               fontWeight: FontWeight.w600,
@@ -68,7 +57,7 @@ class TopicCard extends StatelessWidget {
                     ],
                   ),
                   Text(
-                    this.topic,
+                    this.topic.topic,
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.w600,
@@ -76,7 +65,7 @@ class TopicCard extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    this.time,
+                    "it takes ${this.topic.time}",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 14.0,
@@ -92,7 +81,7 @@ class TopicCard extends StatelessWidget {
                 image: DecorationImage(
                   fit: BoxFit.fill,
                   image: AssetImage(
-                    this.image,
+                    this.topic.image,
                   ),
                 ),
               ),

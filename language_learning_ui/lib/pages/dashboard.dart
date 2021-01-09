@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:language_learning_ui/constants.dart';
+import 'package:language_learning_ui/models/topic_model.dart';
 import 'package:language_learning_ui/widgets/border_text_field.dart';
 import 'package:language_learning_ui/widgets/topic_card.dart';
 
@@ -11,6 +12,44 @@ class Dashboard extends StatefulWidget {
 }
 
 class _DashboardState extends State<Dashboard> {
+  List<TopicModel> topics = [
+    TopicModel(
+      color: Constants.primaryColor,
+      boxShadow: [
+        BoxShadow(
+          color: Color.fromRGBO(255, 99, 128, 0.6),
+          spreadRadius: 0,
+          blurRadius: 6,
+          offset: Offset(0, 2), // changes position of shadow
+        ),
+      ],
+      topic: "interjections & colloquial",
+      time: "30 min",
+      points: "20",
+      image: "assets/images/course-1.png",
+    ),
+    TopicModel(
+      color: Color.fromRGBO(25, 118, 210, 1),
+      boxShadow: [
+        BoxShadow(
+          color: Color.fromRGBO(25, 118, 210, 0.6),
+          spreadRadius: 0,
+          blurRadius: 6,
+          offset: Offset(0, 2), // changes position of shadow
+        ),
+      ],
+      topic: "interjections & colloquial",
+      time: "30 min",
+      points: "30",
+      image: "assets/images/course-2.png",
+    )
+  ];
+  List<String> courseLevels = [
+    "Beginner",
+    "Intermediate",
+    "Advanced",
+    "Professional"
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -89,19 +128,76 @@ class _DashboardState extends State<Dashboard> {
                       );
                     },
                     scrollDirection: Axis.horizontal,
-                    itemCount: 2,
+                    itemCount: topics.length,
                     itemBuilder: (BuildContext context, int index) {
                       return TopicCard(
-                        color: Constants.primaryColor,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Color.fromRGBO(255, 99, 128, 0.6),
-                            spreadRadius: 0,
-                            blurRadius: 6,
-                            offset: Offset(0, 2), // changes position of shadow
-                          ),
-                        ],
+                        topic: topics[index],
                       );
+                    },
+                  ),
+                ),
+                SizedBox(height: 30.0),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Popular Courses",
+                      style: TextStyle(
+                        fontSize: 21.0,
+                        color: Constants.primaryTextColor,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    Text(
+                      "View all",
+                      style: TextStyle(
+                        fontSize: 15.0,
+                        color: Constants.captionTextColor,
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 12.0,
+                ),
+                Container(
+                  height: 22.0,
+                  child: ListView.separated(
+                    separatorBuilder: (BuildContext context, int index) {
+                      return SizedBox(
+                        width: 10.0,
+                      );
+                    },
+                    scrollDirection: Axis.horizontal,
+                    itemCount: courseLevels.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      return Text(
+                        courseLevels[index],
+                        style: TextStyle(
+                          fontSize: 15.0,
+                          fontWeight:
+                              index == 0 ? FontWeight.w600 : FontWeight.w400,
+                          color: index == 0
+                              ? Constants.primaryColor
+                              : Constants.captionTextColor,
+                        ),
+                      );
+                    },
+                  ),
+                ),
+                SizedBox(height: 20.0),
+                Container(
+                  height: 22.0,
+                  child: ListView.separated(
+                    separatorBuilder: (BuildContext context, int index) {
+                      return SizedBox(
+                        width: 10.0,
+                      );
+                    },
+                    scrollDirection: Axis.horizontal,
+                    itemCount: courseLevels.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      return CourseCard();
                     },
                   ),
                 )
