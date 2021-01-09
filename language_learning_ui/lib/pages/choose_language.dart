@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_icons/flutter_icons.dart';
-import 'package:flutter_screenutil/screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:language_learning_ui/constants.dart';
 import 'package:language_learning_ui/models/language_model.dart';
-import 'package:language_learning_ui/widgets/border_text_field.dart';
 import 'package:language_learning_ui/widgets/language_selector.dart';
-import 'package:language_learning_ui/widgets/primary_button.dart';
 
 class ChooseLanguage extends StatefulWidget {
   @override
