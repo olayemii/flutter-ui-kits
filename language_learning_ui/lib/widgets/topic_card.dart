@@ -24,7 +24,7 @@ class TopicCard extends StatelessWidget {
         children: [
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(12.0),
               child: Column(
                 children: [
                   Row(
@@ -35,6 +35,15 @@ class TopicCard extends StatelessWidget {
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           color: Colors.white,
+                        ),
+                        child: Center(
+                          child: Text(
+                            "20",
+                            style: TextStyle(
+                              color: Constants.primaryTextColor,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
                         ),
                       )
                     ],
