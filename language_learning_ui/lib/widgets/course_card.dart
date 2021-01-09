@@ -7,13 +7,19 @@ class CourseCard extends StatelessWidget {
   CourseCard({this.course});
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: ScreenUtil().setHeight(120.0),
-      width: ScreenUtil().setWidth(145.0),
-      decoration: BoxDecoration(
-        color: this.course.color,
-        borderRadius: BorderRadius.circular(8.0),
-      ),
+    return Column(
+      children: [
+        Expanded(
+          child: Container(
+            height: ScreenUtil().setHeight(120.0),
+            width: ScreenUtil().setWidth(145.0),
+            decoration: BoxDecoration(
+              color: this.course.color,
+              borderRadius: BorderRadius.circular(8.0),
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

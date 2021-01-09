@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:language_learning_ui/constants.dart';
+import 'package:language_learning_ui/models/course_model.dart';
 import 'package:language_learning_ui/models/topic_model.dart';
 import 'package:language_learning_ui/widgets/border_text_field.dart';
 import 'package:language_learning_ui/widgets/course_card.dart';
@@ -50,6 +51,13 @@ class _DashboardState extends State<Dashboard> {
     "Intermediate",
     "Advanced",
     "Professional"
+  ];
+  List<CourseModel> courses = [
+    CourseModel(
+      name: "Daily English Conversation",
+      color: Color.fromRGBO(86, 131, 223, 1),
+      image: "assets/images/course-3.png",
+    )
   ];
   @override
   Widget build(BuildContext context) {
@@ -188,7 +196,7 @@ class _DashboardState extends State<Dashboard> {
                 ),
                 SizedBox(height: 20.0),
                 Container(
-                  height: 22.0,
+                  height: ScreenUtil().setHeight(167.0),
                   child: ListView.separated(
                     separatorBuilder: (BuildContext context, int index) {
                       return SizedBox(
@@ -196,9 +204,11 @@ class _DashboardState extends State<Dashboard> {
                       );
                     },
                     scrollDirection: Axis.horizontal,
-                    itemCount: courseLevels.length,
+                    itemCount: courses.length,
                     itemBuilder: (BuildContext context, int index) {
-                      return CourseCard();
+                      return CourseCard(
+                        course: courses[index],
+                      );
                     },
                   ),
                 )
