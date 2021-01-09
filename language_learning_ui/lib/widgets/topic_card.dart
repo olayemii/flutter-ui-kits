@@ -23,11 +23,20 @@ class TopicCard extends StatelessWidget {
       child: Row(
         children: [
           Expanded(
-            child: SizedBox(),
+            child: Column(
+              children: [],
+            ),
           ),
           Expanded(
-            child: Image.asset(
-              "assets/images/course-1.png",
+            child: Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  fit: BoxFit.fill,
+                  image: AssetImage(
+                    "assets/images/course-1.png",
+                  ),
+                ),
+              ),
             ),
           )
         ],
