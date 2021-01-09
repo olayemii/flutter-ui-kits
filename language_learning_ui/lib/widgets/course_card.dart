@@ -26,12 +26,17 @@ class CourseCard extends StatelessWidget {
           SizedBox(
             height: 5.0,
           ),
-          Text(
-            this.course.name,
-            style: TextStyle(
-              color: Constants.primaryTextColor,
-              fontWeight: FontWeight.w600,
-              fontSize: 14.0,
+          Container(
+            height: 40.0,
+            child: Text(
+              this.course.name,
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(
+                color: Constants.primaryTextColor,
+                fontWeight: FontWeight.w600,
+                fontSize: 14.0,
+              ),
             ),
           )
         ],

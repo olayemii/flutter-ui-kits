@@ -57,7 +57,17 @@ class _DashboardState extends State<Dashboard> {
       name: "Daily English Conversation",
       color: Color.fromRGBO(86, 131, 223, 1),
       image: "assets/images/course-3.png",
-    )
+    ),
+    CourseModel(
+      name: "Learn new vocabulary",
+      color: Color.fromRGBO(255, 152, 117, 1),
+      image: "assets/images/course-4.png",
+    ),
+    CourseModel(
+      name: "Daily English Conversation",
+      color: Color.fromRGBO(255, 133, 125, 1),
+      image: "assets/images/course-5.png",
+    ),
   ];
   @override
   Widget build(BuildContext context) {
