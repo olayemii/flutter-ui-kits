@@ -3,22 +3,29 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:language_learning_ui/constants.dart';
 
 class TopicCard extends StatelessWidget {
+  final String topic;
+  final String points;
+  final String time;
+  final String image;
+  final Color color;
+  final List<BoxShadow> boxShadow;
+  TopicCard({
+    this.time,
+    this.topic,
+    this.points,
+    this.image,
+    this.color,
+    this.boxShadow,
+  });
   @override
   Widget build(BuildContext context) {
     return Container(
       height: ScreenUtil().setHeight(136.0),
       width: ScreenUtil().setHeight(246.0),
       decoration: BoxDecoration(
-        color: Constants.primaryColor,
+        color: this.color,
         borderRadius: BorderRadius.circular(8.0),
-        boxShadow: [
-          BoxShadow(
-            color: Color.fromRGBO(255, 99, 128, 0.6),
-            spreadRadius: 0,
-            blurRadius: 6,
-            offset: Offset(0, 2), // changes position of shadow
-          ),
-        ],
+        boxShadow: this.boxShadow,
       ),
       child: Row(
         children: [
@@ -26,6 +33,7 @@ class TopicCard extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(12.0),
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Row(
                     children: [
@@ -38,15 +46,41 @@ class TopicCard extends StatelessWidget {
                         ),
                         child: Center(
                           child: Text(
-                            "20",
+                            this.points,
                             style: TextStyle(
                               color: Constants.primaryTextColor,
                               fontWeight: FontWeight.w600,
                             ),
                           ),
                         ),
+                      ),
+                      SizedBox(
+                        width: 10.0,
+                      ),
+                      Text(
+                        "Points",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 14.0,
+                        ),
                       )
                     ],
+                  ),
+                  Text(
+                    this.topic,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 16.0,
+                    ),
+                  ),
+                  Text(
+                    this.time,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 14.0,
+                    ),
                   )
                 ],
               ),
@@ -58,7 +92,7 @@ class TopicCard extends StatelessWidget {
                 image: DecorationImage(
                   fit: BoxFit.fill,
                   image: AssetImage(
-                    "assets/images/course-1.png",
+                    this.image,
                   ),
                 ),
               ),
