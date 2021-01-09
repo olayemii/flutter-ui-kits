@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/screenutil_init.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:language_learning_ui/pages/choose_language.dart';
 import 'package:language_learning_ui/pages/create_account.dart';
+import 'package:language_learning_ui/pages/dashboard.dart';
 import 'package:language_learning_ui/pages/home.dart';
 
 void main() {
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
             TextTheme(),
           ),
         ),
-        initialRoute: "/choose-language",
+        initialRoute: "/dashboard",
         onGenerateRoute: _onGenerateRoute,
       ),
     );
@@ -45,6 +46,10 @@ Route<dynamic> _onGenerateRoute(RouteSettings settings) {
     case "/choose-language":
       return MaterialPageRoute(builder: (BuildContext context) {
         return ChooseLanguage();
+      });
+    case "/dashboard":
+      return MaterialPageRoute(builder: (BuildContext context) {
+        return Dashboard();
       });
     default:
       return MaterialPageRoute(builder: (BuildContext context) {
