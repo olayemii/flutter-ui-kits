@@ -82,7 +82,12 @@ class _DashboardState extends State<Dashboard> {
                 ),
                 Container(
                   height: ScreenUtil().setHeight(150.0),
-                  child: ListView.builder(
+                  child: ListView.separated(
+                    separatorBuilder: (BuildContext context, int index) {
+                      return SizedBox(
+                        width: 15.0,
+                      );
+                    },
                     scrollDirection: Axis.horizontal,
                     itemCount: 2,
                     itemBuilder: (BuildContext context, int index) {
