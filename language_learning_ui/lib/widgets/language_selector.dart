@@ -14,6 +14,7 @@ class LanguageSelector extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       child: Container(
+        margin: EdgeInsets.only(bottom: 10.0),
         padding: EdgeInsets.symmetric(horizontal: 16.0),
         width: double.infinity,
         height: ScreenUtil().setHeight(83.0),

@@ -8,7 +8,38 @@ class ChooseLanguage extends StatefulWidget {
   _ChooseLanguageState createState() => _ChooseLanguageState();
 }
 
-List<LanguageModel> languages = [];
+List<LanguageModel> languages = [
+  LanguageModel(
+    language: "Spanish",
+    imagePath: "assets/images/spain.png",
+    isActive: false,
+  ),
+  LanguageModel(
+    language: "English",
+    imagePath: "assets/images/england.png",
+    isActive: false,
+  ),
+  LanguageModel(
+    language: "German",
+    imagePath: "assets/images/germany.png",
+    isActive: false,
+  ),
+  LanguageModel(
+    language: "Korean",
+    imagePath: "assets/images/korea.png",
+    isActive: false,
+  ),
+  LanguageModel(
+    language: "Polish",
+    imagePath: "assets/images/poland.png",
+    isActive: false,
+  ),
+  LanguageModel(
+    language: "Italian",
+    imagePath: "assets/images/italy.png",
+    isActive: false,
+  ),
+];
 
 class _ChooseLanguageState extends State<ChooseLanguage> {
   @override
