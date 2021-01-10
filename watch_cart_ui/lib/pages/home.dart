@@ -15,13 +15,52 @@ class Home extends StatelessWidget {
             children: [
               Stack(
                 children: [
+                  Positioned(
+                    top: -150.0,
+                    left: 0.0,
+                    right: 0.0,
+                    child: Container(
+                      height: MediaQuery.of(context).size.height,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: AssetImage(
+                            "assets/images/home_bg.png",
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
                   Container(
                     height: MediaQuery.of(context).size.height,
                     padding: EdgeInsets.symmetric(vertical: 40.0),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        RichText(text: TextSpan(children: [])),
+                        RichText(
+                          textAlign: TextAlign.center,
+                          text: TextSpan(
+                            children: [
+                              TextSpan(
+                                text: "Add a brand\n",
+                                style: TextStyle(
+                                  height: 2.5,
+                                  fontSize: 28.0,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                              TextSpan(
+                                text: "to your look",
+                                style: TextStyle(
+                                  fontSize: 28.0,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          height: 130.0,
+                        ),
                         Container(
                           width: double.infinity,
                           height: ScreenUtil().setHeight(50.0),
