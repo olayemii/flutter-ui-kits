@@ -93,6 +93,8 @@ class _DashboardState extends State<Dashboard> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
         unselectedIconTheme: IconThemeData(
           color: Color.fromRGBO(202, 205, 219, 1),
         ),
