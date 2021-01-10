@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:watch_cart_ui/constants.dart';
 import 'package:watch_cart_ui/models/product.dart';
@@ -159,12 +160,76 @@ class WatchDetails extends StatelessWidget {
                                   color: Colors.grey,
                                 ),
                               ),
+                              Container(
+                                height: 90.0,
+                                child: Row(
+                                  children: [],
+                                ),
+                              ),
                               Text(
                                 watches[0].description,
                                 style: TextStyle(
                                   fontSize: 14.0,
                                   color: Colors.grey,
+                                  height: 1.40,
                                 ),
+                              ),
+                              SizedBox(
+                                height: 10.0,
+                              ),
+                              Row(
+                                children: [
+                                  InkWell(
+                                    onTap: () {},
+                                    child: Container(
+                                      margin: EdgeInsets.only(right: 15.0),
+                                      width: 60.0,
+                                      height: 60.0,
+                                      decoration: BoxDecoration(
+                                        borderRadius:
+                                            BorderRadius.circular(8.0),
+                                        border: Border.all(
+                                          color:
+                                              Color.fromRGBO(230, 230, 230, 1),
+                                        ),
+                                      ),
+                                      child: Icon(
+                                        FlutterIcons.ios_heart_empty_ion,
+                                      ),
+                                    ),
+                                  ),
+                                  Expanded(
+                                    child: InkWell(
+                                      onTap: () {},
+                                      child: Container(
+                                        margin: EdgeInsets.only(right: 15.0),
+                                        height: 60.0,
+                                        padding: EdgeInsets.symmetric(
+                                          horizontal: 32.0,
+                                        ),
+                                        decoration: BoxDecoration(
+                                          color: Constants.primaryColor,
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
+                                          border: Border.all(
+                                            color: Color.fromRGBO(
+                                                230, 230, 230, 1),
+                                          ),
+                                        ),
+                                        child: Center(
+                                          child: Text(
+                                            "Add to Cart",
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.w600,
+                                              fontSize: 14.0,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  )
+                                ],
                               )
                             ],
                           ),
