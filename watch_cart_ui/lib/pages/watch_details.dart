@@ -6,7 +6,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:watch_cart_ui/constants.dart';
 import 'package:watch_cart_ui/models/product.dart';
 
-class Store extends StatelessWidget {
+class WatchDetails extends StatelessWidget {
   final List<Product> watches = [
     Product(
       name: "Skmei Analog Men’s Watch",

@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
             TextTheme(),
           ),
         ),
-        initialRoute: "/",
+        initialRoute: "/lesson-screen",
         onGenerateRoute: _onGenerateRoute,
       ),
     );
