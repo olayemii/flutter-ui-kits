@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:watch_cart_ui/constants.dart';
 
 class Store extends StatelessWidget {
@@ -15,7 +16,17 @@ class Store extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Row(
-                  children: [IconButton(icon: SvgPicture, onPressed: null)],
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    IconButton(
+                      icon: SvgPicture.asset("assets/menu.svg"),
+                      onPressed: () {},
+                    ),
+                    IconButton(
+                      icon: SvgPicture.asset("assets/hamburger.svg"),
+                      onPressed: () {},
+                    )
+                  ],
                 )
               ],
             ),
