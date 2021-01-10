@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -5,6 +6,8 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:watch_cart_ui/constants.dart';
 import 'package:watch_cart_ui/models/product.dart';
+import 'package:watch_cart_ui/pages/watch_details.dart';
+import 'package:watch_cart_ui/widgets/home_options.dart';
 import 'package:watch_cart_ui/widgets/main_app_bar.dart';
 
 class Store extends StatelessWidget {
@@ -92,90 +95,7 @@ class Store extends StatelessWidget {
                 SizedBox(
                   height: 50.0,
                 ),
-                Row(
-                  children: [
-                    InkWell(
-                      onTap: () {},
-                      child: Container(
-                        width: 60.0,
-                        height: 60.0,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8.0),
-                          border: Border.all(
-                            color: Color.fromRGBO(230, 230, 230, 1),
-                          ),
-                        ),
-                        child: Icon(FlutterIcons.search_fea),
-                      ),
-                    ),
-                    SizedBox(
-                      width: 15.0,
-                    ),
-                    InkWell(
-                      onTap: () {},
-                      child: Container(
-                        width: 60.0,
-                        height: 60.0,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8.0),
-                          border: Border.all(
-                            color: Color.fromRGBO(230, 230, 230, 1),
-                          ),
-                        ),
-                        child: Icon(FlutterIcons.md_options_ion),
-                      ),
-                    ),
-                    SizedBox(
-                      width: 15.0,
-                    ),
-                    InkWell(
-                      onTap: () {},
-                      child: Container(
-                        width: 120.0,
-                        height: 60.0,
-                        padding: EdgeInsets.symmetric(horizontal: 16.0),
-                        decoration: BoxDecoration(
-                          color: Constants.primaryColor,
-                          borderRadius: BorderRadius.circular(8.0),
-                          border: Border.all(
-                            color: Color.fromRGBO(230, 230, 230, 1),
-                          ),
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              "Cart",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.w600,
-                                fontSize: 14.0,
-                              ),
-                            ),
-                            Container(
-                              width: 30.0,
-                              height: 30.0,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                shape: BoxShape.circle,
-                              ),
-                              child: Center(
-                                child: Text(
-                                  "2",
-                                  style: TextStyle(
-                                    color: Constants.primaryColor,
-                                    fontWeight: FontWeight.w600,
-                                    fontSize: 14.0,
-                                  ),
-                                ),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    )
-                  ],
-                ),
+                HomeOptions(),
                 SizedBox(
                   height: 30.0,
                 ),
@@ -185,35 +105,54 @@ class Store extends StatelessWidget {
                     shrinkWrap: true,
                     crossAxisCount: 4,
                     itemCount: watches.length,
-                    itemBuilder: (BuildContext context, int index) => Container(
-                      padding: EdgeInsets.all(15.0),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(8.0),
-                      ),
-                      child: Column(
-                        children: [
-                          Expanded(
-                            child: Image.asset(watches[index].image),
-                          ),
-                          Text(
-                            watches[index].brand,
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 14.0,
+                    itemBuilder: (BuildContext context, int index) => ZoomIn(
+                      child: Hero(
+                        tag: "watch-$index",
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (BuildContext context) {
+                                  return WatchDetails(
+                                    watch: this.watches[index],
+                                    tag: "watch-$index",
+                                  );
+                                },
+                              ),
+                            );
+                          },
+                          child: Container(
+                            padding: EdgeInsets.all(15.0),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(8.0),
+                            ),
+                            child: Column(
+                              children: [
+                                Expanded(
+                                  child: Image.asset(watches[index].image),
+                                ),
+                                Text(
+                                  watches[index].brand,
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontSize: 14.0,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 3.0,
+                                ),
+                                Text(
+                                  watches[index].name,
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontSize: 14.0,
+                                  ),
+                                )
+                              ],
                             ),
                           ),
-                          SizedBox(
-                            height: 3.0,
-                          ),
-                          Text(
-                            watches[index].name,
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 14.0,
-                            ),
-                          )
-                        ],
+                        ),
                       ),
                     ),
                     staggeredTileBuilder: (int index) =>

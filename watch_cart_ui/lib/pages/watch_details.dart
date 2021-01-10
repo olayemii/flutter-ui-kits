@@ -5,48 +5,10 @@ import 'package:watch_cart_ui/constants.dart';
 import 'package:watch_cart_ui/models/product.dart';
 
 class WatchDetails extends StatelessWidget {
-  final List<Product> watches = [
-    Product(
-      brand: "Skmei Analog",
-      name: "Men’s Watch",
-      image: "assets/images/watch-1.png",
-      price: 79.99,
-      category: "Trending Watch",
-      model: "AM03",
-      description:
-          "Combining functionality with timeless style. Explore the Rolex® collection and find the watch is that was made for you.",
-    ),
-    Product(
-      brand: "Skmei Analog",
-      name: "Men’s Watch",
-      model: "AM03",
-      image: "assets/images/watch-2.png",
-      price: 79.99,
-      category: "Trending Watch",
-      description:
-          "Combining functionality with timeless style. Explore the Rolex® collection and find the watch is that was made for you.",
-    ),
-    Product(
-      brand: "Skmei Analog",
-      name: "Men’s Watch",
-      model: "AM03",
-      image: "assets/images/watch-3.png",
-      price: 79.99,
-      category: "Trending Watch",
-      description:
-          "Combining functionality with timeless style. Explore the Rolex® collection and find the watch is that was made for you.",
-    ),
-    Product(
-      brand: "Skmei Analog",
-      name: "Women’s Watch",
-      model: "AM03",
-      image: "assets/images/watch-4.png",
-      price: 79.99,
-      category: "Trending Watch",
-      description:
-          "Combining functionality with timeless style. Explore the Rolex® collection and find the watch is that was made for you.",
-    ),
-  ];
+  final Product watch;
+  final String tag;
+
+  WatchDetails({this.watch, this.tag});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -81,13 +43,16 @@ class WatchDetails extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            IconButton(
-                              icon: SvgPicture.asset(
-                                "assets/svg/menu.svg",
-                                width: 12.0,
-                                height: 12.0,
+                            Hero(
+                              tag: this.tag,
+                              child: IconButton(
+                                icon: SvgPicture.asset(
+                                  "assets/svg/menu.svg",
+                                  width: 12.0,
+                                  height: 12.0,
+                                ),
+                                onPressed: () {},
                               ),
-                              onPressed: () {},
                             ),
                             IconButton(
                               icon: SvgPicture.asset(
@@ -115,7 +80,7 @@ class WatchDetails extends StatelessWidget {
                               ),
                             ),
                             child: Image.asset(
-                              watches[0].image,
+                              this.watch.image,
                             ),
                           ),
                         ),
@@ -129,7 +94,7 @@ class WatchDetails extends StatelessWidget {
                                 text: TextSpan(
                                   children: [
                                     TextSpan(
-                                      text: watches[0].brand,
+                                      text: this.watch.brand,
                                       style: TextStyle(
                                         height: 2.5,
                                         fontSize: 28.0,
@@ -139,9 +104,9 @@ class WatchDetails extends StatelessWidget {
                                     ),
                                     TextSpan(
                                       text: " " +
-                                          watches[0].name +
+                                          this.watch.name +
                                           " - " +
-                                          watches[0].model,
+                                          this.watch.model,
                                       style: TextStyle(
                                         fontSize: 28.0,
                                         color: Color.fromRGBO(34, 34, 34, 1),
@@ -154,7 +119,7 @@ class WatchDetails extends StatelessWidget {
                                 height: 5.0,
                               ),
                               Text(
-                                watches[0].category,
+                                this.watch.category,
                                 style: TextStyle(
                                   fontSize: 14.0,
                                   color: Colors.grey,
@@ -223,7 +188,7 @@ class WatchDetails extends StatelessWidget {
                                       ),
                                     ),
                                     Text(
-                                      "\$${watches[0].price}",
+                                      "\$${this.watch.price}",
                                       style: TextStyle(
                                         fontWeight: FontWeight.w600,
                                         fontSize: 24.0,
@@ -234,7 +199,7 @@ class WatchDetails extends StatelessWidget {
                                 ),
                               ),
                               Text(
-                                watches[0].description,
+                                this.watch.description,
                                 style: TextStyle(
                                   fontSize: 14.0,
                                   color: Colors.grey,

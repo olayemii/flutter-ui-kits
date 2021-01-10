@@ -33,6 +33,7 @@ class MyApp extends StatelessWidget {
 }
 
 Route<dynamic> _onGenerateRoute(RouteSettings settings) {
+  Map arguments = settings.arguments;
   switch (settings.name) {
     case "/":
       return MaterialPageRoute(builder: (BuildContext context) {
@@ -44,7 +45,10 @@ Route<dynamic> _onGenerateRoute(RouteSettings settings) {
       });
     case "/watch-details":
       return MaterialPageRoute(builder: (BuildContext context) {
-        return WatchDetails();
+        return WatchDetails(
+          watch: arguments["watch"],
+          tag: arguments["tag"],
+        );
       });
     default:
       return MaterialPageRoute(builder: (BuildContext context) {
