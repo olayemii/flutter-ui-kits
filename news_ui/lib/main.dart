@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/screenutil_init.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:news_ui/pages/home.dart';
+import 'package:news_ui/pages/notifications.dart';
+import 'package:news_ui/utils/constants.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,13 +19,12 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData(
-          primarySwatch: Colors.blue,
+          primaryColor: Constants.primaryColor,
+          scaffoldBackgroundColor: Colors.white,
           visualDensity: VisualDensity.adaptivePlatformDensity,
-          textTheme: GoogleFonts.latoTextTheme(
-            TextTheme(),
-          ),
+          textTheme: GoogleFonts.ptSerifTextTheme(),
         ),
-        initialRoute: "/",
+        initialRoute: "/notifications",
         onGenerateRoute: _onGenerateRoute,
       ),
     );
@@ -36,6 +37,10 @@ Route<dynamic> _onGenerateRoute(RouteSettings settings) {
     case "/":
       return MaterialPageRoute(builder: (BuildContext context) {
         return Home();
+      });
+    case "/notifications":
+      return MaterialPageRoute(builder: (BuildContext context) {
+        return Notifications();
       });
     default:
       return MaterialPageRoute(builder: (BuildContext context) {
