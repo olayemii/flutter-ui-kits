@@ -1,4 +1,4 @@
-# language_learning_ui
+# Language Learn UI Kit
 
 A new Flutter project.
 
