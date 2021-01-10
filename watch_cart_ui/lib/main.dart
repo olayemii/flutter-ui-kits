@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
             TextTheme(),
           ),
         ),
-        initialRoute: "/watch-details",
+        initialRoute: "/",
         onGenerateRoute: _onGenerateRoute,
       ),
     );

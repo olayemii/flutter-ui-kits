@@ -5,6 +5,7 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:watch_cart_ui/constants.dart';
 import 'package:watch_cart_ui/models/product.dart';
+import 'package:watch_cart_ui/widgets/main_app_bar.dart';
 
 class Store extends StatelessWidget {
   final List<Product> watches = [
@@ -61,27 +62,7 @@ class Store extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               mainAxisSize: MainAxisSize.min,
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    IconButton(
-                      icon: SvgPicture.asset(
-                        "assets/svg/menu.svg",
-                        width: 12.0,
-                        height: 12.0,
-                      ),
-                      onPressed: () {},
-                    ),
-                    IconButton(
-                      icon: SvgPicture.asset(
-                        "assets/svg/hamburger.svg",
-                        width: 16.0,
-                        height: 16.0,
-                      ),
-                      onPressed: () {},
-                    )
-                  ],
-                ),
+                MainAppBar(),
                 SizedBox(
                   height: 50.0,
                 ),
@@ -116,7 +97,6 @@ class Store extends StatelessWidget {
                     InkWell(
                       onTap: () {},
                       child: Container(
-                        margin: EdgeInsets.only(right: 15.0),
                         width: 60.0,
                         height: 60.0,
                         decoration: BoxDecoration(
@@ -128,10 +108,12 @@ class Store extends StatelessWidget {
                         child: Icon(FlutterIcons.search_fea),
                       ),
                     ),
+                    SizedBox(
+                      width: 15.0,
+                    ),
                     InkWell(
                       onTap: () {},
                       child: Container(
-                        margin: EdgeInsets.only(right: 15.0),
                         width: 60.0,
                         height: 60.0,
                         decoration: BoxDecoration(
@@ -143,10 +125,12 @@ class Store extends StatelessWidget {
                         child: Icon(FlutterIcons.md_options_ion),
                       ),
                     ),
+                    SizedBox(
+                      width: 15.0,
+                    ),
                     InkWell(
                       onTap: () {},
                       child: Container(
-                        margin: EdgeInsets.only(right: 15.0),
                         width: 120.0,
                         height: 60.0,
                         padding: EdgeInsets.symmetric(horizontal: 16.0),
