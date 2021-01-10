@@ -4,11 +4,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:language_learning_ui/constants.dart';
 import 'package:language_learning_ui/models/course_model.dart';
 import 'package:language_learning_ui/models/instructor_model.dart';
+import 'package:language_learning_ui/models/lesson_model.dart';
 import 'package:language_learning_ui/models/topic_model.dart';
 import 'package:language_learning_ui/widgets/border_text_field.dart';
 import 'package:language_learning_ui/widgets/bottom_bar.dart';
 import 'package:language_learning_ui/widgets/course_card.dart';
 import 'package:language_learning_ui/widgets/instructor_card.dart';
+import 'package:language_learning_ui/widgets/lesson_card.dart';
 import 'package:language_learning_ui/widgets/topic_card.dart';
 import 'package:language_learning_ui/widgets/user_menu_bar.dart';
 
@@ -18,6 +20,33 @@ class LessonScreen extends StatefulWidget {
 }
 
 class _LessonScreenState extends State<LessonScreen> {
+  List<LessonModel> lessons = [
+    LessonModel(
+      imagePath: "assets/images/lesson.png",
+      title: "Introduction",
+      duration: "10 minutes 20 seconds",
+    ),
+    LessonModel(
+      imagePath: "assets/images/lesson.png",
+      title: "Lesson 01",
+      duration: "25 minutes 20 seconds",
+    ),
+    LessonModel(
+      imagePath: "assets/images/lesson.png",
+      title: "Lesson 02",
+      duration: "13 minutes 20 seconds",
+    ),
+    LessonModel(
+      imagePath: "assets/images/lesson.png",
+      title: "Lesson 03",
+      duration: "45 minutes 20 seconds",
+    ),
+    LessonModel(
+      imagePath: "assets/images/lesson.png",
+      title: "Lesson 04",
+      duration: "10 minutes 20 seconds",
+    )
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -153,6 +182,21 @@ class _LessonScreenState extends State<LessonScreen> {
                 SizedBox(
                   height: 12.0,
                 ),
+                Flexible(
+                  child: ListView.separated(
+                    shrinkWrap: true,
+                    physics: NeverScrollableScrollPhysics(),
+                    itemBuilder: (BuildContext context, int index) {
+                      return LessonCard(lesson: lessons[index]);
+                    },
+                    separatorBuilder: (BuildContext context, int index) {
+                      return SizedBox(
+                        height: 8.0,
+                      );
+                    },
+                    itemCount: lessons.length,
+                  ),
+                )
               ],
             ),
           ),

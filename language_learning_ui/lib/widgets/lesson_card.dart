@@ -12,7 +12,7 @@ class LessonCard extends StatelessWidget {
     return InkWell(
       child: Container(
         margin: EdgeInsets.only(bottom: 10.0),
-        padding: EdgeInsets.symmetric(horizontal: 16.0),
+        padding: EdgeInsets.all(6.0),
         width: double.infinity,
         height: ScreenUtil().setHeight(65.0),
         decoration: BoxDecoration(
@@ -42,6 +42,7 @@ class LessonCard extends StatelessWidget {
             ),
             Expanded(
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
@@ -68,6 +69,9 @@ class LessonCard extends StatelessWidget {
             Icon(
               FlutterIcons.play_circle_filled_mdi,
               color: Constants.primaryColor,
+            ),
+            SizedBox(
+              width: 15.0,
             )
           ],
         ),
