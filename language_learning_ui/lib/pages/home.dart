@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:language_learning_ui/constants.dart';
+import 'package:language_learning_ui/pages/create_account.dart';
+import 'package:language_learning_ui/pages/dashboard.dart';
 import 'package:language_learning_ui/widgets/primary_button.dart';
 
 class Home extends StatelessWidget {
@@ -45,6 +47,15 @@ class Home extends StatelessWidget {
                 height: 25.0,
               ),
               InkWell(
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (BuildContext context) {
+                        return Dashboard();
+                      },
+                    ),
+                  );
+                },
                 child: Container(
                   width: double.infinity,
                   height: ScreenUtil().setHeight(50.0),
@@ -75,7 +86,18 @@ class Home extends StatelessWidget {
               SizedBox(
                 height: 10.0,
               ),
-              PrimaryButton(text: "Create An Account", onPressed: () {})
+              PrimaryButton(
+                text: "Create An Account",
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (BuildContext context) {
+                        return CreateAccount();
+                      },
+                    ),
+                  );
+                },
+              )
             ],
           ),
         ),
