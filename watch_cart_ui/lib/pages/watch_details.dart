@@ -163,7 +163,74 @@ class WatchDetails extends StatelessWidget {
                               Container(
                                 height: 90.0,
                                 child: Row(
-                                  children: [],
+                                  children: [
+                                    Container(
+                                      margin: EdgeInsets.only(right: 15.0),
+                                      height: 60.0,
+                                      decoration: BoxDecoration(
+                                        borderRadius:
+                                            BorderRadius.circular(8.0),
+                                        border: Border.all(
+                                          color:
+                                              Color.fromRGBO(230, 230, 230, 1),
+                                        ),
+                                      ),
+                                      child: Row(
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                              horizontal: 16.0,
+                                            ),
+                                            child: Text(
+                                              "+",
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.w600,
+                                                fontSize: 24.0,
+                                                color: Color.fromRGBO(
+                                                    34, 34, 34, 1),
+                                              ),
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                              horizontal: 16.0,
+                                            ),
+                                            child: Text(
+                                              "2",
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.w600,
+                                                fontSize: 24.0,
+                                                color: Color.fromRGBO(
+                                                    34, 34, 34, 1),
+                                              ),
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                              horizontal: 16.0,
+                                            ),
+                                            child: Text(
+                                              "-",
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.w600,
+                                                fontSize: 24.0,
+                                                color: Color.fromRGBO(
+                                                    34, 34, 34, 1),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Text(
+                                      "\$${watches[0].price}",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w600,
+                                        fontSize: 24.0,
+                                        color: Color.fromRGBO(34, 34, 34, 1),
+                                      ),
+                                    )
+                                  ],
                                 ),
                               ),
                               Text(
