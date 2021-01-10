@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/screenutil_init.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:watch_cart_ui/pages/home.dart';
 import 'package:watch_cart_ui/pages/store.dart';
+import 'package:watch_cart_ui/pages/watch_details.dart';
 
 void main() {
   runApp(MyApp());
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
             TextTheme(),
           ),
         ),
-        initialRoute: "/store",
+        initialRoute: "/watch-details",
         onGenerateRoute: _onGenerateRoute,
       ),
     );
@@ -40,6 +41,10 @@ Route<dynamic> _onGenerateRoute(RouteSettings settings) {
     case "/store":
       return MaterialPageRoute(builder: (BuildContext context) {
         return Store();
+      });
+    case "/watch-details":
+      return MaterialPageRoute(builder: (BuildContext context) {
+        return WatchDetails();
       });
     default:
       return MaterialPageRoute(builder: (BuildContext context) {
