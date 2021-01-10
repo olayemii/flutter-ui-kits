@@ -13,7 +13,7 @@ PRs are welcomed. Issues are welcomed too.
 
 Send me UI suggestions for any uplabs project on <a href="mailto:chris2code@gmail.com">chris2code@gmail.com</a>
 
-### Support Me
+### Support App
 
 > ⭐️  Star the repo to show support. ⭐️ 
 
