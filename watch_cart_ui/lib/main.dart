@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/screenutil_init.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:watch_cart_ui/pages/home.dart';
+import 'package:watch_cart_ui/pages/store.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
             TextTheme(),
           ),
         ),
-        initialRoute: "/",
+        initialRoute: "/store",
         onGenerateRoute: _onGenerateRoute,
       ),
     );
@@ -35,6 +36,10 @@ Route<dynamic> _onGenerateRoute(RouteSettings settings) {
     case "/":
       return MaterialPageRoute(builder: (BuildContext context) {
         return Home();
+      });
+    case "/store":
+      return MaterialPageRoute(builder: (BuildContext context) {
+        return Store();
       });
     default:
       return MaterialPageRoute(builder: (BuildContext context) {
