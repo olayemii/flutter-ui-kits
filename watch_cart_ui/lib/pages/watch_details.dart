@@ -11,12 +11,14 @@ class WatchDetails extends StatelessWidget {
       image: "assets/images/watch-1.png",
       price: 79.99,
       category: "Trending Watch",
+      model: "AM03",
       description:
           "Combining functionality with timeless style. Explore the Rolex® collection and find the watch is that was made for you.",
     ),
     Product(
       brand: "Skmei Analog",
       name: "Men’s Watch",
+      model: "AM03",
       image: "assets/images/watch-2.png",
       price: 79.99,
       category: "Trending Watch",
@@ -26,6 +28,7 @@ class WatchDetails extends StatelessWidget {
     Product(
       brand: "Skmei Analog",
       name: "Men’s Watch",
+      model: "AM03",
       image: "assets/images/watch-3.png",
       price: 79.99,
       category: "Trending Watch",
@@ -35,6 +38,7 @@ class WatchDetails extends StatelessWidget {
     Product(
       brand: "Skmei Analog",
       name: "Women’s Watch",
+      model: "AM03",
       image: "assets/images/watch-4.png",
       price: 79.99,
       category: "Trending Watch",
@@ -117,6 +121,7 @@ class WatchDetails extends StatelessWidget {
                         Container(
                           padding: EdgeInsets.symmetric(horizontal: 16.0),
                           child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               RichText(
                                 textAlign: TextAlign.left,
@@ -132,7 +137,10 @@ class WatchDetails extends StatelessWidget {
                                       ),
                                     ),
                                     TextSpan(
-                                      text: " " + watches[0].name,
+                                      text: " " +
+                                          watches[0].name +
+                                          " - " +
+                                          watches[0].model,
                                       style: TextStyle(
                                         fontSize: 28.0,
                                         color: Color.fromRGBO(34, 34, 34, 1),
@@ -141,6 +149,23 @@ class WatchDetails extends StatelessWidget {
                                   ],
                                 ),
                               ),
+                              SizedBox(
+                                height: 5.0,
+                              ),
+                              Text(
+                                watches[0].category,
+                                style: TextStyle(
+                                  fontSize: 14.0,
+                                  color: Colors.grey,
+                                ),
+                              ),
+                              Text(
+                                watches[0].description,
+                                style: TextStyle(
+                                  fontSize: 14.0,
+                                  color: Colors.grey,
+                                ),
+                              )
                             ],
                           ),
                         )

@@ -12,6 +12,7 @@ class Store extends StatelessWidget {
       brand: "Skmei Analog",
       name: "Men’s Watch",
       image: "assets/images/watch-1.png",
+      model: "AM03",
       price: 79.99,
       category: "Trending Watch",
       description:
@@ -23,6 +24,7 @@ class Store extends StatelessWidget {
       image: "assets/images/watch-2.png",
       price: 79.99,
       category: "Trending Watch",
+      model: "AM03",
       description:
           "Combining functionality with timeless style. Explore the Rolex® collection and find the watch is that was made for you.",
     ),
@@ -30,6 +32,7 @@ class Store extends StatelessWidget {
       brand: "Skmei Analog",
       name: "Men’s Watch",
       image: "assets/images/watch-3.png",
+      model: "AM03",
       price: 79.99,
       category: "Trending Watch",
       description:
@@ -39,6 +42,7 @@ class Store extends StatelessWidget {
       brand: "Skmei Analog",
       name: "Women’s Watch",
       image: "assets/images/watch-4.png",
+      model: "AM03",
       price: 79.99,
       category: "Trending Watch",
       description:
