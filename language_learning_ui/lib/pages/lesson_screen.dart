@@ -183,16 +183,11 @@ class _LessonScreenState extends State<LessonScreen> {
                   height: 12.0,
                 ),
                 Flexible(
-                  child: ListView.separated(
+                  child: ListView.builder(
                     shrinkWrap: true,
                     physics: NeverScrollableScrollPhysics(),
                     itemBuilder: (BuildContext context, int index) {
                       return LessonCard(lesson: lessons[index]);
-                    },
-                    separatorBuilder: (BuildContext context, int index) {
-                      return SizedBox(
-                        height: 8.0,
-                      );
                     },
                     itemCount: lessons.length,
                   ),
