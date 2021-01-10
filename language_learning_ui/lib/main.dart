@@ -5,6 +5,7 @@ import 'package:language_learning_ui/pages/choose_language.dart';
 import 'package:language_learning_ui/pages/create_account.dart';
 import 'package:language_learning_ui/pages/dashboard.dart';
 import 'package:language_learning_ui/pages/home.dart';
+import 'package:language_learning_ui/pages/lesson_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
             TextTheme(),
           ),
         ),
-        initialRoute: "/dashboard",
+        initialRoute: "/lesson-screen",
         onGenerateRoute: _onGenerateRoute,
       ),
     );
@@ -50,6 +51,10 @@ Route<dynamic> _onGenerateRoute(RouteSettings settings) {
     case "/dashboard":
       return MaterialPageRoute(builder: (BuildContext context) {
         return Dashboard();
+      });
+    case "/lesson-screen":
+      return MaterialPageRoute(builder: (BuildContext context) {
+        return LessonScreen();
       });
     default:
       return MaterialPageRoute(builder: (BuildContext context) {
