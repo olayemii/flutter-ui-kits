@@ -13,10 +13,24 @@ Free Flutter UI Kits based on designs on UpLabs 💓. Repo will be updated daily
 
 
 
-You can also support me by buying me a cup of coffee ☕️.
+You can also support the project by buying me a cup of coffee ☕️.
 
 
 
 <a href="https://www.buymeacoffee.com/xPGLYEr"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=xPGLYEr&button_colour=BD5FFF&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00"></a>
 
+Or Support me on Patreon
+
 <a href="https://www.patreon.com/bePatron?u=48456662" data-patreon-widget-type="become-patron-button">Become a Patron!</a>
+
+
+### 💻  Requirements
+
+* Any Operating System (MacOS, Linux, Windows)
+* Any IDE with Flutter SDK installed (Android Studio, VSCode etc)
+* A little knowledge of Dart and Flutter
+
+ ### 👨‍💻  Author
+
+####Apps were developed by Olayemi Garuba [![Twitter Follow](https://img.shields.io/twitter/follow/iam_olayemii.svg?style=social)](https://twitter.com/iam_olayemii)
+
