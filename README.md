@@ -47,3 +47,7 @@ Our top sponsors will be listed here
 
 ### Screenshots
 
+1. **Wrist Watch Store UI Kit**
+
+![Wrist Watch Store UI Kit](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/watch-2.png)
+
