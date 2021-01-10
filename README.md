@@ -25,7 +25,7 @@ PRs are welcomed. Issues are welcomed too.
 
 Or Support me on Patreon
 
-<a href="https://www.patreon.com/bePatron?u=48456662" data-patreon-widget-type="become-patron-button">Become a Patron!</a>
+<a href="https://www.patreon.com/bePatron?u=48456662" data-patreon-widget-type="become-patron-button"><img src="https://raw.githubusercontent.com/codebard/patron-button-and-widgets-by-codebard/master/images/patreon-medium-button.png" alt="Become a Patreon!" /></a>
 
 
 ### 💻  Requirements
