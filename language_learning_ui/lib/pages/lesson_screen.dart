@@ -37,6 +37,19 @@ class _LessonScreenState extends State<LessonScreen> {
                 SizedBox(
                   height: 15.0,
                 ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Constants.primaryColor,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Color.fromRGBO(255, 99, 128, 0.6),
+                        spreadRadius: 0,
+                        blurRadius: 6,
+                        offset: Offset(0, 2), // changes position of shadow
+                      ),
+                    ],
+                  ),
+                )
               ],
             ),
           ),
