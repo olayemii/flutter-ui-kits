@@ -1,4 +1,4 @@
-# watch_cart_ui
+# Wrist Watch EShop
 
 A new Flutter project.
 
