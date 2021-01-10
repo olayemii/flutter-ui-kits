@@ -7,6 +7,7 @@
 Free Flutter UI Kits based on designs on UpLabs 💓. Repo will be updated daily with new beautiful UI Kits.
 
 
+### Support Me
 
 ⭐️  Star the repo to show support. ⭐️ 
 
@@ -18,3 +19,4 @@ You can also support me by buying me a cup of coffee ☕️.
 
 <a href="https://www.buymeacoffee.com/xPGLYEr"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=xPGLYEr&button_colour=BD5FFF&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00"></a>
 
+<a href="https://www.patreon.com/bePatron?u=48456662" data-patreon-widget-type="become-patron-button">Become a Patron!</a>
