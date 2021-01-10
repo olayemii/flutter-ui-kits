@@ -2,12 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_screenutil/screenutil.dart';
 import 'package:language_learning_ui/constants.dart';
+import 'package:language_learning_ui/models/lesson_model.dart';
 
 class LessonCard extends StatelessWidget {
-  final String duration;
-  final String title;
-  final String imagePath;
-  LessonCard({this.title, this.duration, this.imagePath});
+  final LessonModel lesson;
+  LessonCard({this.lesson});
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -29,7 +28,48 @@ class LessonCard extends StatelessWidget {
           ],
         ),
         child: Row(
-          children: [],
+          children: [
+            Container(
+              height: ScreenUtil().setHeight(55.0),
+              width: ScreenUtil().setWidth(55.0),
+              decoration: BoxDecoration(
+                color: Color.fromRGBO(224, 230, 255, 1),
+              ),
+              child: Image.asset(this.lesson.imagePath),
+            ),
+            SizedBox(
+              width: 25.0,
+            ),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    this.lesson.title,
+                    style: TextStyle(
+                      color: Constants.primaryTextColor,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14.0,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 5.0,
+                  ),
+                  Text(
+                    this.lesson.duration,
+                    style: TextStyle(
+                      fontSize: 14.0,
+                      color: Constants.captionTextColor,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Icon(
+              FlutterIcons.play_circle_filled_mdi,
+              color: Constants.primaryColor,
+            )
+          ],
         ),
       ),
     );
