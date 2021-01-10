@@ -7,7 +7,9 @@ import 'package:language_learning_ui/models/instructor_model.dart';
 import 'package:language_learning_ui/models/topic_model.dart';
 import 'package:language_learning_ui/widgets/border_text_field.dart';
 import 'package:language_learning_ui/widgets/course_card.dart';
+import 'package:language_learning_ui/widgets/instructor_card.dart';
 import 'package:language_learning_ui/widgets/topic_card.dart';
+import 'package:language_learning_ui/widgets/user_menu_bar.dart';
 
 class Dashboard extends StatefulWidget {
   @override
@@ -78,18 +80,50 @@ class _DashboardState extends State<Dashboard> {
     ),
     InstructorModel(
       name: "Olayemii Garuba",
-      occupation: "Software Developer",
+      occupation: "Software Dev",
       image: "assets/images/person-2.png",
     ),
     InstructorModel(
       name: "Christopher Gary",
-      occupation: "Software Developer",
+      occupation: "Software Dev",
       image: "assets/images/person-3.png",
     )
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: BottomNavigationBar(
+        unselectedIconTheme: IconThemeData(
+          color: Color.fromRGBO(202, 205, 219, 1),
+        ),
+        selectedIconTheme: IconThemeData(
+          color: Constants.primaryColor,
+        ),
+        items: [
+          BottomNavigationBarItem(
+            label: "",
+            icon: Icon(FlutterIcons.home_fea),
+          ),
+          BottomNavigationBarItem(
+            label: "",
+            icon: Icon(
+              FlutterIcons.calendar_fea,
+            ),
+          ),
+          BottomNavigationBarItem(
+            label: "",
+            icon: Icon(
+              FlutterIcons.edit_fea,
+            ),
+          ),
+          BottomNavigationBarItem(
+            label: "",
+            icon: Icon(
+              FlutterIcons.user_fea,
+            ),
+          ),
+        ],
+      ),
       body: SingleChildScrollView(
         child: SafeArea(
           child: Container(
@@ -101,47 +135,7 @@ class _DashboardState extends State<Dashboard> {
                 SizedBox(
                   height: 30.0,
                 ),
-                Row(
-                  children: [
-                    CircleAvatar(
-                      backgroundImage: AssetImage("assets/images/profile.png"),
-                      radius: 25.0,
-                      backgroundColor: Colors.transparent,
-                    ),
-                    SizedBox(
-                      width: 15.0,
-                    ),
-                    RichText(
-                      text: TextSpan(
-                        children: [
-                          TextSpan(
-                            text: "Hello,\n",
-                            style: TextStyle(
-                              fontSize: 14.0,
-                              color: Color.fromRGBO(152, 156, 173, 1),
-                            ),
-                          ),
-                          TextSpan(
-                            text: "Jennifer Lee",
-                            style: TextStyle(
-                              fontSize: 16.0,
-                              fontWeight: FontWeight.w600,
-                              color: Constants.primaryTextColor,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Spacer(),
-                    IconButton(
-                      icon: Icon(
-                        FlutterIcons.bell_fea,
-                        color: Constants.primaryTextColor,
-                      ),
-                      onPressed: () {},
-                    )
-                  ],
-                ),
+                UserMenuBar(),
                 SizedBox(
                   height: 15.0,
                 ),
@@ -251,7 +245,7 @@ class _DashboardState extends State<Dashboard> {
                 ),
                 SizedBox(height: 10.0),
                 Container(
-                  height: ScreenUtil().setHeight(167.0),
+                  height: ScreenUtil().setHeight(140.0),
                   child: ListView.separated(
                     separatorBuilder: (BuildContext context, int index) {
                       return SizedBox(
@@ -259,10 +253,10 @@ class _DashboardState extends State<Dashboard> {
                       );
                     },
                     scrollDirection: Axis.horizontal,
-                    itemCount: courses.length,
+                    itemCount: instructors.length,
                     itemBuilder: (BuildContext context, int index) {
-                      return CourseCard(
-                        course: courses[index],
+                      return InstructorCard(
+                        instructor: instructors[index],
                       );
                     },
                   ),
