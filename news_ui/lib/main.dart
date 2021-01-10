@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
           visualDensity: VisualDensity.adaptivePlatformDensity,
           textTheme: GoogleFonts.ptSerifTextTheme(),
         ),
-        initialRoute: "/notifications",
+        initialRoute: "/",
         onGenerateRoute: _onGenerateRoute,
       ),
     );
@@ -32,7 +32,6 @@ class MyApp extends StatelessWidget {
 }
 
 Route<dynamic> _onGenerateRoute(RouteSettings settings) {
-  Map arguments = settings.arguments;
   switch (settings.name) {
     case "/":
       return MaterialPageRoute(builder: (BuildContext context) {
