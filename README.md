@@ -4,8 +4,10 @@
 
 
 
-Free Flutter UI Kits based on designs on UpLabs 💓. Repo will be updated daily with new beautiful UI Kits.
+Free Flutter UI Kits based on designs on UpLabs 💓. 
+Repo will be updated daily with new beautiful UI Kits.
 
+Complete flutter projects are available on my <a href="https://codecanyon.net/user/chris2code/portfolio">Codecanyon.net Page</a>
 
 ### Support Me
 
