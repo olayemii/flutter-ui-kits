@@ -38,8 +38,11 @@ class _LessonScreenState extends State<LessonScreen> {
                   height: 15.0,
                 ),
                 Container(
+                  height: ScreenUtil().setHeight(180.0),
+                  width: ScreenUtil().setWidth(339.24),
                   decoration: BoxDecoration(
                     color: Constants.primaryColor,
+                    borderRadius: BorderRadius.circular(8.0),
                     boxShadow: [
                       BoxShadow(
                         color: Color.fromRGBO(255, 99, 128, 0.6),
@@ -47,6 +50,79 @@ class _LessonScreenState extends State<LessonScreen> {
                         blurRadius: 6,
                         offset: Offset(0, 2), // changes position of shadow
                       ),
+                    ],
+                  ),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.all(12.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Row(
+                                children: [
+                                  Container(
+                                    width: 30.0,
+                                    height: 30.0,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      color: Colors.white,
+                                    ),
+                                    child: Center(
+                                      child: Text(
+                                        "20",
+                                        style: TextStyle(
+                                          color: Constants.primaryTextColor,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 10.0,
+                                  ),
+                                  Text(
+                                    "Points",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 14.0,
+                                    ),
+                                  )
+                                ],
+                              ),
+                              Text(
+                                "Daily English Conversation",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 16.0,
+                                ),
+                              ),
+                              Text(
+                                "Learn More",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 14.0,
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              fit: BoxFit.fill,
+                              image: AssetImage(
+                                "assets/images/course-1.png",
+                              ),
+                            ),
+                          ),
+                        ),
+                      )
                     ],
                   ),
                 )
