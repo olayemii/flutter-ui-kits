@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/screenutil.dart';
 import 'package:language_learning_ui/constants.dart';
 import 'package:language_learning_ui/models/language_model.dart';
+import 'package:language_learning_ui/pages/dashboard.dart';
 import 'package:language_learning_ui/widgets/language_selector.dart';
+import 'package:language_learning_ui/widgets/primary_button.dart';
 
 class ChooseLanguage extends StatefulWidget {
   @override
@@ -77,7 +80,28 @@ class _ChooseLanguageState extends State<ChooseLanguage> {
                       imagePath: language.imagePath,
                     ),
                   );
-                }).toList()
+                }).toList(),
+                AnimatedCrossFade(
+                  crossFadeState: _activeIndex == -1
+                      ? CrossFadeState.showFirst
+                      : CrossFadeState.showSecond,
+                  duration: Duration(milliseconds: 450),
+                  firstChild: Container(
+                    height: ScreenUtil().setHeight(50.0),
+                  ),
+                  secondChild: PrimaryButton(
+                    text: "Continue",
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (BuildContext context) {
+                            return Dashboard();
+                          },
+                        ),
+                      );
+                    },
+                  ),
+                )
               ],
             ),
           ),

@@ -9,6 +9,7 @@ import 'package:language_learning_ui/widgets/border_text_field.dart';
 import 'package:language_learning_ui/widgets/course_card.dart';
 import 'package:language_learning_ui/widgets/instructor_card.dart';
 import 'package:language_learning_ui/widgets/topic_card.dart';
+import 'package:language_learning_ui/widgets/topics_list.dart';
 import 'package:language_learning_ui/widgets/user_menu_bar.dart';
 
 class Dashboard extends StatefulWidget {
@@ -17,78 +18,6 @@ class Dashboard extends StatefulWidget {
 }
 
 class _DashboardState extends State<Dashboard> {
-  List<TopicModel> topics = [
-    TopicModel(
-      color: Constants.primaryColor,
-      boxShadow: [
-        BoxShadow(
-          color: Color.fromRGBO(255, 99, 128, 0.6),
-          spreadRadius: 0,
-          blurRadius: 6,
-          offset: Offset(0, 2), // changes position of shadow
-        ),
-      ],
-      topic: "interjections & colloquial",
-      time: "30 min",
-      points: "20",
-      image: "assets/images/course-1.png",
-    ),
-    TopicModel(
-      color: Color.fromRGBO(25, 118, 210, 1),
-      boxShadow: [
-        BoxShadow(
-          color: Color.fromRGBO(25, 118, 210, 0.6),
-          spreadRadius: 0,
-          blurRadius: 6,
-          offset: Offset(0, 2), // changes position of shadow
-        ),
-      ],
-      topic: "interjections & colloquial",
-      time: "30 min",
-      points: "30",
-      image: "assets/images/course-2.png",
-    )
-  ];
-  List<String> courseLevels = [
-    "Beginner",
-    "Intermediate",
-    "Advanced",
-    "Professional"
-  ];
-  List<CourseModel> courses = [
-    CourseModel(
-      name: "Daily English Conversation",
-      color: Color.fromRGBO(86, 131, 223, 1),
-      image: "assets/images/course-3.png",
-    ),
-    CourseModel(
-      name: "Learn new vocabulary",
-      color: Color.fromRGBO(255, 152, 117, 1),
-      image: "assets/images/course-4.png",
-    ),
-    CourseModel(
-      name: "Daily English Conversation",
-      color: Color.fromRGBO(255, 133, 125, 1),
-      image: "assets/images/course-5.png",
-    ),
-  ];
-  List<InstructorModel> instructors = [
-    InstructorModel(
-      name: "Jennifer Lee",
-      occupation: "UI Designer",
-      image: "assets/images/person-1.png",
-    ),
-    InstructorModel(
-      name: "Olayemii Garuba",
-      occupation: "Software Dev",
-      image: "assets/images/person-2.png",
-    ),
-    InstructorModel(
-      name: "Christopher Gary",
-      occupation: "Software Dev",
-      image: "assets/images/person-3.png",
-    )
-  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -152,23 +81,7 @@ class _DashboardState extends State<Dashboard> {
                 SizedBox(
                   height: 30.0,
                 ),
-                Container(
-                  height: ScreenUtil().setHeight(150.0),
-                  child: ListView.separated(
-                    separatorBuilder: (BuildContext context, int index) {
-                      return SizedBox(
-                        width: 15.0,
-                      );
-                    },
-                    scrollDirection: Axis.horizontal,
-                    itemCount: topics.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      return TopicCard(
-                        topic: topics[index],
-                      );
-                    },
-                  ),
-                ),
+                TopicsList(),
                 SizedBox(height: 30.0),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -202,10 +115,10 @@ class _DashboardState extends State<Dashboard> {
                       );
                     },
                     scrollDirection: Axis.horizontal,
-                    itemCount: courseLevels.length,
+                    itemCount: Constants.courseLevels.length,
                     itemBuilder: (BuildContext context, int index) {
                       return Text(
-                        courseLevels[index],
+                        Constants.courseLevels[index],
                         style: TextStyle(
                           fontSize: 15.0,
                           fontWeight:
@@ -228,10 +141,10 @@ class _DashboardState extends State<Dashboard> {
                       );
                     },
                     scrollDirection: Axis.horizontal,
-                    itemCount: courses.length,
+                    itemCount: Constants.courses.length,
                     itemBuilder: (BuildContext context, int index) {
                       return CourseCard(
-                        course: courses[index],
+                        course: Constants.courses[index],
                       );
                     },
                   ),
@@ -255,10 +168,10 @@ class _DashboardState extends State<Dashboard> {
                       );
                     },
                     scrollDirection: Axis.horizontal,
-                    itemCount: instructors.length,
+                    itemCount: Constants.instructors.length,
                     itemBuilder: (BuildContext context, int index) {
                       return InstructorCard(
-                        instructor: instructors[index],
+                        instructor: Constants.instructors[index],
                       );
                     },
                   ),
