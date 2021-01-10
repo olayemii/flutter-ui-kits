@@ -9,7 +9,8 @@ import 'package:watch_cart_ui/models/product.dart';
 class Store extends StatelessWidget {
   final List<Product> watches = [
     Product(
-      name: "Skmei Analog Men’s Watch",
+      brand: "Skmei Analog",
+      name: "Men’s Watch",
       image: "assets/images/watch-1.png",
       price: 79.99,
       category: "Trending Watch",
@@ -17,7 +18,8 @@ class Store extends StatelessWidget {
           "Combining functionality with timeless style. Explore the Rolex® collection and find the watch is that was made for you.",
     ),
     Product(
-      name: "Skmei Analog Men’s Watch",
+      brand: "Skmei Analog",
+      name: "Men’s Watch",
       image: "assets/images/watch-2.png",
       price: 79.99,
       category: "Trending Watch",
@@ -25,7 +27,8 @@ class Store extends StatelessWidget {
           "Combining functionality with timeless style. Explore the Rolex® collection and find the watch is that was made for you.",
     ),
     Product(
-      name: "Skmei Analog Men’s Watch",
+      brand: "Skmei Analog",
+      name: "Men’s Watch",
       image: "assets/images/watch-3.png",
       price: 79.99,
       category: "Trending Watch",
@@ -33,7 +36,8 @@ class Store extends StatelessWidget {
           "Combining functionality with timeless style. Explore the Rolex® collection and find the watch is that was made for you.",
     ),
     Product(
-      name: "Skmei Analog Women’s Watch",
+      brand: "Skmei Analog",
+      name: "Women’s Watch",
       image: "assets/images/watch-4.png",
       price: 79.99,
       category: "Trending Watch",
@@ -203,6 +207,16 @@ class Store extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Image.asset(watches[index].image),
+                          ),
+                          Text(
+                            watches[index].brand,
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 14.0,
+                            ),
+                          ),
+                          SizedBox(
+                            height: 3.0,
                           ),
                           Text(
                             watches[index].name,

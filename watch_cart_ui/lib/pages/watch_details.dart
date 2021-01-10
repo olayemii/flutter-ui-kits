@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_icons/flutter_icons.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:watch_cart_ui/constants.dart';
 import 'package:watch_cart_ui/models/product.dart';
@@ -8,7 +6,8 @@ import 'package:watch_cart_ui/models/product.dart';
 class WatchDetails extends StatelessWidget {
   final List<Product> watches = [
     Product(
-      name: "Skmei Analog Men’s Watch",
+      brand: "Skmei Analog",
+      name: "Men’s Watch",
       image: "assets/images/watch-1.png",
       price: 79.99,
       category: "Trending Watch",
@@ -16,7 +15,8 @@ class WatchDetails extends StatelessWidget {
           "Combining functionality with timeless style. Explore the Rolex® collection and find the watch is that was made for you.",
     ),
     Product(
-      name: "Skmei Analog Men’s Watch",
+      brand: "Skmei Analog",
+      name: "Men’s Watch",
       image: "assets/images/watch-2.png",
       price: 79.99,
       category: "Trending Watch",
@@ -24,7 +24,8 @@ class WatchDetails extends StatelessWidget {
           "Combining functionality with timeless style. Explore the Rolex® collection and find the watch is that was made for you.",
     ),
     Product(
-      name: "Skmei Analog Men’s Watch",
+      brand: "Skmei Analog",
+      name: "Men’s Watch",
       image: "assets/images/watch-3.png",
       price: 79.99,
       category: "Trending Watch",
@@ -32,7 +33,8 @@ class WatchDetails extends StatelessWidget {
           "Combining functionality with timeless style. Explore the Rolex® collection and find the watch is that was made for you.",
     ),
     Product(
-      name: "Skmei Analog Women’s Watch",
+      brand: "Skmei Analog",
+      name: "Women’s Watch",
       image: "assets/images/watch-4.png",
       price: 79.99,
       category: "Trending Watch",
@@ -121,7 +123,7 @@ class WatchDetails extends StatelessWidget {
                                 text: TextSpan(
                                   children: [
                                     TextSpan(
-                                      text: "World",
+                                      text: watches[0].brand,
                                       style: TextStyle(
                                         height: 2.5,
                                         fontSize: 28.0,
@@ -130,7 +132,7 @@ class WatchDetails extends StatelessWidget {
                                       ),
                                     ),
                                     TextSpan(
-                                      text: "of luxury",
+                                      text: " " + watches[0].name,
                                       style: TextStyle(
                                         fontSize: 28.0,
                                         color: Color.fromRGBO(34, 34, 34, 1),
