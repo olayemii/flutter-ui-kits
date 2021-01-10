@@ -9,6 +9,8 @@ Repo will be updated daily with new beautiful UI Kits.
 
 Complete flutter projects are available on my <a href="https://codecanyon.net/user/chris2code/portfolio">Codecanyon.net Page</a>
 
+PRs are welcomed. Issues are welcomed too. 
+
 ### Support Me
 
 > ⭐️  Star the repo to show support. ⭐️ 
