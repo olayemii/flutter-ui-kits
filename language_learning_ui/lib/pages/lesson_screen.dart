@@ -56,8 +56,9 @@ class _LessonScreenState extends State<LessonScreen> {
                     children: [
                       Expanded(
                         child: Padding(
-                          padding: const EdgeInsets.all(12.0),
+                          padding: const EdgeInsets.all(10.0),
                           child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Row(
@@ -97,14 +98,14 @@ class _LessonScreenState extends State<LessonScreen> {
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.w600,
-                                  fontSize: 16.0,
+                                  fontSize: 24.0,
                                 ),
                               ),
                               Text(
                                 "Learn More",
                                 style: TextStyle(
                                   color: Colors.white,
-                                  fontSize: 14.0,
+                                  fontSize: 20.0,
                                 ),
                               )
                             ],
@@ -125,7 +126,33 @@ class _LessonScreenState extends State<LessonScreen> {
                       )
                     ],
                   ),
-                )
+                ),
+                SizedBox(
+                  height: 30.0,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "My lessons",
+                      style: TextStyle(
+                        fontSize: 21.0,
+                        color: Constants.primaryTextColor,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    Text(
+                      "View all",
+                      style: TextStyle(
+                        fontSize: 15.0,
+                        color: Constants.captionTextColor,
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 12.0,
+                ),
               ],
             ),
           ),
