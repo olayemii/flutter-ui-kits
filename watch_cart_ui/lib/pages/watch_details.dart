@@ -1,14 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_icons/flutter_icons.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:watch_cart_ui/constants.dart';
 import 'package:watch_cart_ui/models/product.dart';
+import 'package:watch_cart_ui/widgets/main_app_bar.dart';
+import 'package:watch_cart_ui/widgets/watch_detail_footer.dart';
+import 'package:watch_cart_ui/widgets/watch_detail_image.dart';
 
-class WatchDetails extends StatelessWidget {
+class WatchDetails extends StatefulWidget {
   final Product watch;
   final String tag;
 
   WatchDetails({this.watch, this.tag});
+
+  @override
+  _WatchDetailsState createState() => _WatchDetailsState();
+}
+
+class _WatchDetailsState extends State<WatchDetails> {
+  int cartItemCount = 1;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,49 +49,13 @@ class WatchDetails extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Hero(
-                              tag: this.tag,
-                              child: IconButton(
-                                icon: SvgPicture.asset(
-                                  "assets/svg/menu.svg",
-                                  width: 12.0,
-                                  height: 12.0,
-                                ),
-                                onPressed: () {},
-                              ),
-                            ),
-                            IconButton(
-                              icon: SvgPicture.asset(
-                                "assets/svg/hamburger.svg",
-                                width: 16.0,
-                                height: 16.0,
-                              ),
-                              onPressed: () {},
-                            )
-                          ],
-                        ),
+                        MainAppBar(),
                         SizedBox(
                           height: 30.0,
                         ),
-                        Center(
-                          child: Container(
-                            padding: EdgeInsets.all(24.0),
-                            height: MediaQuery.of(context).size.height * 0.38,
-                            width: MediaQuery.of(context).size.width * 0.85,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(16.0),
-                              border: Border.all(
-                                color: Colors.grey[300],
-                              ),
-                            ),
-                            child: Image.asset(
-                              this.watch.image,
-                            ),
-                          ),
+                        WatchDetailImage(
+                          image: this.widget.watch.image,
+                          tag: this.widget.tag,
                         ),
                         Container(
                           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -94,7 +67,7 @@ class WatchDetails extends StatelessWidget {
                                 text: TextSpan(
                                   children: [
                                     TextSpan(
-                                      text: this.watch.brand,
+                                      text: this.widget.watch.brand,
                                       style: TextStyle(
                                         height: 2.5,
                                         fontSize: 28.0,
@@ -104,9 +77,9 @@ class WatchDetails extends StatelessWidget {
                                     ),
                                     TextSpan(
                                       text: " " +
-                                          this.watch.name +
+                                          this.widget.watch.name +
                                           " - " +
-                                          this.watch.model,
+                                          this.widget.watch.model,
                                       style: TextStyle(
                                         fontSize: 28.0,
                                         color: Color.fromRGBO(34, 34, 34, 1),
@@ -119,7 +92,7 @@ class WatchDetails extends StatelessWidget {
                                 height: 5.0,
                               ),
                               Text(
-                                this.watch.category,
+                                this.widget.watch.category,
                                 style: TextStyle(
                                   fontSize: 14.0,
                                   color: Colors.grey,
@@ -142,12 +115,36 @@ class WatchDetails extends StatelessWidget {
                                       ),
                                       child: Row(
                                         children: [
-                                          Padding(
+                                          GestureDetector(
+                                            onTap: () {
+                                              setState(() {
+                                                cartItemCount += 1;
+                                              });
+                                            },
+                                            child: Container(
+                                              alignment: Alignment.center,
+                                              height: 90.0,
+                                              padding:
+                                                  const EdgeInsets.symmetric(
+                                                horizontal: 16.0,
+                                              ),
+                                              child: Text(
+                                                "+",
+                                                style: TextStyle(
+                                                  fontWeight: FontWeight.w600,
+                                                  fontSize: 24.0,
+                                                  color: Color.fromRGBO(
+                                                      34, 34, 34, 1),
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                          Container(
                                             padding: const EdgeInsets.symmetric(
                                               horizontal: 16.0,
                                             ),
                                             child: Text(
-                                              "+",
+                                              "${this.cartItemCount}",
                                               style: TextStyle(
                                                 fontWeight: FontWeight.w600,
                                                 fontSize: 24.0,
@@ -156,31 +153,30 @@ class WatchDetails extends StatelessWidget {
                                               ),
                                             ),
                                           ),
-                                          Padding(
-                                            padding: const EdgeInsets.symmetric(
-                                              horizontal: 16.0,
-                                            ),
-                                            child: Text(
-                                              "2",
-                                              style: TextStyle(
-                                                fontWeight: FontWeight.w600,
-                                                fontSize: 24.0,
-                                                color: Color.fromRGBO(
-                                                    34, 34, 34, 1),
+                                          GestureDetector(
+                                            onTap: () {
+                                              setState(() {
+                                                cartItemCount =
+                                                    cartItemCount > 2
+                                                        ? cartItemCount - 1
+                                                        : 1;
+                                              });
+                                            },
+                                            child: Container(
+                                              alignment: Alignment.center,
+                                              height: 90.0,
+                                              padding:
+                                                  const EdgeInsets.symmetric(
+                                                horizontal: 16.0,
                                               ),
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding: const EdgeInsets.symmetric(
-                                              horizontal: 16.0,
-                                            ),
-                                            child: Text(
-                                              "-",
-                                              style: TextStyle(
-                                                fontWeight: FontWeight.w600,
-                                                fontSize: 24.0,
-                                                color: Color.fromRGBO(
-                                                    34, 34, 34, 1),
+                                              child: Text(
+                                                "-",
+                                                style: TextStyle(
+                                                  fontWeight: FontWeight.w600,
+                                                  fontSize: 24.0,
+                                                  color: Color.fromRGBO(
+                                                      34, 34, 34, 1),
+                                                ),
                                               ),
                                             ),
                                           ),
@@ -188,7 +184,7 @@ class WatchDetails extends StatelessWidget {
                                       ),
                                     ),
                                     Text(
-                                      "\$${this.watch.price}",
+                                      "\$${(this.widget.watch.price * this.cartItemCount).toStringAsFixed(2)}",
                                       style: TextStyle(
                                         fontWeight: FontWeight.w600,
                                         fontSize: 24.0,
@@ -199,7 +195,7 @@ class WatchDetails extends StatelessWidget {
                                 ),
                               ),
                               Text(
-                                this.watch.description,
+                                this.widget.watch.description,
                                 style: TextStyle(
                                   fontSize: 14.0,
                                   color: Colors.grey,
@@ -209,60 +205,7 @@ class WatchDetails extends StatelessWidget {
                               SizedBox(
                                 height: 10.0,
                               ),
-                              Row(
-                                children: [
-                                  InkWell(
-                                    onTap: () {},
-                                    child: Container(
-                                      margin: EdgeInsets.only(right: 15.0),
-                                      width: 60.0,
-                                      height: 60.0,
-                                      decoration: BoxDecoration(
-                                        borderRadius:
-                                            BorderRadius.circular(8.0),
-                                        border: Border.all(
-                                          color:
-                                              Color.fromRGBO(230, 230, 230, 1),
-                                        ),
-                                      ),
-                                      child: Icon(
-                                        FlutterIcons.ios_heart_empty_ion,
-                                      ),
-                                    ),
-                                  ),
-                                  Expanded(
-                                    child: InkWell(
-                                      onTap: () {},
-                                      child: Container(
-                                        margin: EdgeInsets.only(right: 15.0),
-                                        height: 60.0,
-                                        padding: EdgeInsets.symmetric(
-                                          horizontal: 32.0,
-                                        ),
-                                        decoration: BoxDecoration(
-                                          color: Constants.primaryColor,
-                                          borderRadius:
-                                              BorderRadius.circular(8.0),
-                                          border: Border.all(
-                                            color: Color.fromRGBO(
-                                                230, 230, 230, 1),
-                                          ),
-                                        ),
-                                        child: Center(
-                                          child: Text(
-                                            "Add to Cart",
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.w600,
-                                              fontSize: 14.0,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              )
+                              WatchDetailFooter(),
                             ],
                           ),
                         )
