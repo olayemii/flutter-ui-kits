@@ -1,4 +1,4 @@
-# 🔥 🔥 Wrist Watch Store Flutter UI Kit 🔥 🔥 💫 ⭐️ ⭐️ 👨‍💻  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)  [![Twitter Follow](https://img.shields.io/twitter/follow/iam_olayemii.svg?style=social)](https://twitter.com/iam_olayemii)
+# 🔥 🔥 Language Learning Flutter UI Kit 🔥 🔥 💫 ⭐️ ⭐️ 👨‍💻  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)  [![Twitter Follow](https://img.shields.io/twitter/follow/iam_olayemii.svg?style=social)](https://twitter.com/iam_olayemii)
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/olayemii/flutter-ui-kits?style=social) ![GitHub watchers](https://img.shields.io/github/watchers/olayemii/flutter-ui-kits?style=social) ![GitHub followers](https://img.shields.io/github/followers/olayemii?style=social) ![GitHub](https://img.shields.io/github/license/olayemii/flutter-ui-kits)
 
@@ -47,6 +47,6 @@ Our top sponsors will be listed here
 
 ### Screenshots
 
-![Screenshot 1](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/ss5.png) ![Screenshot 2](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/ss6.png) ![Screenshot 3](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/ss7.png)
+![Screenshot 1](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/ss1.png) ![Screenshot 2](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/ss2.png) ![Screenshot 3](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/ss3.png) ![Screenshot 4](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/ss4.png)
 
-![Main Page](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/watch-1.png)
+![Main Page](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/language-1.png)
