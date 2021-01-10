@@ -47,3 +47,11 @@ Our top sponsors will be listed here
 
 ### Screenshots
 
+1. **[Wrist Watch Store UI Kit](https://github.com/OLayemii/flutter-ui-kits/tree/main/watch_cart_ui)**
+
+![Wrist Watch Store UI Kit](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/watch-2.png)
+
+2. **[Language Learning FLutter UI Kit](https://github.com/OLayemii/flutter-ui-kits/tree/main/language_learning_ui)**
+
+![Language Learning FLutter UI Kit](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/language-2.png)
+
