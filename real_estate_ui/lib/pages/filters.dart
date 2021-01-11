@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:real_estate_ui/models/og_tab_item.dart';
 import 'package:real_estate_ui/widgets/og_tab.dart';
 
 class Filters extends StatelessWidget {
@@ -14,7 +15,22 @@ class Filters extends StatelessWidget {
               SizedBox(height: 80.0),
               Padding(
                 padding: const EdgeInsets.all(16.0),
-                child: OgTab(),
+                child: OgTab(
+                  items: [
+                    OgTabItem(
+                      title: "Sale",
+                      page: Container(),
+                    ),
+                    OgTabItem(
+                      title: "Rent",
+                      page: Container(),
+                    ),
+                    OgTabItem(
+                      title: "Sold",
+                      page: Container(),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),

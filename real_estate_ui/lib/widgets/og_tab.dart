@@ -1,19 +1,43 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:real_estate_ui/models/og_tab_item.dart';
+import 'package:real_estate_ui/utils/constants.dart';
 
 class OgTab extends StatelessWidget {
+  final List<OgTabItem> items;
+  OgTab({this.items});
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: ScreenUtil().setHeight(47.0),
       child: Row(
         children: List.generate(
           3,
           (index) => Expanded(
             child: Container(
+              height: ScreenUtil().setHeight(47.0),
               decoration: BoxDecoration(
+                color: index == 0
+                    ? Color.fromRGBO(230, 236, 254, 1)
+                    : Colors.transparent,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(index == 0 ? 5 : 0),
+                  bottomLeft: Radius.circular(index == 0 ? 5 : 0),
+                  topRight: Radius.circular(index == 2 ? 5 : 0),
+                  bottomRight: Radius.circular(index == 2 ? 5 : 0),
+                ),
                 border: Border.all(
                   color: Color.fromRGBO(216, 227, 255, 1),
+                ),
+              ),
+              child: Center(
+                child: Text(
+                  "Sale",
+                  style: TextStyle(
+                    color: index == 0
+                        ? Constants.primaryColor
+                        : Color.fromRGBO(154, 154, 154, 1),
+                  ),
                 ),
               ),
             ),
