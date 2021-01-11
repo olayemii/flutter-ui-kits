@@ -3,7 +3,7 @@ import 'package:news_ui/pages/notification_content.dart';
 import 'package:news_ui/widgets/primary_button.dart';
 
 class Notifications extends StatelessWidget {
-  bool _hasContents = false;
+  bool _hasContents = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(

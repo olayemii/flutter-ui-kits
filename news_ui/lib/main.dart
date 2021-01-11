@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
           visualDensity: VisualDensity.adaptivePlatformDensity,
           textTheme: GoogleFonts.ptSerifTextTheme(),
         ),
-        initialRoute: "/",
+        initialRoute: "/notifications",
         onGenerateRoute: _onGenerateRoute,
       ),
     );
