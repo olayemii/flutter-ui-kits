@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:real_estate_ui/models/og_tab_item.dart';
+import 'package:real_estate_ui/pages/search_result.dart';
 import 'package:real_estate_ui/utils/constants.dart';
+import 'package:real_estate_ui/utils/helper.dart';
 import 'package:real_estate_ui/widgets/button_group_spaced.dart';
 import 'package:real_estate_ui/widgets/input_widget.dart';
 import 'package:real_estate_ui/widgets/og_tab.dart';
@@ -163,7 +165,9 @@ class Filters extends StatelessWidget {
                     ),
                     PrimaryButton(
                       text: "Apply Filters",
-                      onPressed: () {},
+                      onPressed: () {
+                        Helper.nextScreen(context, SearchResult());
+                      },
                     )
                   ],
                 ),

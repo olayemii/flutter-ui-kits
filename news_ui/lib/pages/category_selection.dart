@@ -1,11 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:news_ui/utils/constants.dart';
 import 'package:news_ui/utils/static_data.dart';
-import 'package:news_ui/widgets/bottom_bar.dart';
-import 'package:news_ui/widgets/nu_appbar.dart';
 
-class CategorySelection extends StatelessWidget {
+class CategorySelection extends StatefulWidget {
+  @override
+  _CategorySelectionState createState() => _CategorySelectionState();
+}
+
+class _CategorySelectionState extends State<CategorySelection> {
   List<int> selectedIndices = [];
+  void selectUnselect(int index) {
+    setState(() {
+      if (selectedIndices.contains(index)) {
+        selectedIndices.remove(index);
+      } else {
+        selectedIndices.add(index);
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -34,22 +47,29 @@ class CategorySelection extends StatelessWidget {
                 crossAxisSpacing: 8.0,
               ),
               itemBuilder: (BuildContext context, int index) {
-                return Container(
-                  decoration: BoxDecoration(
-                    color: Color.fromRGBO(245, 246, 250, 1),
-                    borderRadius: BorderRadius.circular(18.0),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      StaticData.categories[index].icon,
-                      SizedBox(
-                        height: 5.0,
-                      ),
-                      Text(
-                        StaticData.categories[index].title,
-                      )
-                    ],
+                return GestureDetector(
+                  onTap: () {
+                    selectUnselect(index);
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: selectedIndices.contains(index)
+                          ? Constants.primaryColor
+                          : Color.fromRGBO(245, 246, 250, 1),
+                      borderRadius: BorderRadius.circular(18.0),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        StaticData.categories[index].icon,
+                        SizedBox(
+                          height: 5.0,
+                        ),
+                        Text(
+                          StaticData.categories[index].title,
+                        )
+                      ],
+                    ),
                   ),
                 );
               },

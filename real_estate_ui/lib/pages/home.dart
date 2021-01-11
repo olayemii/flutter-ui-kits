@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_screenutil/screenutil.dart';
+import 'package:real_estate_ui/pages/filters.dart';
 import 'package:real_estate_ui/utils/constants.dart';
+import 'package:real_estate_ui/utils/helper.dart';
 import 'package:real_estate_ui/utils/static_data.dart';
+import 'package:real_estate_ui/widgets/bottom_bar.dart';
 import 'package:real_estate_ui/widgets/input_widget.dart';
-import 'package:real_estate_ui/widgets/primary_button.dart';
 import 'package:real_estate_ui/widgets/property_card.dart';
 
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: BottomBar(),
       body: SingleChildScrollView(
         child: SafeArea(
           child: Container(
@@ -61,7 +64,9 @@ class Home extends StatelessWidget {
                     ),
                     FlatButton(
                       height: ScreenUtil().setHeight(44.0),
-                      onPressed: () {},
+                      onPressed: () {
+                        Helper.nextScreen(context, Filters());
+                      },
                       color: Constants.primaryColor,
                       child: Row(
                         children: [
