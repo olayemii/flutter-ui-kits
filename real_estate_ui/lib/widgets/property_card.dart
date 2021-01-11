@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:real_estate_ui/models/property.dart';
 import 'package:real_estate_ui/utils/constants.dart';
 
 class PropertyCard extends StatelessWidget {
+  final Property property;
+  PropertyCard({this.property});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -13,15 +16,62 @@ class PropertyCard extends StatelessWidget {
           Expanded(
             child: ClipRRect(
               borderRadius: BorderRadius.circular(18.0),
-              child: Container(
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    fit: BoxFit.cover,
-                    image: AssetImage(
-                      "assets/images/property-1.png",
+              child: Stack(
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(bottom: 15.0),
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage(
+                          property.imagePath,
+                        ),
+                      ),
                     ),
                   ),
-                ),
+                  Positioned(
+                    top: 10.0,
+                    right: 10.0,
+                    child: InkWell(
+                      onTap: () {},
+                      child: Container(
+                        width: 45.0,
+                        height: 45.0,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.white,
+                        ),
+                        child: Icon(
+                          FlutterIcons.favorite_mdi,
+                          color: Color.fromRGBO(255, 136, 0, 1),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    bottom: -15.0,
+                    left: 10.0,
+                    child: InkWell(
+                      onTap: () {},
+                      child: Container(
+                        width: 45.0,
+                        height: 45.0,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.white,
+                        ),
+                        child: Center(
+                          child: Text(
+                            "Agent",
+                            style: TextStyle(
+                              fontSize: 10.0,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  )
+                ],
               ),
             ),
           ),
@@ -35,14 +85,14 @@ class PropertyCard extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Text(
-                        "Gorgious Appartment #1215",
+                        property.name,
                         style: TextStyle(
                           fontSize: 17.0,
                         ),
                       ),
                     ),
                     Text(
-                      "\$2,800/yr",
+                      property.price,
                       style: TextStyle(
                         fontSize: 17.0,
                         color: Constants.primaryColor,
@@ -54,7 +104,7 @@ class PropertyCard extends StatelessWidget {
                   height: 5.0,
                 ),
                 Text(
-                  "1-4 Beds, 1-2 Baths, 1,852 sqft",
+                  property.description,
                   style: TextStyle(
                     fontSize: 13.0,
                     color: Color(0xFF343434),
@@ -74,7 +124,7 @@ class PropertyCard extends StatelessWidget {
                       width: 5.0,
                     ),
                     Text(
-                      "252 1st Avenue",
+                      property.address,
                       style: TextStyle(
                         fontSize: 13.0,
                         color: Color(0xFF343434),
