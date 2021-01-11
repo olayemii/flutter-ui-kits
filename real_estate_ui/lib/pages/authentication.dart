@@ -7,7 +7,6 @@ class Authentication extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(247, 249, 255, 1),
       body: SingleChildScrollView(
         child: Container(
           child: Column(

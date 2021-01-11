@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         title: 'Flutter Demo',
         theme: ThemeData(
           primaryColor: Constants.primaryColor,
-          scaffoldBackgroundColor: Colors.white,
+          scaffoldBackgroundColor: Color.fromRGBO(247, 249, 255, 1),
           visualDensity: VisualDensity.adaptivePlatformDensity,
           textTheme: GoogleFonts.poppinsTextTheme(),
         ),

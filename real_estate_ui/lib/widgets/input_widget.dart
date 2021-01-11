@@ -14,13 +14,18 @@ class InputWidget extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(8.0),
       ),
-      padding: EdgeInsets.only(right: 16.0),
+      padding: EdgeInsets.only(
+        right: 16.0,
+        left: this.prefixIcon == null ? 16.0 : 0.0,
+      ),
       child: TextFormField(
         decoration: InputDecoration(
-          prefixIcon: Icon(
-            this.prefixIcon,
-            color: Color.fromRGBO(105, 108, 121, 1),
-          ),
+          prefixIcon: this.prefixIcon == null
+              ? null
+              : Icon(
+                  this.prefixIcon,
+                  color: Color.fromRGBO(105, 108, 121, 1),
+                ),
           enabledBorder: InputBorder.none,
           focusedBorder: InputBorder.none,
           border: OutlineInputBorder(

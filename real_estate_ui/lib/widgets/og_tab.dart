@@ -30,7 +30,7 @@ class _OgTabState extends State<OgTab> {
               child: Container(
                 height: ScreenUtil().setHeight(47.0),
                 decoration: BoxDecoration(
-                  color: activeIndex == 0
+                  color: activeIndex == index
                       ? Color.fromRGBO(230, 236, 254, 1)
                       : Colors.transparent,
                   borderRadius: BorderRadius.only(
@@ -47,7 +47,7 @@ class _OgTabState extends State<OgTab> {
                   child: Text(
                     widget.items[index].title,
                     style: TextStyle(
-                      color: activeIndex == 0
+                      color: activeIndex == index
                           ? Constants.primaryColor
                           : Color.fromRGBO(154, 154, 154, 1),
                     ),
