@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:news_ui/utils/static_data.dart';
 import 'package:news_ui/widgets/bottom_bar.dart';
 import 'package:news_ui/widgets/nu_appbar.dart';
@@ -25,6 +26,16 @@ class Home extends StatelessWidget {
                       SizedBox(
                         height: 20.0,
                       ),
+                      Container(
+                        height: ScreenUtil().setHeight(210.0),
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage(
+                              "assets/images/trump.png",
+                            ),
+                          ),
+                        ),
+                      )
                     ],
                   ),
                 ),
