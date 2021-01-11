@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news_ui/utils/constants.dart';
 import 'package:news_ui/utils/static_data.dart';
 import 'package:news_ui/widgets/bottom_bar.dart';
 import 'package:news_ui/widgets/nu_appbar.dart';
@@ -7,7 +8,9 @@ class CategorySelection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomBar(),
+      bottomNavigationBar: BottomBar(
+        activePage: BottomBarPages.CategorySelection,
+      ),
       body: Container(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,

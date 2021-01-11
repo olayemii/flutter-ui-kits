@@ -3,9 +3,12 @@ import 'package:flutter_icons/flutter_icons.dart';
 import 'package:news_ui/utils/constants.dart';
 
 class BottomBar extends StatelessWidget {
+  final BottomBarPages activePage;
+  BottomBar({this.activePage});
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
+      currentIndex: BottomBarPages.values.indexOf(this.activePage),
       showSelectedLabels: false,
       showUnselectedLabels: false,
       unselectedIconTheme: IconThemeData(

@@ -3,6 +3,8 @@ import 'package:news_ui/utils/static_data.dart';
 import 'package:news_ui/widgets/mini_news_card.dart';
 
 class NotificationContent extends StatelessWidget {
+  final Function clear;
+  NotificationContent({this.clear});
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -17,7 +19,7 @@ class NotificationContent extends StatelessWidget {
             children: [
               Text("Today"),
               GestureDetector(
-                onTap: () {},
+                onTap: this.clear,
                 child: Text(
                   "Clear",
                   style: TextStyle(

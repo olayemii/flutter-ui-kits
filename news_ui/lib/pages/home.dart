@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:news_ui/utils/constants.dart';
 import 'package:news_ui/utils/static_data.dart';
 import 'package:news_ui/widgets/bottom_bar.dart';
 import 'package:news_ui/widgets/mini_news_card.dart';
@@ -10,7 +10,9 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomBar(),
+      bottomNavigationBar: BottomBar(
+        activePage: BottomBarPages.Home,
+      ),
       body: Container(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
