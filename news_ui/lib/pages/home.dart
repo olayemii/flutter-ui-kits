@@ -33,7 +33,6 @@ class Home extends StatelessWidget {
                       ),
                       Container(
                         padding: EdgeInsets.all(12.0),
-                        height: ScreenUtil().setHeight(140.0),
                         decoration: BoxDecoration(
                           border: Border.all(
                             color: Color.fromRGBO(233, 233, 233, 1),
@@ -49,7 +48,68 @@ class Home extends StatelessWidget {
                                 border: Border.all(
                                   color: Color.fromRGBO(233, 233, 233, 1),
                                 ),
+                                image: DecorationImage(
+                                  image: AssetImage(
+                                    "assets/images/paris.png",
+                                  ),
+                                ),
                                 borderRadius: BorderRadius.circular(20.0),
+                              ),
+                            ),
+                            SizedBox(
+                              width: 30.0,
+                            ),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.stretch,
+                                children: [
+                                  Text(
+                                    "Who is Paris Hilton Really?",
+                                    maxLines: 2,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 16.0,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 5.0,
+                                  ),
+                                  Text(
+                                    "The heiress and proto-influencer says that she spent nearly two decades playing a character. Now she’s ready to be herself.",
+                                    maxLines: 2,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(
+                                      color: Color.fromRGBO(139, 144, 165, 1),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 5.0,
+                                  ),
+                                  Row(
+                                    children: [
+                                      Text(
+                                        "20 min ago",
+                                        style: TextStyle(
+                                          fontSize: 14.0,
+                                        ),
+                                      ),
+                                      Text(
+                                        " | ",
+                                        style: TextStyle(
+                                          fontSize: 14.0,
+                                        ),
+                                      ),
+                                      Text(
+                                        "Politics",
+                                        style: TextStyle(
+                                          fontSize: 14.0,
+                                          color: Color.fromRGBO(251, 89, 84, 1),
+                                        ),
+                                      ),
+                                    ],
+                                  )
+                                ],
                               ),
                             )
                           ],
