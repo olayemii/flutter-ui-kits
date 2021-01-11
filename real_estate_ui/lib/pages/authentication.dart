@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:real_estate_ui/utils/constants.dart';
+import 'package:real_estate_ui/widgets/auth_tab.dart';
 
 class Authentication extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromRGBO(247, 249, 255, 1),
       body: SingleChildScrollView(
         child: Container(
           child: Column(
@@ -44,7 +46,12 @@ class Authentication extends StatelessWidget {
                     ),
                   )
                 ],
-              )
+              ),
+              AuthTab(),
+              SizedBox(
+                height: 40.0,
+              ),
+              LoginForm(),
             ],
           ),
         ),
