@@ -30,8 +30,13 @@ class Home extends StatelessWidget {
                         ),
                       ),
                       GridView.builder(
-                        gridDelegate: null,
-                        itemBuilder: null,
+                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2),
+                        itemBuilder: (BuildContext context, int index) {
+                          return Container(
+                            color: Colors.red,
+                          );
+                        },
                         itemCount: StaticData.categories.length,
                       )
                     ],
