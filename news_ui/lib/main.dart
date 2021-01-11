@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/screenutil_init.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:news_ui/pages/category_selection.dart';
 import 'package:news_ui/pages/home.dart';
 import 'package:news_ui/pages/notifications.dart';
 import 'package:news_ui/utils/constants.dart';
@@ -35,7 +36,7 @@ Route<dynamic> _onGenerateRoute(RouteSettings settings) {
   switch (settings.name) {
     case "/":
       return MaterialPageRoute(builder: (BuildContext context) {
-        return Home();
+        return CategorySelection();
       });
     case "/notifications":
       return MaterialPageRoute(builder: (BuildContext context) {
