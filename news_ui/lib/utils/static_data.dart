@@ -8,8 +8,22 @@ class StaticData {
       id: 1,
       title: "Most Popular",
       icon: Icon(
-        FlutterIcons.chart_bar_mco,
+        FlutterIcons.trending_up_fea,
       ),
     ),
+    Category(
+      id: 2,
+      title: "World",
+      icon: Icon(
+        FlutterIcons.globe_ent,
+      ),
+    ),
+    Category(
+      id: 3,
+      title: "Science",
+      icon: Icon(
+        FlutterIcons.react_faw5d,
+      ),
+    )
   ];
 }
