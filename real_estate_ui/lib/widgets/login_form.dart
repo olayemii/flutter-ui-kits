@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:real_estate_ui/widgets/input_widget.dart';
 import 'package:real_estate_ui/widgets/primary_button.dart';
 
@@ -55,12 +56,65 @@ class LoginForm extends StatelessWidget {
               height: 15.0,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                  height: ScreenUtil().setHeight(53.0),
-                  width: 150.0,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
+                GestureDetector(
+                  onTap: () {},
+                  child: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 14.0),
+                    height: ScreenUtil().setHeight(53.0),
+                    width: 150.0,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                    ),
+                    child: Row(
+                      children: [
+                        SvgPicture.asset(
+                          "assets/svg/google.svg",
+                          width: 30.0,
+                        ),
+                        SizedBox(
+                          width: 10.0,
+                        ),
+                        Text(
+                          "Google",
+                          style: TextStyle(
+                            color: Color.fromRGBO(105, 108, 121, 1),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: 10.0,
+                ),
+                GestureDetector(
+                  onTap: () {},
+                  child: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 14.0),
+                    height: ScreenUtil().setHeight(53.0),
+                    width: 150.0,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                    ),
+                    child: Row(
+                      children: [
+                        SvgPicture.asset(
+                          "assets/svg/google.svg",
+                          width: 30.0,
+                        ),
+                        SizedBox(
+                          width: 10.0,
+                        ),
+                        Text(
+                          "Google",
+                          style: TextStyle(
+                            color: Color.fromRGBO(105, 108, 121, 1),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 )
               ],
