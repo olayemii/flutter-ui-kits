@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news_ui/utils/static_data.dart';
 import 'package:news_ui/widgets/nu_appbar.dart';
 
 class Home extends StatelessWidget {
@@ -28,6 +29,16 @@ class Home extends StatelessWidget {
                           fontWeight: FontWeight.w600,
                         ),
                       ),
+                      GridView.builder(
+                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2),
+                        itemBuilder: (BuildContext context, int index) {
+                          return Container(
+                            color: Colors.red,
+                          );
+                        },
+                        itemCount: StaticData.categories.length,
+                      )
                     ],
                   ),
                 ),
