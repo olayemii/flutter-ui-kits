@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:real_estate_ui/utils/constants.dart';
 
 class Welcome extends StatelessWidget {
   @override
@@ -13,11 +12,38 @@ class Welcome extends StatelessWidget {
             children: [
               Expanded(
                 child: Container(
-                  color: Constants.primaryColor,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      alignment: Alignment(0, -0.9),
+                      image: AssetImage(
+                        "assets/images/welcome.png",
+                      ),
+                    ),
+                  ),
                 ),
               ),
               Expanded(
-                child: Container(),
+                child: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  child: Column(
+                    children: [
+                      RichText(
+                        text: TextSpan(
+                          children: [
+                            TextSpan(
+                              text: "Discover",
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
               )
             ],
           ),

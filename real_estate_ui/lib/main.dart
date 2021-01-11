@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
           primaryColor: Constants.primaryColor,
           scaffoldBackgroundColor: Colors.white,
           visualDensity: VisualDensity.adaptivePlatformDensity,
-          textTheme: GoogleFonts.ptSerifTextTheme(),
+          textTheme: GoogleFonts.sofiaTextTheme(),
         ),
         initialRoute: "/welcome",
         onGenerateRoute: _onGenerateRoute,
