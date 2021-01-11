@@ -9,45 +9,29 @@ import 'package:news_ui/widgets/single_news_card.dart';
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      bottomNavigationBar: BottomBar(
-        activePage: BottomBarPages.Home,
-      ),
-      body: Container(
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
           mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            NuAppbar(),
-            Expanded(
-              child: SingleChildScrollView(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      SizedBox(
-                        height: 20.0,
-                      ),
-                      SingleNewsCard(),
-                      ListView.separated(
-                        shrinkWrap: true,
-                        physics: NeverScrollableScrollPhysics(),
-                        itemCount: StaticData.news.length,
-                        itemBuilder: (BuildContext context, int index) {
-                          return MiniNewsCard(news: StaticData.news[index]);
-                        },
-                        separatorBuilder: (BuildContext context, int index) {
-                          return SizedBox(
-                            height: 10.0,
-                          );
-                        },
-                      )
-                    ],
-                  ),
-                ),
-              ),
+            SizedBox(
+              height: 20.0,
+            ),
+            SingleNewsCard(),
+            ListView.separated(
+              shrinkWrap: true,
+              physics: NeverScrollableScrollPhysics(),
+              itemCount: StaticData.news.length,
+              itemBuilder: (BuildContext context, int index) {
+                return MiniNewsCard(news: StaticData.news[index]);
+              },
+              separatorBuilder: (BuildContext context, int index) {
+                return SizedBox(
+                  height: 10.0,
+                );
+              },
             )
           ],
         ),

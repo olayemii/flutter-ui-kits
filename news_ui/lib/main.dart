@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:news_ui/pages/category_selection.dart';
 import 'package:news_ui/pages/home.dart';
 import 'package:news_ui/pages/notifications.dart';
+import 'package:news_ui/pages/page_switch.dart';
 import 'package:news_ui/pages/single_news_page.dart';
 import 'package:news_ui/utils/constants.dart';
 
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
           visualDensity: VisualDensity.adaptivePlatformDensity,
           textTheme: GoogleFonts.ptSerifTextTheme(),
         ),
-        initialRoute: "/category-selection",
+        initialRoute: "/",
         onGenerateRoute: _onGenerateRoute,
       ),
     );
@@ -37,11 +38,7 @@ Route<dynamic> _onGenerateRoute(RouteSettings settings) {
   switch (settings.name) {
     case "/":
       return MaterialPageRoute(builder: (BuildContext context) {
-        return Home();
-      });
-    case "/category-selection":
-      return MaterialPageRoute(builder: (BuildContext context) {
-        return CategorySelection();
+        return PageSwitch();
       });
     case "/notifications":
       return MaterialPageRoute(builder: (BuildContext context) {
@@ -57,7 +54,7 @@ Route<dynamic> _onGenerateRoute(RouteSettings settings) {
       });
     default:
       return MaterialPageRoute(builder: (BuildContext context) {
-        return Home();
+        return PageSwitch();
       });
   }
 }
