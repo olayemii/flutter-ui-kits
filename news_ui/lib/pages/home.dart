@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:news_ui/utils/static_data.dart';
 import 'package:news_ui/widgets/bottom_bar.dart';
 import 'package:news_ui/widgets/nu_appbar.dart';
+import 'package:news_ui/widgets/single_news_card.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -26,14 +27,32 @@ class Home extends StatelessWidget {
                       SizedBox(
                         height: 20.0,
                       ),
+                      SingleNewsCard(),
+                      SizedBox(
+                        height: 40.0,
+                      ),
                       Container(
-                        height: ScreenUtil().setHeight(210.0),
+                        padding: EdgeInsets.all(12.0),
+                        height: ScreenUtil().setHeight(140.0),
                         decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage(
-                              "assets/images/trump.png",
-                            ),
+                          border: Border.all(
+                            color: Color.fromRGBO(233, 233, 233, 1),
                           ),
+                          borderRadius: BorderRadius.circular(20.0),
+                        ),
+                        child: Row(
+                          children: [
+                            Container(
+                              height: ScreenUtil().setHeight(125.0),
+                              width: ScreenUtil().setWidth(125.0),
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                  color: Color.fromRGBO(233, 233, 233, 1),
+                                ),
+                                borderRadius: BorderRadius.circular(20.0),
+                              ),
+                            )
+                          ],
                         ),
                       )
                     ],
