@@ -34,9 +34,13 @@ class MyApp extends StatelessWidget {
 
 Route<dynamic> _onGenerateRoute(RouteSettings settings) {
   switch (settings.name) {
-    case "/":
+    case "/category-selection":
       return MaterialPageRoute(builder: (BuildContext context) {
         return CategorySelection();
+      });
+    case "/":
+      return MaterialPageRoute(builder: (BuildContext context) {
+        return Home();
       });
     case "/notifications":
       return MaterialPageRoute(builder: (BuildContext context) {
