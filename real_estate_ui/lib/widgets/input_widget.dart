@@ -5,11 +5,12 @@ import 'package:flutter_screenutil/screenutil.dart';
 class InputWidget extends StatelessWidget {
   final String hintText;
   final IconData prefixIcon;
-  InputWidget({this.hintText, this.prefixIcon});
+  final double height;
+  InputWidget({this.hintText, this.prefixIcon, this.height = 53.0});
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: ScreenUtil().setHeight(53.0),
+      height: ScreenUtil().setHeight(height),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(8.0),
