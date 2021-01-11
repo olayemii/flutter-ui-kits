@@ -36,8 +36,10 @@ class _OgTabState extends State<OgTab> {
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(index == 0 ? 5 : 0),
                     bottomLeft: Radius.circular(index == 0 ? 5 : 0),
-                    topRight: Radius.circular(index == 2 ? 5 : 0),
-                    bottomRight: Radius.circular(index == 2 ? 5 : 0),
+                    topRight: Radius.circular(
+                        index == (this.widget.items.length - 1) ? 5 : 0),
+                    bottomRight: Radius.circular(
+                        index == (this.widget.items.length - 1) ? 5 : 0),
                   ),
                   border: Border.all(
                     color: Color.fromRGBO(216, 227, 255, 1),

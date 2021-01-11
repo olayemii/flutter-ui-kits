@@ -31,8 +31,7 @@ class PrimaryButton extends StatelessWidget {
             this.text,
             style: GoogleFonts.roboto(
               color: Colors.white,
-              fontSize: 18.0,
-              fontWeight: FontWeight.w600,
+              fontSize: 16.0,
             ),
           ),
         ),
