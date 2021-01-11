@@ -37,6 +37,9 @@ class SingleNewsPage extends StatelessWidget {
                     decoration: InputDecoration(
                       border: InputBorder.none,
                       hintText: "Write a comment...",
+                      hintStyle: TextStyle(
+                        color: Color.fromRGBO(186, 186, 186, 1),
+                      ),
                     ),
                   ),
                 ),
