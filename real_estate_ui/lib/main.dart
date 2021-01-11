@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:real_estate_ui/pages/authentication.dart';
 import 'package:real_estate_ui/pages/filters.dart';
 import 'package:real_estate_ui/pages/home.dart';
+import 'package:real_estate_ui/pages/search_result.dart';
 import 'package:real_estate_ui/pages/welcome.dart';
 import 'package:real_estate_ui/utils/constants.dart';
 
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
           visualDensity: VisualDensity.adaptivePlatformDensity,
           textTheme: GoogleFonts.poppinsTextTheme(),
         ),
-        initialRoute: "/",
+        initialRoute: "/authentication",
         onGenerateRoute: _onGenerateRoute,
       ),
     );
@@ -47,6 +48,11 @@ Route<dynamic> _onGenerateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (BuildContext context) {
         return Authentication();
       });
+    case "/search-result":
+      return MaterialPageRoute(builder: (BuildContext context) {
+        return SearchResult();
+      });
+
     case "/filters":
       return MaterialPageRoute(builder: (BuildContext context) {
         return Filters();

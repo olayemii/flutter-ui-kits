@@ -8,6 +8,8 @@ class StaticData {
       price: "\$2,800/yr",
       description: "1-4 Beds, 1-2 Baths, 1,852 sqft",
       address: "252 1st Avenue",
+      propertyTypes: PropertyTypes.AGENCY,
+      liked: false,
     ),
     Property(
       name: "Gorgious Appartment #1215",
@@ -15,6 +17,8 @@ class StaticData {
       price: "\$2,800/yr",
       description: "1-4 Beds, 1-2 Baths, 1,852 sqft",
       address: "252 1st Avenue",
+      propertyTypes: PropertyTypes.PRIVATE,
+      liked: true,
     ),
     Property(
       name: "Gorgious Appartment #1215",
@@ -22,6 +26,8 @@ class StaticData {
       price: "\$2,800/yr",
       description: "1-4 Beds, 1-2 Baths, 1,852 sqft",
       address: "252 1st Avenue",
+      propertyTypes: PropertyTypes.AGENCY,
+      liked: false,
     ),
     Property(
       name: "Gorgious Appartment #1215",
@@ -29,6 +35,8 @@ class StaticData {
       price: "\$2,800/yr",
       description: "1-4 Beds, 1-2 Baths, 1,852 sqft",
       address: "252 1st Avenue",
+      propertyTypes: PropertyTypes.AGENCY,
+      liked: true,
     ),
   ];
 }

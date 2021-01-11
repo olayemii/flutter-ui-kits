@@ -2,11 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_screenutil/screenutil.dart';
 import 'package:news_ui/utils/constants.dart';
-import 'package:news_ui/utils/static_data.dart';
-import 'package:news_ui/widgets/bottom_bar.dart';
-import 'package:news_ui/widgets/mini_news_card.dart';
-import 'package:news_ui/widgets/nu_appbar.dart';
-import 'package:news_ui/widgets/single_news_card.dart';
 import 'package:news_ui/widgets/single_news_header.dart';
 
 class SingleNewsPage extends StatelessWidget {

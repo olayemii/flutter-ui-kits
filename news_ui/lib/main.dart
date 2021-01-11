@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
           visualDensity: VisualDensity.adaptivePlatformDensity,
           textTheme: GoogleFonts.ptSerifTextTheme(),
         ),
-        initialRoute: "/single-news",
+        initialRoute: "/",
         onGenerateRoute: _onGenerateRoute,
       ),
     );
@@ -35,15 +35,19 @@ class MyApp extends StatelessWidget {
 
 Route<dynamic> _onGenerateRoute(RouteSettings settings) {
   switch (settings.name) {
-    case "/category-selection":
-      return MaterialPageRoute(builder: (BuildContext context) {
-        return CategorySelection();
-      });
     case "/":
       return MaterialPageRoute(builder: (BuildContext context) {
         return Home();
       });
+    case "/category-selection":
+      return MaterialPageRoute(builder: (BuildContext context) {
+        return CategorySelection();
+      });
     case "/notifications":
+      return MaterialPageRoute(builder: (BuildContext context) {
+        return Notifications();
+      });
+    case "/search-results":
       return MaterialPageRoute(builder: (BuildContext context) {
         return Notifications();
       });

@@ -14,65 +14,67 @@ class PropertyCard extends StatelessWidget {
       child: Column(
         children: [
           Expanded(
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(18.0),
-              child: Stack(
-                children: [
-                  Container(
-                    margin: EdgeInsets.only(bottom: 15.0),
+            child: Stack(
+              overflow: Overflow.visible,
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(18.0),
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: AssetImage(
+                        property.imagePath,
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  top: 10.0,
+                  right: 10.0,
+                  child: InkWell(
+                    onTap: () {},
+                    child: Container(
+                      width: 45.0,
+                      height: 45.0,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.white,
+                      ),
+                      child: Icon(
+                        FlutterIcons.favorite_mdi,
+                        color: this.property.liked
+                            ? Color.fromRGBO(255, 136, 0, 1)
+                            : Color(0xFFC4C4C4),
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  bottom: -15.0,
+                  left: 10.0,
+                  child: Container(
+                    width: 45.0,
+                    height: 45.0,
                     decoration: BoxDecoration(
-                      image: DecorationImage(
-                        fit: BoxFit.cover,
-                        image: AssetImage(
-                          property.imagePath,
+                      shape: BoxShape.circle,
+                      color: this.property.propertyTypes == PropertyTypes.AGENCY
+                          ? Constants.primaryColor
+                          : Color.fromRGBO(255, 136, 0, 1),
+                    ),
+                    child: Center(
+                      child: Text(
+                        this.property.propertyTypes == PropertyTypes.AGENCY
+                            ? "Agency"
+                            : "Private",
+                        style: TextStyle(
+                          fontSize: 8.0,
+                          color: Colors.white,
                         ),
                       ),
                     ),
                   ),
-                  Positioned(
-                    top: 10.0,
-                    right: 10.0,
-                    child: InkWell(
-                      onTap: () {},
-                      child: Container(
-                        width: 45.0,
-                        height: 45.0,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Colors.white,
-                        ),
-                        child: Icon(
-                          FlutterIcons.favorite_mdi,
-                          color: Color.fromRGBO(255, 136, 0, 1),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    bottom: -15.0,
-                    left: 10.0,
-                    child: InkWell(
-                      onTap: () {},
-                      child: Container(
-                        width: 45.0,
-                        height: 45.0,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Colors.white,
-                        ),
-                        child: Center(
-                          child: Text(
-                            "Agent",
-                            style: TextStyle(
-                              fontSize: 10.0,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  )
-                ],
-              ),
+                )
+              ],
             ),
           ),
           Container(

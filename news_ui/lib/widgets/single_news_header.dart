@@ -20,35 +20,40 @@ class SingleNewsHeader extends StatelessWidget {
           ),
         ],
       ),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.end,
-        children: [
-          Icon(FlutterIcons.chevron_left_fea),
-          Expanded(
-            child: Text(
-              "Jacob Blake: Trump visits Kenosha to back police...",
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: GoogleFonts.ptSans(
-                fontSize: 16.0,
+      child: GestureDetector(
+        onTap: () {
+          Navigator.pop(context);
+        },
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            Icon(FlutterIcons.chevron_left_fea),
+            Expanded(
+              child: Text(
+                "Jacob Blake: Trump visits Kenosha to back police...",
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: GoogleFonts.ptSans(
+                  fontSize: 16.0,
+                ),
               ),
             ),
-          ),
-          SizedBox(
-            width: 40.0,
-          ),
-          Icon(
-            FlutterIcons.bookmark_fea,
-            size: 20.0,
-          ),
-          SizedBox(
-            width: 20.0,
-          ),
-          Icon(
-            FlutterIcons.share_2_fea,
-            size: 20.0,
-          )
-        ],
+            SizedBox(
+              width: 40.0,
+            ),
+            Icon(
+              FlutterIcons.bookmark_fea,
+              size: 20.0,
+            ),
+            SizedBox(
+              width: 20.0,
+            ),
+            Icon(
+              FlutterIcons.share_2_fea,
+              size: 20.0,
+            )
+          ],
+        ),
       ),
     );
   }
