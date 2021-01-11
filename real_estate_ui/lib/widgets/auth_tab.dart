@@ -36,7 +36,7 @@ class AuthTab extends StatelessWidget {
                 ),
               ),
               child: Text(
-                "SIGN UP",
+                "LOGIN",
                 style: TextStyle(
                   color: Constants.blackColor,
                 ),

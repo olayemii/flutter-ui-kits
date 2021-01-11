@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:real_estate_ui/utils/constants.dart';
 import 'package:real_estate_ui/widgets/auth_tab.dart';
+import 'package:real_estate_ui/widgets/login_form.dart';
 
 class Authentication extends StatelessWidget {
   @override
