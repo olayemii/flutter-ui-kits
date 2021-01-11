@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:real_estate_ui/utils/constants.dart';
 
 class Welcome extends StatelessWidget {
   @override
@@ -6,10 +7,19 @@ class Welcome extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 16.0),
+          height: MediaQuery.of(context).size.height,
           child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [],
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Expanded(
+                child: Container(
+                  color: Constants.primaryColor,
+                ),
+              ),
+              Expanded(
+                child: Container(),
+              )
+            ],
           ),
         ),
       ),
