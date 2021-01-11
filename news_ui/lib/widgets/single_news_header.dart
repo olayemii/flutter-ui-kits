@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_screenutil/screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class NuAppbar extends StatelessWidget {
+class SingleNewsHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -25,14 +25,21 @@ class NuAppbar extends StatelessWidget {
         children: [
           Expanded(
             child: Text(
-              "𝕯𝖆𝖎𝖑𝖞 𝕹𝖊𝖜𝖘",
+              "Politics",
               style: GoogleFonts.ptSans(
-                fontSize: 20.0,
+                fontSize: 16.0,
               ),
             ),
           ),
           Icon(
-            FlutterIcons.bell_sli,
+            FlutterIcons.bookmark_fea,
+            size: 20.0,
+          ),
+          SizedBox(
+            width: 20.0,
+          ),
+          Icon(
+            FlutterIcons.share_2_fea,
             size: 20.0,
           )
         ],

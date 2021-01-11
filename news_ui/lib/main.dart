@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:news_ui/pages/category_selection.dart';
 import 'package:news_ui/pages/home.dart';
 import 'package:news_ui/pages/notifications.dart';
+import 'package:news_ui/pages/single_news_page.dart';
 import 'package:news_ui/utils/constants.dart';
 
 void main() {
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
           visualDensity: VisualDensity.adaptivePlatformDensity,
           textTheme: GoogleFonts.ptSerifTextTheme(),
         ),
-        initialRoute: "/notifications",
+        initialRoute: "/single-news",
         onGenerateRoute: _onGenerateRoute,
       ),
     );
@@ -45,6 +46,10 @@ Route<dynamic> _onGenerateRoute(RouteSettings settings) {
     case "/notifications":
       return MaterialPageRoute(builder: (BuildContext context) {
         return Notifications();
+      });
+    case "/single-news":
+      return MaterialPageRoute(builder: (BuildContext context) {
+        return SingleNewsPage();
       });
     default:
       return MaterialPageRoute(builder: (BuildContext context) {

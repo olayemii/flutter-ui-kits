@@ -4,18 +4,18 @@ import 'package:news_ui/widgets/bottom_bar.dart';
 import 'package:news_ui/widgets/mini_news_card.dart';
 import 'package:news_ui/widgets/nu_appbar.dart';
 import 'package:news_ui/widgets/single_news_card.dart';
+import 'package:news_ui/widgets/single_news_header.dart';
 
 class SingleNewsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomBar(),
       body: Container(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           mainAxisSize: MainAxisSize.min,
           children: [
-            NuAppbar(),
+            SingleNewsHeader(),
             Expanded(
               child: SingleChildScrollView(
                 child: Padding(
@@ -25,22 +25,15 @@ class SingleNewsPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       SizedBox(
-                        height: 20.0,
+                        height: 30.0,
                       ),
-                      SingleNewsCard(),
-                      ListView.separated(
-                        shrinkWrap: true,
-                        physics: NeverScrollableScrollPhysics(),
-                        itemCount: StaticData.news.length,
-                        itemBuilder: (BuildContext context, int index) {
-                          return MiniNewsCard(news: StaticData.news[index]);
-                        },
-                        separatorBuilder: (BuildContext context, int index) {
-                          return SizedBox(
-                            height: 10.0,
-                          );
-                        },
-                      )
+                      Text(
+                        "Jacob Blake: Trump visits Kenosha to back police...",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 20.0,
+                        ),
+                      ),
                     ],
                   ),
                 ),
