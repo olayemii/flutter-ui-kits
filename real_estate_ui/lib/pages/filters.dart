@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:real_estate_ui/widgets/og_tab.dart';
 
 class Filters extends StatelessWidget {
   @override
@@ -9,7 +10,13 @@ class Filters extends StatelessWidget {
           height: MediaQuery.of(context).size.height,
           child: Column(
             mainAxisSize: MainAxisSize.max,
-            children: [],
+            children: [
+              SizedBox(height: 80.0),
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: OgTab(),
+              ),
+            ],
           ),
         ),
       ),
