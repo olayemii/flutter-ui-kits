@@ -3,6 +3,9 @@ import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_screenutil/screenutil.dart';
 
 class InputWidget extends StatelessWidget {
+  final String hintText;
+  final IconData prefixIcon;
+  InputWidget({this.hintText, this.prefixIcon});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -15,7 +18,7 @@ class InputWidget extends StatelessWidget {
       child: TextFormField(
         decoration: InputDecoration(
           prefixIcon: Icon(
-            FlutterIcons.mail_ant,
+            this.prefixIcon,
             color: Color.fromRGBO(105, 108, 121, 1),
           ),
           enabledBorder: InputBorder.none,
@@ -25,7 +28,7 @@ class InputWidget extends StatelessWidget {
               color: Colors.transparent,
             ),
           ),
-          hintText: "Email address",
+          hintText: this.hintText,
           hintStyle: TextStyle(
             fontSize: 14.0,
             color: Color.fromRGBO(105, 108, 121, 1),
