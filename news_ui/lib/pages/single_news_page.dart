@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_screenutil/screenutil.dart';
+import 'package:news_ui/utils/constants.dart';
 import 'package:news_ui/utils/static_data.dart';
 import 'package:news_ui/widgets/bottom_bar.dart';
 import 'package:news_ui/widgets/mini_news_card.dart';
@@ -11,6 +13,56 @@ class SingleNewsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: Container(
+        height: ScreenUtil().setHeight(100.0),
+        color: Colors.white,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 18.0),
+          child: Row(
+            children: [
+              Expanded(
+                child: Container(
+                  height: 60.0,
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 16.0,
+                    vertical: 5.0,
+                  ),
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Color.fromRGBO(232, 232, 232, 1),
+                    ),
+                    borderRadius: BorderRadius.circular(16.0),
+                  ),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      hintText: "Write a comment...",
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(
+                width: 10.0,
+              ),
+              Container(
+                width: 65.0,
+                height: 65.0,
+                decoration: BoxDecoration(
+                  color: Constants.primaryColor,
+                  borderRadius: BorderRadius.circular(16.0),
+                ),
+                child: Transform.rotate(
+                  angle: -0.8,
+                  child: Icon(
+                    FlutterIcons.send_mdi,
+                    color: Colors.white,
+                  ),
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
       body: Container(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
