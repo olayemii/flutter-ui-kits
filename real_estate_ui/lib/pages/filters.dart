@@ -19,15 +19,12 @@ class Filters extends StatelessWidget {
                   items: [
                     OgTabItem(
                       title: "Sale",
-                      page: Container(),
                     ),
                     OgTabItem(
                       title: "Rent",
-                      page: Container(),
                     ),
                     OgTabItem(
                       title: "Sold",
-                      page: Container(),
                     ),
                   ],
                 ),
