@@ -101,14 +101,14 @@ class LoginForm extends StatelessWidget {
                     child: Row(
                       children: [
                         SvgPicture.asset(
-                          "assets/svg/google.svg",
+                          "assets/svg/facebook.svg",
                           width: 30.0,
                         ),
                         SizedBox(
                           width: 10.0,
                         ),
                         Text(
-                          "Google",
+                          "Facebook",
                           style: TextStyle(
                             color: Color.fromRGBO(105, 108, 121, 1),
                           ),

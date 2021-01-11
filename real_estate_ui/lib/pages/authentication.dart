@@ -53,6 +53,15 @@ class Authentication extends StatelessWidget {
                 height: 40.0,
               ),
               LoginForm(),
+              SizedBox(
+                height: 20.0,
+              ),
+              FlatButton(
+                onPressed: () {},
+                child: Text(
+                  "Terms & Conditions",
+                ),
+              ),
             ],
           ),
         ),
