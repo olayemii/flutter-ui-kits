@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news_ui/utils/static_data.dart';
 import 'package:news_ui/widgets/nu_appbar.dart';
 
 class Home extends StatelessWidget {
@@ -28,6 +29,11 @@ class Home extends StatelessWidget {
                           fontWeight: FontWeight.w600,
                         ),
                       ),
+                      GridView.builder(
+                        gridDelegate: null,
+                        itemBuilder: null,
+                        itemCount: StaticData.categories.length,
+                      )
                     ],
                   ),
                 ),
