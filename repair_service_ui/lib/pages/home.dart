@@ -15,7 +15,11 @@ class Home extends StatelessWidget {
             ),
             Container(
               height: size.height,
-              decoration: BoxDecoration(),
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage("assets/images/home-bg.png"),
+                ),
+              ),
             )
           ],
         ),
