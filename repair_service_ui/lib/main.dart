@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/screenutil_init.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:repair_service_ui/pages/home.dart';
+import 'package:repair_service_ui/utils/constants.dart';
 
 void main() {
   runApp(MyApp());

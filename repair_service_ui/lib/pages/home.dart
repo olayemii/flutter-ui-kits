@@ -4,9 +4,8 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return SingleChildScrollView(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+    return Scaffold(
+      body: SingleChildScrollView(
         child: Stack(
           children: [
             Column(
@@ -14,9 +13,11 @@ class Home extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
             ),
             Container(
-              height: size.height,
+              height: size.height * 0.8,
               decoration: BoxDecoration(
                 image: DecorationImage(
+                  alignment: Alignment(0, 1),
+                  fit: BoxFit.cover,
                   image: AssetImage("assets/images/home-bg.png"),
                 ),
               ),
