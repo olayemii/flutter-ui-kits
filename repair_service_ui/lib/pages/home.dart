@@ -53,6 +53,9 @@ class Home extends StatelessWidget {
                           ],
                         ),
                       ),
+                      SizedBox(
+                        height: 20.0,
+                      ),
                       LoginForm(),
                     ],
                   ),
