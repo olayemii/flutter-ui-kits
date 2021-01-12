@@ -55,3 +55,7 @@ Our top sponsors will be listed here
 
 ![Language Learning FLutter UI Kit](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/language-2.png)
 
+2. **[News UI Flutter UI Kit](https://github.com/OLayemii/flutter-ui-kits/tree/main/news_ui)**
+
+![News UI Flutter UI Kit](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/news2.jpg)
+
