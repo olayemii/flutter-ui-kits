@@ -8,12 +8,8 @@ class Home extends StatelessWidget {
       body: SingleChildScrollView(
         child: Stack(
           children: [
-            Column(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-            ),
             Container(
-              height: size.height * 0.8,
+              height: size.height * 0.7,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   alignment: Alignment(0, 1),
@@ -21,7 +17,43 @@ class Home extends StatelessWidget {
                   image: AssetImage("assets/images/home-bg.png"),
                 ),
               ),
-            )
+            ),
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 24.0),
+              height: size.height,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    height: 80.0,
+                  ),
+                  RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: "Have some\nproblem with",
+                          style: TextStyle(
+                            height: 1.4,
+                            fontSize: 30.0,
+                            color: Colors.black,
+                          ),
+                        ),
+                        TextSpan(
+                          text: " your Device?",
+                          style: TextStyle(
+                            fontSize: 30.0,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
