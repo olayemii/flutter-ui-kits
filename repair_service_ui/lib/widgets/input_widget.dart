@@ -8,6 +8,7 @@ class InputWidget extends StatelessWidget {
       height: ScreenUtil().setHeight(59.0),
       decoration: BoxDecoration(
         color: Color.fromRGBO(247, 247, 249, 1),
+        borderRadius: BorderRadius.circular(32.0),
       ),
     );
   }
