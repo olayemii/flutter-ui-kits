@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/screenutil_init.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:repair_service_ui/pages/request_service_flow.dart';
 import 'package:repair_service_ui/utils/constants.dart';
 import 'package:repair_service_ui/pages/home.dart';
 
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
           visualDensity: VisualDensity.adaptivePlatformDensity,
           textTheme: GoogleFonts.openSansTextTheme(),
         ),
-        initialRoute: "/authentication",
+        initialRoute: "/repair-flow",
         onGenerateRoute: _onGenerateRoute,
       ),
     );
@@ -35,6 +36,10 @@ Route<dynamic> _onGenerateRoute(RouteSettings settings) {
     case "/":
       return MaterialPageRoute(builder: (BuildContext context) {
         return Home();
+      });
+    case "/repair-flow":
+      return MaterialPageRoute(builder: (BuildContext context) {
+        return RequestServiceFlow();
       });
     default:
       return MaterialPageRoute(builder: (BuildContext context) {
