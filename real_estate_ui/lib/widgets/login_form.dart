@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:real_estate_ui/pages/home.dart';
+import 'package:real_estate_ui/utils/helper.dart';
 import 'package:real_estate_ui/widgets/input_widget.dart';
 import 'package:real_estate_ui/widgets/primary_button.dart';
 
@@ -26,7 +28,9 @@ class LoginForm extends StatelessWidget {
             SizedBox(height: 25.0),
             PrimaryButton(
               text: "Login",
-              onPressed: () {},
+              onPressed: () {
+                Helper.nextScreen(context, Home());
+              },
             ),
             SizedBox(height: 10.0),
             Align(

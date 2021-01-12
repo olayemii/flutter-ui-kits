@@ -2,8 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:real_estate_ui/utils/constants.dart';
 import 'package:real_estate_ui/widgets/auth_tab.dart';
 import 'package:real_estate_ui/widgets/login_form.dart';
+import 'package:real_estate_ui/widgets/register_form.dart';
 
-class Authentication extends StatelessWidget {
+class Authentication extends StatefulWidget {
+  @override
+  _AuthenticationState createState() => _AuthenticationState();
+}
+
+class _AuthenticationState extends State<Authentication> {
+  String active = "login";
+
+  void setActive(String val) {
+    setState(() {
+      active = val;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,11 +61,21 @@ class Authentication extends StatelessWidget {
                   )
                 ],
               ),
-              AuthTab(),
+              AuthTab(
+                active: active,
+                setActive: setActive,
+              ),
               SizedBox(
                 height: 40.0,
               ),
-              LoginForm(),
+              AnimatedCrossFade(
+                firstChild: LoginForm(),
+                secondChild: RegisterForm(),
+                crossFadeState: active == "register"
+                    ? CrossFadeState.showSecond
+                    : CrossFadeState.showFirst,
+                duration: Duration(milliseconds: 300),
+              ),
               SizedBox(
                 height: 20.0,
               ),
