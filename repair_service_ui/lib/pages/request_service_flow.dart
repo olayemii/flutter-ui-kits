@@ -15,61 +15,72 @@ class RequestServiceFlow extends StatelessWidget {
       ),
       backgroundColor: Constants.primaryColor,
       body: SingleChildScrollView(
-        child: Stack(
-          children: [
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 24.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Align(
-                    alignment: Alignment.centerRight,
-                    child: CircleAvatar(
-                      backgroundImage: AssetImage("assets/images/dp.png"),
+        child: Container(
+          height: size.height,
+          child: Stack(
+            children: [
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 24.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: CircleAvatar(
+                        backgroundImage: AssetImage("assets/images/dp.png"),
+                      ),
                     ),
-                  ),
-                  Row(
-                    children: List.generate(
-                      3,
-                      (index) => Container(
-                        width: ScreenUtil().setWidth(9.0),
-                        height: ScreenUtil().setHeight(9.0),
-                        margin: EdgeInsets.only(right: 10.0),
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color:
-                              Colors.white.withOpacity(index == 0 ? 1 : 0.56),
+                    Row(
+                      children: List.generate(
+                        3,
+                        (index) => Container(
+                          width: ScreenUtil().setWidth(9.0),
+                          height: ScreenUtil().setHeight(9.0),
+                          margin: EdgeInsets.only(right: 10.0),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color:
+                                Colors.white.withOpacity(index == 0 ? 1 : 0.56),
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 20.0,
-                  ),
-                  Text(
-                    "Hii, Uigiant",
-                    style: TextStyle(
-                      color: Colors.white.withOpacity(0.77),
-                      fontSize: 22.0,
+                    SizedBox(
+                      height: 20.0,
                     ),
-                  ),
-                  SizedBox(
-                    height: 10.0,
-                  ),
-                  Text(
-                    "Choose your\ndevice",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 35.0,
-                      fontWeight: FontWeight.w600,
-                      height: 1.2,
+                    Text(
+                      "Hii, Uigiant",
+                      style: TextStyle(
+                        color: Colors.white.withOpacity(0.77),
+                        fontSize: 22.0,
+                      ),
                     ),
-                  )
-                ],
+                    SizedBox(
+                      height: 10.0,
+                    ),
+                    Text(
+                      "Choose your\ndevice",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 35.0,
+                        fontWeight: FontWeight.w600,
+                        height: 1.2,
+                      ),
+                    )
+                  ],
+                ),
               ),
-            ),
-          ],
+              Positioned(
+                bottom: 0.0,
+                width: size.width,
+                child: Container(
+                  height: size.height * 0.7,
+                  color: Colors.white,
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
