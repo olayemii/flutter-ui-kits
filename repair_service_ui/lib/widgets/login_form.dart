@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:repair_service_ui/widgets/input_widget.dart';
 
-class InputForm extends StatelessWidget {
+class LoginForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      child: Column(
+        children: [
+          InputWidget(),
+        ],
+      ),
+    );
   }
 }

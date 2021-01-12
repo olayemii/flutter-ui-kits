@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:repair_service_ui/widgets/login_form.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -51,6 +52,7 @@ class Home extends StatelessWidget {
                       ],
                     ),
                   ),
+                  LoginForm(),
                 ],
               ),
             ),
