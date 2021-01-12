@@ -3,23 +3,30 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class InputWidget extends StatelessWidget {
   final String hintText;
-  final IconData prefixIcon;
+  final IconData suffixIcon;
+  final bool obscureText;
 
-  InputWidget({this.prefixIcon, this.hintText});
+  InputWidget({this.suffixIcon, this.hintText, this.obscureText = false});
   @override
   Widget build(BuildContext context) {
     return Container(
+      alignment: Alignment.centerLeft,
       height: ScreenUtil().setHeight(59.0),
       decoration: BoxDecoration(
         color: Color.fromRGBO(247, 247, 249, 1),
         borderRadius: BorderRadius.circular(32.0),
       ),
+      padding: EdgeInsets.only(
+        right: 24.0,
+        left: 24.0,
+      ),
       child: TextFormField(
+        obscureText: this.obscureText,
         decoration: InputDecoration(
-          prefixIcon: this.prefixIcon == null
+          suffixIcon: this.suffixIcon == null
               ? null
               : Icon(
-                  this.prefixIcon,
+                  this.suffixIcon,
                   color: Color.fromRGBO(105, 108, 121, 1),
                 ),
           enabledBorder: InputBorder.none,
@@ -32,7 +39,8 @@ class InputWidget extends StatelessWidget {
           hintText: this.hintText,
           hintStyle: TextStyle(
             fontSize: 14.0,
-            color: Color.fromRGBO(105, 108, 121, 1),
+            color: Color.fromRGBO(124, 124, 124, 1),
+            fontWeight: FontWeight.w600,
           ),
         ),
       ),
