@@ -1,3 +1,4 @@
+import 'package:airbnb_redesign_ui/widgets/page_indicator.dart';
 import 'package:flutter/material.dart';
 
 class HomePageOne extends StatelessWidget {
@@ -34,6 +35,10 @@ class HomePageOne extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
+                SizedBox(
+                  height: 10.0,
+                ),
+                PageIndicator(),
               ],
             ),
           ),
