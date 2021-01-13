@@ -9,6 +9,33 @@ class RequestServiceFlow extends StatelessWidget {
     backgroundColor: Colors.transparent,
     automaticallyImplyLeading: false,
   );
+  final List options = [
+    [
+      {
+        "name": "Mobile",
+        "icon": "assets/svg/mobile.svg",
+        "key": "mobile",
+      },
+      {
+        "name": "Tablet",
+        "icon": "assets/svg/tablet.svg",
+        "key": "tablet",
+      },
+    ],
+    // Second
+    [
+      {
+        "name": "Mobile",
+        "icon": "assets/svg/mobile.svg",
+        "key": "mobile",
+      },
+      {
+        "name": "Tablet",
+        "icon": "assets/svg/tablet.svg",
+        "key": "tablet",
+      },
+    ],
+  ];
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
