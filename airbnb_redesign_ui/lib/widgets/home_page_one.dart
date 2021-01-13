@@ -1,5 +1,8 @@
+import 'package:airbnb_redesign_ui/utils/constants.dart';
 import 'package:airbnb_redesign_ui/widgets/page_indicator.dart';
+import 'package:airbnb_redesign_ui/widgets/primary_button.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomePageOne extends StatelessWidget {
   @override
@@ -22,7 +25,7 @@ class HomePageOne extends StatelessWidget {
             ),
           ),
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 24.0),
+            padding: EdgeInsets.symmetric(horizontal: 24.0, vertical: 20.0),
             constraints: BoxConstraints(minHeight: _size.height * 0.4),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -30,15 +33,49 @@ class HomePageOne extends StatelessWidget {
                 Text(
                   "Let’s find Peace with Comfort.",
                   style: TextStyle(
-                    fontSize: 28.0,
+                    fontSize: 26.0,
+                    height: 1.5,
                     color: Color.fromRGBO(33, 45, 82, 1),
                     fontWeight: FontWeight.w600,
                   ),
                 ),
                 SizedBox(
-                  height: 10.0,
+                  height: 15.0,
                 ),
                 PageIndicator(),
+                SizedBox(
+                  height: 50.0,
+                ),
+                PrimaryButton(
+                  text: "Get Started",
+                  onPressed: () {},
+                ),
+                Center(
+                  child: Wrap(
+                    runAlignment: WrapAlignment.center,
+                    crossAxisAlignment: WrapCrossAlignment.center,
+                    children: [
+                      Text(
+                        "Already have account?",
+                        style: GoogleFonts.inter(
+                          fontSize: 14.0,
+                          color: Color.fromRGBO(64, 74, 106, 1),
+                        ),
+                      ),
+                      FlatButton(
+                        onPressed: () {},
+                        child: Text(
+                          "Log In",
+                          style: TextStyle(
+                            fontSize: 14.0,
+                            color: Constants.primaryColor,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                )
               ],
             ),
           ),
