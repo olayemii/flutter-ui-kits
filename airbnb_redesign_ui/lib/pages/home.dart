@@ -1,15 +1,17 @@
+import 'package:airbnb_redesign_ui/widgets/home_page_one.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(1, 1, 1, 1),
       body: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 16.0),
           child: Column(
             mainAxisSize: MainAxisSize.min,
+            children: [
+              HomePageOne(),
+            ],
           ),
         ),
       ),
