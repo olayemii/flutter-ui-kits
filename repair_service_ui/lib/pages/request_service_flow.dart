@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_screenutil/screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:repair_service_ui/utils/constants.dart';
@@ -11,13 +12,6 @@ class RequestServiceFlow extends StatefulWidget {
 }
 
 class _RequestServiceFlowState extends State<RequestServiceFlow> {
-  final PreferredSizeWidget appBar = AppBar(
-    brightness: Brightness.dark,
-    elevation: 0.0,
-    backgroundColor: Colors.transparent,
-    automaticallyImplyLeading: false,
-  );
-
   int current = 0;
 
   void nextPage() {
@@ -42,7 +36,23 @@ class _RequestServiceFlowState extends State<RequestServiceFlow> {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      appBar: appBar,
+      appBar: AppBar(
+        brightness: Brightness.dark,
+        elevation: 0.0,
+        backgroundColor: Colors.transparent,
+        // automaticallyImplyLeading: false,
+        leading: current > 0
+            ? GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pop();
+                },
+                child: Icon(FlutterIcons.arrow_left_ent),
+              )
+            : null,
+        iconTheme: IconThemeData(
+          color: Colors.red,
+        ),
+      ),
       backgroundColor: current == 0 ? Constants.primaryColor : Colors.white,
       body: AnimatedSwitcher(
         duration: Duration(milliseconds: 300),

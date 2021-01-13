@@ -150,15 +150,18 @@ Widget serviceCard(Map item, String active, Function setActive) {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            SvgPicture.asset(
-              item["icon"],
-              color: isActive ? Colors.white : null,
+            Align(
+              alignment: Alignment.centerLeft,
+              child: SvgPicture.asset(
+                item["icon"],
+                color: isActive ? Colors.white : null,
+              ),
             ),
             Text(
               item["name"],
               style: TextStyle(
                   fontWeight: FontWeight.w500,
-                  fontSize: 16.0,
+                  fontSize: 14.0,
                   color: isActive
                       ? Colors.white
                       : Color.fromRGBO(20, 20, 20, 0.96)),
