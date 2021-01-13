@@ -103,6 +103,7 @@ Widget serviceCard(Map item, String active, Function setActive) {
         setActive(item["key"]);
       },
       child: AnimatedContainer(
+        margin: EdgeInsets.only(bottom: 15.0),
         duration: Duration(milliseconds: 300),
         decoration: BoxDecoration(
           color: isActive ? Colors.black : Constants.greyColor,
@@ -120,26 +121,33 @@ Widget serviceCard(Map item, String active, Function setActive) {
                 color: isActive ? Colors.white : null,
               ),
             ),
-            Text(
-              item["name"],
-              style: TextStyle(
-                fontWeight: FontWeight.w500,
-                fontSize: 14.0,
-                color:
-                    isActive ? Colors.white : Color.fromRGBO(20, 20, 20, 0.96),
-              ),
-            ),
-            SizedBox(
-              height: 5.0,
-            ),
-            Text(
-              item["description"],
-              style: TextStyle(
-                fontWeight: FontWeight.w500,
-                fontSize: 12.0,
-                color:
-                    isActive ? Colors.white : Color.fromRGBO(20, 20, 20, 0.96),
-              ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  item["name"],
+                  style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 20.0,
+                    color: isActive
+                        ? Colors.white
+                        : Color.fromRGBO(20, 20, 20, 0.96),
+                  ),
+                ),
+                SizedBox(
+                  height: 5.0,
+                ),
+                Text(
+                  item["description"],
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 12.0,
+                    color: isActive
+                        ? Colors.white
+                        : Color.fromRGBO(20, 20, 20, 0.96),
+                  ),
+                )
+              ],
             )
           ],
         ),
