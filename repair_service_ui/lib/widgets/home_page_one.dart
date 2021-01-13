@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:repair_service_ui/utils/constants.dart';
+import 'package:repair_service_ui/widgets/page_indicator.dart';
 
 class HomePageOne extends StatefulWidget {
   final Function nextPage;
@@ -87,21 +88,7 @@ class _HomePageOneState extends State<HomePageOne> {
                         backgroundImage: AssetImage("assets/images/dp.png"),
                       ),
                     ),
-                    Row(
-                      children: List.generate(
-                        3,
-                        (index) => Container(
-                          width: ScreenUtil().setWidth(9.0),
-                          height: ScreenUtil().setHeight(9.0),
-                          margin: EdgeInsets.only(right: 10.0),
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color:
-                                Colors.white.withOpacity(index == 0 ? 1 : 0.56),
-                          ),
-                        ),
-                      ),
-                    ),
+                    PageIndicator(activePage: 1),
                     SizedBox(
                       height: 20.0,
                     ),

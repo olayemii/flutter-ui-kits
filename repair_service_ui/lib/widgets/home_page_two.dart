@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:repair_service_ui/utils/constants.dart';
+import 'package:repair_service_ui/widgets/page_indicator.dart';
 
 class HomePageTwo extends StatefulWidget {
   final Function nextPage;
@@ -69,103 +70,41 @@ class _HomePageTwoState extends State<HomePageTwo> {
     double heightFromWhiteBg =
         size.height - 200.0 - Scaffold.of(context).appBarMaxHeight;
     return Container(
-      height: size.height - kToolbarHeight,
-      child: Stack(
+      width: size.width,
+      padding: EdgeInsets.symmetric(horizontal: 24.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        mainAxisSize: MainAxisSize.min,
         children: [
-          Container(
-            height: 200.0,
-            padding: EdgeInsets.symmetric(horizontal: 24.0),
-            child: FittedBox(
-              child: Container(
-                width: size.width,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Align(
-                      alignment: Alignment.centerRight,
-                      child: CircleAvatar(
-                        backgroundImage: AssetImage("assets/images/dp.png"),
-                      ),
-                    ),
-                    Row(
-                      children: List.generate(
-                        3,
-                        (index) => Container(
-                          width: ScreenUtil().setWidth(9.0),
-                          height: ScreenUtil().setHeight(9.0),
-                          margin: EdgeInsets.only(right: 10.0),
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color:
-                                Colors.white.withOpacity(index == 0 ? 1 : 0.56),
-                          ),
+          PageIndicator(
+            activePage: 2,
+            darkMode: false,
+          ),
+          Text(
+            "What’s happening with your laptop ? ",
+            style: TextStyle(
+              color: Constants.primaryColor,
+              fontSize: 28.0,
+              fontWeight: FontWeight.w600,
+              height: 1.2,
+            ),
+          ),
+          Expanded(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: List.generate(
+                3,
+                (index) => Expanded(
+                  child: Container(
+                    margin: EdgeInsets.only(bottom: index == 2 ? 0 : 10.0),
+                    child: Row(
+                      children: [
+                        serviceCard(options[index][0], active, setActiveFunc),
+                        SizedBox(
+                          width: 10.0,
                         ),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 20.0,
-                    ),
-                    Text(
-                      "Hii, Uigiant",
-                      style: TextStyle(
-                        color: Colors.white.withOpacity(0.77),
-                        fontSize: 22.0,
-                      ),
-                    ),
-                    SizedBox(
-                      height: 10.0,
-                    ),
-                    Text(
-                      "Choose your\ndevice",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 35.0,
-                        fontWeight: FontWeight.w600,
-                        height: 1.2,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
-          Positioned(
-            top: 200.0,
-            width: size.width,
-            child: Container(
-              height: heightFromWhiteBg,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(40.0),
-                  topRight: Radius.circular(40.0),
-                ),
-              ),
-            ),
-          ),
-          Positioned(
-            top: 200.0,
-            height: heightFromWhiteBg,
-            width: size.width,
-            child: Container(
-              padding: EdgeInsets.all(20.0),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: List.generate(
-                  3,
-                  (index) => Expanded(
-                    child: Container(
-                      margin: EdgeInsets.only(bottom: index == 2 ? 0 : 10.0),
-                      child: Row(
-                        children: [
-                          serviceCard(options[index][0], active, setActiveFunc),
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          serviceCard(options[index][1], active, setActiveFunc),
-                        ],
-                      ),
+                        serviceCard(options[index][1], active, setActiveFunc),
+                      ],
                     ),
                   ),
                 ),
