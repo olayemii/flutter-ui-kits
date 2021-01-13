@@ -1,4 +1,5 @@
 import 'package:airbnb_redesign_ui/widgets/home_page_one.dart';
+import 'package:airbnb_redesign_ui/widgets/home_page_two.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -10,7 +11,7 @@ class Home extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              HomePageOne(),
+              HomePageTwo(),
             ],
           ),
         ),
