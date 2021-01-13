@@ -18,7 +18,7 @@ class HomePageTwo extends StatelessWidget {
                 image: DecorationImage(
                   fit: BoxFit.fill,
                   image: AssetImage(
-                    "assets/images/page1.png",
+                    "assets/images/page2.png",
                   ),
                 ),
               ),
