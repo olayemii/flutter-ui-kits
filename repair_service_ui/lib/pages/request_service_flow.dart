@@ -3,19 +3,22 @@ import 'package:flutter_screenutil/screenutil.dart';
 import 'package:repair_service_ui/utils/constants.dart';
 
 class RequestServiceFlow extends StatelessWidget {
+  final PreferredSizeWidget appBar = AppBar(
+    brightness: Brightness.dark,
+    elevation: 0.0,
+    backgroundColor: Colors.transparent,
+    automaticallyImplyLeading: false,
+  );
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    double heightFromWhiteBg =
+        size.height - 200.0 - appBar.preferredSize.height;
     return Scaffold(
-      appBar: AppBar(
-        brightness: Brightness.dark,
-        elevation: 0.0,
-        backgroundColor: Colors.transparent,
-        automaticallyImplyLeading: false,
-      ),
+      appBar: appBar,
       backgroundColor: Constants.primaryColor,
       body: Container(
-        height: size.height,
+        height: size.height - kToolbarHeight,
         child: Stack(
           children: [
             Container(
@@ -80,7 +83,7 @@ class RequestServiceFlow extends StatelessWidget {
               top: 200.0,
               width: size.width,
               child: Container(
-                height: size.height - 200.0,
+                height: heightFromWhiteBg,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
@@ -91,9 +94,11 @@ class RequestServiceFlow extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 200.0,
+              top: 180.0,
+              height: size.height - 200.0 - kToolbarHeight,
               width: size.width,
               child: Container(
+                color: Colors.green,
                 height: size.height - 200.0,
                 // child: GridView.builder(
                 //   physics: NeverScrollableScrollPhysics(),
@@ -111,36 +116,32 @@ class RequestServiceFlow extends StatelessWidget {
                 //   },
                 //   itemCount: 6,
                 // ),
-                child: Container(
-                  padding: EdgeInsets.all(20.0),
-                  width: size.width,
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: List.generate(
-                      3,
-                      (index) => Expanded(
-                        child: Container(
-                          child: Row(
-                            children: [
-                              Expanded(
-                                child: Container(
-                                  color: [
-                                    Colors.amber,
-                                    Colors.green,
-                                    Colors.red
-                                  ][index],
-                                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: List.generate(
+                    3,
+                    (index) => Expanded(
+                      child: Container(
+                        child: Row(
+                          children: [
+                            Expanded(
+                              child: Container(
+                                color: [
+                                  Colors.amber,
+                                  Colors.green,
+                                  Colors.red
+                                ][index],
                               ),
-                              SizedBox(
-                                width: 5.0,
+                            ),
+                            SizedBox(
+                              width: 5.0,
+                            ),
+                            Expanded(
+                              child: Container(
+                                color: Colors.amber,
                               ),
-                              Expanded(
-                                child: Container(
-                                  color: Colors.amber,
-                                ),
-                              )
-                            ],
-                          ),
+                            )
+                          ],
                         ),
                       ),
                     ),
