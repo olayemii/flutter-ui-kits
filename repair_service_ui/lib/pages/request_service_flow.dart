@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:repair_service_ui/utils/constants.dart';
 import 'package:repair_service_ui/widgets/home_page_one.dart';
+import 'package:repair_service_ui/widgets/home_page_two.dart';
 
 class RequestServiceFlow extends StatefulWidget {
   @override
@@ -27,6 +28,7 @@ class _RequestServiceFlowState extends State<RequestServiceFlow> {
       body: PageView(
         children: [
           HomePageOne(),
+          HomePageTwo(),
         ],
       ),
     );
