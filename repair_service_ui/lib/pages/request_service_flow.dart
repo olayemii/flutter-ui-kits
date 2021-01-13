@@ -44,7 +44,7 @@ class _RequestServiceFlowState extends State<RequestServiceFlow> {
         leading: current > 0
             ? GestureDetector(
                 onTap: () {
-                  Navigator.of(context).pop();
+                  this.prevPage();
                 },
                 child: Icon(FlutterIcons.arrow_left_ent),
               )

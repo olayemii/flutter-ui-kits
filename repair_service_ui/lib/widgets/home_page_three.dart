@@ -6,17 +6,17 @@ import 'package:repair_service_ui/utils/constants.dart';
 import 'package:repair_service_ui/widgets/input_widget.dart';
 import 'package:repair_service_ui/widgets/page_indicator.dart';
 
-class HomePageTwo extends StatefulWidget {
+class HomePageThree extends StatefulWidget {
   final Function nextPage;
   final Function prevPage;
 
-  HomePageTwo({this.nextPage, this.prevPage});
+  HomePageThree({this.nextPage, this.prevPage});
 
   @override
-  _HomePageTwoState createState() => _HomePageTwoState();
+  _HomePageThreeState createState() => _HomePageThreeState();
 }
 
-class _HomePageTwoState extends State<HomePageTwo> {
+class _HomePageThreeState extends State<HomePageThree> {
   final List options = [
     [
       {
