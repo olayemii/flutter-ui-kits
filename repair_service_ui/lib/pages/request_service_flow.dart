@@ -1,14 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:repair_service_ui/utils/constants.dart';
 
-class RequestServiceFlow extends StatelessWidget {
+class RequestServiceFlow extends StatefulWidget {
+  @override
+  _RequestServiceFlowState createState() => _RequestServiceFlowState();
+}
+
+class _RequestServiceFlowState extends State<RequestServiceFlow> {
   final PreferredSizeWidget appBar = AppBar(
     brightness: Brightness.dark,
     elevation: 0.0,
     backgroundColor: Colors.transparent,
     automaticallyImplyLeading: false,
   );
+
   final List options = [
     [
       {
@@ -49,7 +56,15 @@ class RequestServiceFlow extends StatelessWidget {
       },
     ],
   ];
+
   String active = "";
+
+  void setActiveFunc(String key) {
+    setState(() {
+      active = key;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -154,25 +169,13 @@ class RequestServiceFlow extends StatelessWidget {
                               EdgeInsets.only(bottom: index == 2 ? 0 : 10.0),
                           child: Row(
                             children: [
-                              Expanded(
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    color: Constants.greyColor,
-                                    borderRadius: BorderRadius.circular(12.0),
-                                  ),
-                                ),
-                              ),
+                              serviceCard(
+                                  options[index][0], false, setActiveFunc),
                               SizedBox(
                                 width: 10.0,
                               ),
-                              Expanded(
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    color: Constants.greyColor,
-                                    borderRadius: BorderRadius.circular(12.0),
-                                  ),
-                                ),
-                              )
+                              serviceCard(
+                                  options[index][1], false, setActiveFunc),
                             ],
                           ),
                         ),
@@ -189,12 +192,40 @@ class RequestServiceFlow extends StatelessWidget {
   }
 }
 
-Widget serviceCard(Map item, bool isActive) {
+Widget serviceCard(Map item, bool isActive, Function setActive) {
   return Expanded(
-    child: Container(
-      decoration: BoxDecoration(
-        color: Constants.greyColor,
-        borderRadius: BorderRadius.circular(12.0),
+    child: GestureDetector(
+      onTap: () {
+        setActive(item["key"]);
+      },
+      child: AnimatedContainer(
+        duration: Duration(milliseconds: 300),
+        decoration: BoxDecoration(
+          color: isActive ? Colors.black : Constants.greyColor,
+          borderRadius: BorderRadius.circular(12.0),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SvgPicture.asset(
+              item["icon"],
+              color: isActive ? Colors.white : null,
+            ),
+            SizedBox(
+              height: 5.0,
+            ),
+            Text(
+              item["name"],
+              style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  fontSize: 16.0,
+                  color: isActive
+                      ? Colors.white
+                      : Color.fromRGBO(20, 20, 20, 0.96)),
+            )
+          ],
+        ),
       ),
     ),
   );
