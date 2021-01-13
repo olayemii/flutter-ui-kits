@@ -18,44 +18,24 @@ class HomePageThree extends StatefulWidget {
 
 class _HomePageThreeState extends State<HomePageThree> {
   final List options = [
-    [
-      {
-        "name": "Startup or Power",
-        "icon": "assets/svg/power.svg",
-        "key": "power",
-      },
-      {
-        "name": "Hardware Issues",
-        "icon": "assets/svg/hardware.svg",
-        "key": "hardware",
-      },
-    ],
-    // Second
-    [
-      {
-        "name": "Battery & Charging",
-        "icon": "assets/svg/charging.svg",
-        "key": "charging",
-      },
-      {
-        "name": "Internet & Connectivity",
-        "icon": "assets/svg/internet.svg",
-        "key": "internet",
-      },
-    ],
-    // Third
-    [
-      {
-        "name": "Software & Usage",
-        "icon": "assets/svg/software.svg",
-        "key": "software",
-      },
-      {
-        "name": "Mail",
-        "icon": "assets/svg/mail.svg",
-        "key": "mail",
-      },
-    ],
+    {
+      "name": "Talk to Support Now",
+      "icon": "assets/svg/phone.svg",
+      "key": "phone",
+      "description": "Provide your phone number and we will call you"
+    },
+    {
+      "name": "Chat",
+      "icon": "assets/svg/chat.svg",
+      "key": "chat",
+      "description": "Start a chat session with us",
+    },
+    {
+      "name": "Bring in for repair",
+      "icon": "assets/svg/repair.svg",
+      "key": "repair",
+      "description": "Find an authorized service provider",
+    },
   ];
 
   String active = "";
@@ -87,7 +67,7 @@ class _HomePageThreeState extends State<HomePageThree> {
             height: 20.0,
           ),
           Text(
-            "What’s happening with your laptop ? ",
+            "How would you like to get help?",
             style: TextStyle(
               color: Constants.primaryColor,
               fontSize: 28.0,
@@ -98,32 +78,14 @@ class _HomePageThreeState extends State<HomePageThree> {
           SizedBox(
             height: 10.0,
           ),
-          InputWidget(
-            hintText: "Search the problem",
-            suffixIcon: FlutterIcons.search1_ant,
-          ),
           Expanded(
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 24.0),
               child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: List.generate(
-                  3,
-                  (index) => Expanded(
-                    child: Container(
-                      margin: EdgeInsets.only(bottom: index == 2 ? 0 : 10.0),
-                      child: Row(
-                        children: [
-                          serviceCard(options[index][0], active, setActiveFunc),
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          serviceCard(options[index][1], active, setActiveFunc),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
+                children: options.map((e) {
+                  int index = options.indexOf(e);
+                  return serviceCard(options[index], active, setActiveFunc);
+                }).toList(),
               ),
             ),
           ),
@@ -161,11 +123,23 @@ Widget serviceCard(Map item, String active, Function setActive) {
             Text(
               item["name"],
               style: TextStyle(
-                  fontWeight: FontWeight.w500,
-                  fontSize: 14.0,
-                  color: isActive
-                      ? Colors.white
-                      : Color.fromRGBO(20, 20, 20, 0.96)),
+                fontWeight: FontWeight.w500,
+                fontSize: 14.0,
+                color:
+                    isActive ? Colors.white : Color.fromRGBO(20, 20, 20, 0.96),
+              ),
+            ),
+            SizedBox(
+              height: 5.0,
+            ),
+            Text(
+              item["description"],
+              style: TextStyle(
+                fontWeight: FontWeight.w500,
+                fontSize: 12.0,
+                color:
+                    isActive ? Colors.white : Color.fromRGBO(20, 20, 20, 0.96),
+              ),
             )
           ],
         ),
