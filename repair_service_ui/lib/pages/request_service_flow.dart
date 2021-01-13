@@ -21,15 +21,31 @@ class _RequestServiceFlowState extends State<RequestServiceFlow> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    int current = 0;
+
+    void nextPage() {
+      setState(() {
+        current += 1;
+      });
+    }
+
+    void prevPage() {
+      setState(() {
+        current -= 1;
+      });
+    }
+
+    List<Widget> pages = [
+      HomePageOne(nextPage: nextPage, prevPage: prevPage),
+      HomePageTwo(nextPage: nextPage, prevPage: prevPage),
+    ];
 
     return Scaffold(
       appBar: appBar,
       backgroundColor: Constants.primaryColor,
-      body: PageView(
-        children: [
-          HomePageOne(),
-          HomePageTwo(),
-        ],
+      body: AnimatedSwitcher(
+        duration: Duration(milliseconds: 300),
+        child: pages[current],
       ),
     );
   }
