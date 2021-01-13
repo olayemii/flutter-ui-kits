@@ -115,11 +115,7 @@ class RequestServiceFlow extends StatelessWidget {
                             children: [
                               Expanded(
                                 child: Container(
-                                  color: [
-                                    Colors.amber,
-                                    Colors.green,
-                                    Colors.red
-                                  ][index],
+                                  color: Constants.greyColor,
                                 ),
                               ),
                               SizedBox(
