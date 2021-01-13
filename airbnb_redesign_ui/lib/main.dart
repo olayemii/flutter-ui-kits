@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
           primaryColor: Constants.primaryColor,
           scaffoldBackgroundColor: Color.fromRGBO(255, 255, 255, 1),
           visualDensity: VisualDensity.adaptivePlatformDensity,
-          textTheme: GoogleFonts.openSansTextTheme(),
+          textTheme: GoogleFonts.playfairDisplayTextTheme(),
         ),
         initialRoute: "/",
         onGenerateRoute: _onGenerateRoute,
