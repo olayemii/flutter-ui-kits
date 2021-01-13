@@ -4,6 +4,11 @@ import 'package:flutter_svg/svg.dart';
 import 'package:repair_service_ui/utils/constants.dart';
 
 class HomePageTwo extends StatefulWidget {
+  final Function nextPage;
+  final Function prevPage;
+
+  HomePageTwo({this.nextPage, this.prevPage});
+
   @override
   _HomePageTwoState createState() => _HomePageTwoState();
 }

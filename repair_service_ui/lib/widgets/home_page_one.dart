@@ -4,6 +4,10 @@ import 'package:flutter_svg/svg.dart';
 import 'package:repair_service_ui/utils/constants.dart';
 
 class HomePageOne extends StatefulWidget {
+  final Function nextPage;
+  final Function prevPage;
+
+  HomePageOne({this.nextPage, this.prevPage});
   @override
   _HomePageOneState createState() => _HomePageOneState();
 }
@@ -154,11 +158,13 @@ class _HomePageOneState extends State<HomePageOne> {
                       margin: EdgeInsets.only(bottom: index == 2 ? 0 : 10.0),
                       child: Row(
                         children: [
-                          serviceCard(options[index][0], active, setActiveFunc),
+                          serviceCard(options[index][0], active, setActiveFunc,
+                              this.widget.nextPage),
                           SizedBox(
                             width: 10.0,
                           ),
-                          serviceCard(options[index][1], active, setActiveFunc),
+                          serviceCard(options[index][1], active, setActiveFunc,
+                              this.widget.nextPage),
                         ],
                       ),
                     ),
@@ -173,12 +179,15 @@ class _HomePageOneState extends State<HomePageOne> {
   }
 }
 
-Widget serviceCard(Map item, String active, Function setActive) {
+Widget serviceCard(Map item, String active, Function setActive, nextPage) {
   bool isActive = active == item["key"];
   return Expanded(
     child: GestureDetector(
       onTap: () {
         setActive(item["key"]);
+        Future.delayed(Duration(milliseconds: 350), () {
+          nextPage();
+        });
       },
       child: AnimatedContainer(
         duration: Duration(milliseconds: 300),
