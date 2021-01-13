@@ -50,7 +50,7 @@ class _RequestServiceFlowState extends State<RequestServiceFlow> {
               )
             : null,
         iconTheme: IconThemeData(
-          color: Colors.red,
+          color: Constants.primaryColor,
         ),
       ),
       backgroundColor: current == 0 ? Constants.primaryColor : Colors.white,
