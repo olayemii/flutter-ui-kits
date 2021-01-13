@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
           visualDensity: VisualDensity.adaptivePlatformDensity,
           textTheme: GoogleFonts.openSansTextTheme(),
         ),
-        initialRoute: "/repair-flow",
+        initialRoute: "/",
         onGenerateRoute: _onGenerateRoute,
       ),
     );
