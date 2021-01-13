@@ -95,14 +95,6 @@ class RequestServiceFlow extends StatelessWidget {
               width: size.width,
               child: Container(
                 height: size.height - 200.0,
-                padding: EdgeInsets.all(20.0),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(40.0),
-                    topRight: Radius.circular(40.0),
-                  ),
-                ),
                 // child: GridView.builder(
                 //   physics: NeverScrollableScrollPhysics(),
                 //   shrinkWrap: true,
@@ -119,22 +111,35 @@ class RequestServiceFlow extends StatelessWidget {
                 //   },
                 //   itemCount: 6,
                 // ),
-                child: FittedBox(
-                  child: Container(
-                    color: Colors.red,
-                    width: size.width,
-                    child: Wrap(
-                      children: List.generate(
-                        6,
-                        (index) => FractionallySizedBox(
-                          widthFactor: 0.47,
-                          child: Container(
-                            color: Colors.amber,
-                            height: 100.0,
-                            width: 150,
-                            // margin: EdgeInsets.only(
-                            //   right: index % 2 == 0 ? 20.0 : 0,
-                            // ),
+                child: Container(
+                  padding: EdgeInsets.all(20.0),
+                  width: size.width,
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: List.generate(
+                      3,
+                      (index) => Expanded(
+                        child: Container(
+                          child: Row(
+                            children: [
+                              Expanded(
+                                child: Container(
+                                  color: [
+                                    Colors.amber,
+                                    Colors.green,
+                                    Colors.red
+                                  ][index],
+                                ),
+                              ),
+                              SizedBox(
+                                width: 5.0,
+                              ),
+                              Expanded(
+                                child: Container(
+                                  color: Colors.amber,
+                                ),
+                              )
+                            ],
                           ),
                         ),
                       ),
