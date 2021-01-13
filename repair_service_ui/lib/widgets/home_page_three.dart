@@ -80,7 +80,7 @@ class _HomePageThreeState extends State<HomePageThree> {
             height: 20.0,
           ),
           PageIndicator(
-            activePage: 2,
+            activePage: 3,
             darkMode: false,
           ),
           SizedBox(
