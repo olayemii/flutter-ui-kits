@@ -25,17 +25,31 @@ class RequestServiceFlow extends StatelessWidget {
     // Second
     [
       {
-        "name": "Mobile",
-        "icon": "assets/svg/mobile.svg",
-        "key": "mobile",
+        "name": "Laptop",
+        "icon": "assets/svg/laptop.svg",
+        "key": "laptop",
       },
       {
-        "name": "Tablet",
-        "icon": "assets/svg/tablet.svg",
-        "key": "tablet",
+        "name": "Desktop",
+        "icon": "assets/svg/desktop.svg",
+        "key": "desktop",
+      },
+    ],
+    // Third
+    [
+      {
+        "name": "Watch",
+        "icon": "assets/svg/watch.svg",
+        "key": "watch",
+      },
+      {
+        "name": "Headphone",
+        "icon": "assets/svg/headphone.svg",
+        "key": "headphone",
       },
     ],
   ];
+  String active = "";
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -173,4 +187,15 @@ class RequestServiceFlow extends StatelessWidget {
       }),
     );
   }
+}
+
+Widget serviceCard(Map item, bool isActive) {
+  return Expanded(
+    child: Container(
+      decoration: BoxDecoration(
+        color: Constants.greyColor,
+        borderRadius: BorderRadius.circular(12.0),
+      ),
+    ),
+  );
 }
