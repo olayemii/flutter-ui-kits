@@ -1,5 +1,6 @@
 import 'package:airbnb_redesign_ui/utils/constants.dart';
 import 'package:airbnb_redesign_ui/widgets/home_page_two.dart';
+import 'package:airbnb_redesign_ui/widgets/house_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -84,6 +85,36 @@ class Dashboard extends StatelessWidget {
                       ),
                     ),
                   ],
+                ),
+              ),
+              SizedBox(
+                height: 15.0,
+              ),
+              Text(
+                "Popular",
+                style: TextStyle(
+                  fontSize: 18.0,
+                  height: 1.5,
+                  color: Color.fromRGBO(33, 45, 82, 1),
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              SizedBox(
+                height: 10.0,
+              ),
+              Container(
+                height: ScreenUtil().setHeight(300.0),
+                child: ListView.separated(
+                  separatorBuilder: (BuildContext context, int index) {
+                    return SizedBox(
+                      width: 10.0,
+                    );
+                  },
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 3,
+                  itemBuilder: (BuildContext context, int index) {
+                    return HouseCard();
+                  },
                 ),
               )
             ],
