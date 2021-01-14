@@ -1,6 +1,7 @@
 import 'package:airbnb_redesign_ui/pages/dashboard.dart';
 import 'package:airbnb_redesign_ui/pages/home.dart';
 import 'package:airbnb_redesign_ui/pages/sign_up.dart';
+import 'package:airbnb_redesign_ui/pages/single_property.dart';
 import 'package:airbnb_redesign_ui/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/screenutil_init.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
           visualDensity: VisualDensity.adaptivePlatformDensity,
           textTheme: GoogleFonts.playfairDisplayTextTheme(),
         ),
-        initialRoute: "/dashboard",
+        initialRoute: "/single-property",
         onGenerateRoute: _onGenerateRoute,
       ),
     );
@@ -45,6 +46,10 @@ Route<dynamic> _onGenerateRoute(RouteSettings settings) {
     case "/dashboard":
       return MaterialPageRoute(builder: (BuildContext context) {
         return Dashboard();
+      });
+    case "/single-property":
+      return MaterialPageRoute(builder: (BuildContext context) {
+        return SingleProperty();
       });
     default:
       return MaterialPageRoute(builder: (BuildContext context) {
