@@ -1,3 +1,4 @@
+import 'package:airbnb_redesign_ui/widgets/booking_details.dart';
 import 'package:airbnb_redesign_ui/widgets/booking_property_features.dart';
 import 'package:airbnb_redesign_ui/widgets/primary_button.dart';
 import 'package:flutter/material.dart';
@@ -48,6 +49,7 @@ class BookingScreen extends StatelessWidget {
                   ),
                 ),
               ),
+              BookingDetails(),
               BookingPropertyFeatures(),
               PrimaryButton(
                 text: "BOOK ROOM",
