@@ -1,4 +1,5 @@
 import 'package:airbnb_redesign_ui/pages/home.dart';
+import 'package:airbnb_redesign_ui/pages/sign_up.dart';
 import 'package:airbnb_redesign_ui/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/screenutil_init.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
           visualDensity: VisualDensity.adaptivePlatformDensity,
           textTheme: GoogleFonts.playfairDisplayTextTheme(),
         ),
-        initialRoute: "/",
+        initialRoute: "/sign-up",
         onGenerateRoute: _onGenerateRoute,
       ),
     );
@@ -36,7 +37,10 @@ Route<dynamic> _onGenerateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (BuildContext context) {
         return Home();
       });
-
+    case "/sign-up":
+      return MaterialPageRoute(builder: (BuildContext context) {
+        return SignUp();
+      });
     default:
       return MaterialPageRoute(builder: (BuildContext context) {
         return Home();
