@@ -1,7 +1,9 @@
 import 'package:airbnb_redesign_ui/utils/constants.dart';
 import 'package:airbnb_redesign_ui/widgets/primary_button.dart';
+import 'package:airbnb_redesign_ui/widgets/register_form.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SignUp extends StatelessWidget {
@@ -36,18 +38,40 @@ class SignUp extends StatelessWidget {
               height: _size.height - Scaffold.of(context).appBarMaxHeight,
               padding: EdgeInsets.symmetric(horizontal: 24.0),
               child: Column(
-                mainAxisSize: MainAxisSize.min,
+                mainAxisSize: MainAxisSize.max,
                 children: [
                   Expanded(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: Color.fromRGBO(255, 255, 255, 0.5),
-                      ),
-                      width: double.infinity,
+                    child: Wrap(
+                      runAlignment: WrapAlignment.center,
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(12.0),
+                          decoration: BoxDecoration(
+                            color: Color.fromRGBO(255, 255, 255, 0.5),
+                          ),
+                          width: double.infinity,
+                          child: Column(
+                            children: [
+                              Text(
+                                "Sign Up",
+                                style: TextStyle(
+                                  fontSize: 22.0,
+                                  color: Color.fromRGBO(33, 45, 82, 1),
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 15.0,
+                              ),
+                              RegisterForm(),
+                            ],
+                          ),
+                        )
+                      ],
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 20.0),
+                    padding: const EdgeInsets.symmetric(vertical: 30.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
@@ -80,6 +104,19 @@ class SignUp extends StatelessWidget {
                               ),
                             ],
                           ),
+                        ),
+                        SizedBox(
+                          height: 15.0,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset("assets/images/google.png"),
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            Image.asset("assets/images/facebook.png"),
+                          ],
                         )
                       ],
                     ),

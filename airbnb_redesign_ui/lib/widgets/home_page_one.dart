@@ -66,7 +66,7 @@ class HomePageOne extends StatelessWidget {
                         onPressed: () {},
                         child: Text(
                           "Log In",
-                          style: TextStyle(
+                          style: GoogleFonts.inter(
                             fontSize: 14.0,
                             color: Constants.primaryColor,
                             fontWeight: FontWeight.w600,
