@@ -39,7 +39,7 @@ class SingleProperty extends StatelessWidget {
                     vertical: 20.0,
                   ),
                   decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.8),
+                    color: Colors.grey[100],
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(40.0),
                       topRight: Radius.circular(40.0),
@@ -88,28 +88,7 @@ class SingleProperty extends StatelessWidget {
                       SizedBox(
                         height: 10.0,
                       ),
-                      Row(
-                        children: [
-                          ...List.generate(
-                            5,
-                            (index) => Icon(
-                              Icons.star,
-                              size: 18.0,
-                              color: Color.fromRGBO(71, 148, 255, 1),
-                            ),
-                          ),
-                          SizedBox(
-                            width: 15.0,
-                          ),
-                          Text(
-                            "5.0",
-                            style: TextStyle(
-                              color: Color.fromRGBO(71, 148, 255, 0.8),
-                              fontWeight: FontWeight.w500,
-                            ),
-                          )
-                        ],
-                      ),
+                      PropertyFeatures(),
                       SizedBox(
                         height: 10.0,
                       ),
@@ -118,6 +97,8 @@ class SingleProperty extends StatelessWidget {
                           3,
                           (index) => Expanded(
                             child: Container(
+                              margin: EdgeInsets.symmetric(horizontal: 10.0),
+                              height: 40.0,
                               decoration: BoxDecoration(
                                 color: Colors.white,
                               ),
