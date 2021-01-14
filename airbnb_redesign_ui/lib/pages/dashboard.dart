@@ -11,6 +11,16 @@ class Dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Container(
+          height: ScreenUtil().setHeight(60.0),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20.0),
+            color: Colors.white,
+          ),
+        ),
+      ),
       body: SingleChildScrollView(
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: 24.0),
@@ -92,6 +102,36 @@ class Dashboard extends StatelessWidget {
               ),
               Text(
                 "Popular",
+                style: TextStyle(
+                  fontSize: 18.0,
+                  height: 1.5,
+                  color: Color.fromRGBO(33, 45, 82, 1),
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              SizedBox(
+                height: 10.0,
+              ),
+              Container(
+                height: ScreenUtil().setHeight(300.0),
+                child: ListView.separated(
+                  separatorBuilder: (BuildContext context, int index) {
+                    return SizedBox(
+                      width: 10.0,
+                    );
+                  },
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 3,
+                  itemBuilder: (BuildContext context, int index) {
+                    return HouseCard();
+                  },
+                ),
+              ),
+              SizedBox(
+                height: 25.0,
+              ),
+              Text(
+                "Trending",
                 style: TextStyle(
                   fontSize: 18.0,
                   height: 1.5,

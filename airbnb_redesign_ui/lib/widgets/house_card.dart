@@ -1,6 +1,7 @@
 import 'package:airbnb_redesign_ui/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HouseCard extends StatelessWidget {
   @override
@@ -10,7 +11,7 @@ class HouseCard extends StatelessWidget {
       width: ScreenUtil().setWidth(255.0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12.0),
-        // color: Color.fromRGBO(255, 255, 255, 0.7),
+        color: Color(0xFFF4F5F6),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -19,6 +20,12 @@ class HouseCard extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12.0),
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: AssetImage(
+                    "assets/images/house1.png",
+                  ),
+                ),
               ),
             ),
           ),
@@ -41,19 +48,33 @@ class HouseCard extends StatelessWidget {
                 Text(
                   "Are you searching for luxury hotels? This is for you !",
                   style: TextStyle(
-                    fontSize: 12.0,
+                    fontSize: 13.0,
                     color: Color.fromRGBO(138, 150, 190, 1),
                   ),
                 ),
                 SizedBox(
-                  height: 5.0,
+                  height: 10.0,
                 ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     RichText(
                       text: TextSpan(
                         children: [
-                          TextSpan(text: "From"),
+                          TextSpan(
+                            text: "From\n",
+                            style: GoogleFonts.inter(
+                              color: Color.fromRGBO(64, 74, 106, 1),
+                            ),
+                          ),
+                          TextSpan(
+                            text: "\$250",
+                            style: GoogleFonts.inter(
+                              color: Color.fromRGBO(33, 45, 82, 1),
+                              fontWeight: FontWeight.w600,
+                              fontSize: 22.0,
+                            ),
+                          ),
                         ],
                       ),
                     ),
