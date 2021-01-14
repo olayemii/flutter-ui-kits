@@ -1,3 +1,4 @@
+import 'package:airbnb_redesign_ui/pages/sign_up.dart';
 import 'package:airbnb_redesign_ui/utils/constants.dart';
 import 'package:airbnb_redesign_ui/widgets/page_indicator.dart';
 import 'package:airbnb_redesign_ui/widgets/primary_button.dart';
@@ -50,7 +51,14 @@ class HomePageTwo extends StatelessWidget {
                 ),
                 PrimaryButton(
                   text: "Get Started",
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (BuildContext context) {
+                        return SignUp();
+                      }),
+                    );
+                  },
                 ),
                 Center(
                   child: Wrap(
