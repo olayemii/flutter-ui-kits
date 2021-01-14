@@ -37,7 +37,7 @@ class BookingScreen extends StatelessWidget {
             mainAxisSize: MainAxisSize.max,
             children: [
               Container(
-                height: 400.0,
+                height: 350.0,
                 decoration: BoxDecoration(
                   color: Colors.white.withOpacity(0.3),
                   borderRadius: BorderRadius.circular(12.0),
