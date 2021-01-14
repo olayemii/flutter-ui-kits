@@ -1,4 +1,5 @@
 import 'package:airbnb_redesign_ui/utils/constants.dart';
+import 'package:airbnb_redesign_ui/widgets/property_features.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:google_fonts/google_fonts.dart';
