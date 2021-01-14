@@ -2,6 +2,7 @@ import 'package:airbnb_redesign_ui/utils/constants.dart';
 import 'package:airbnb_redesign_ui/widgets/property_features.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'package:flutter_screenutil/screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SingleProperty extends StatelessWidget {
@@ -31,7 +32,7 @@ class SingleProperty extends StatelessWidget {
                 ),
               ),
               Positioned(
-                top: 500.0,
+                top: 450.0,
                 width: size.width,
                 child: Container(
                   height: heightFromWhiteBg,
@@ -47,6 +48,7 @@ class SingleProperty extends StatelessWidget {
                     ),
                   ),
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -89,22 +91,50 @@ class SingleProperty extends StatelessWidget {
                       SizedBox(
                         height: 10.0,
                       ),
+                      SizedBox(
+                        height: 10.0,
+                      ),
                       PropertyFeatures(),
                       SizedBox(
                         height: 10.0,
                       ),
-                      Row(
-                        children: List.generate(
-                          3,
-                          (index) => Expanded(
-                            child: Container(
-                              margin: EdgeInsets.symmetric(horizontal: 10.0),
-                              height: 40.0,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
+                      Text(
+                        "Nulla Lorem mollit cupidatat irure. Laborum is magna nulla duis ullamco cillum dolor Voluptat exercitation.",
+                        maxLines: 3,
+                        overflow: TextOverflow.ellipsis,
+                        style: GoogleFonts.inter(
+                          fontSize: 15.0,
+                          height: 1.5,
+                          color: Color.fromRGBO(138, 150, 190, 1),
+                        ),
+                      ),
+                      // Spacer(),
+                      SizedBox(
+                        height: 40.0,
+                      ),
+                      Container(
+                        width: double.infinity,
+                        padding: EdgeInsets.symmetric(horizontal: 16.0),
+                        height: ScreenUtil().setHeight(56.0),
+                        decoration: BoxDecoration(
+                          color: Constants.primaryColor,
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            RichText(
+                              text: TextSpan(
+                                children: [
+                                  TextSpan(text: "120\$ /"),
+                                  TextSpan(text: " night"),
+                                ],
                               ),
                             ),
-                          ),
+                            Container(
+                              decoration: BoxDecoration(),
+                            )
+                          ],
                         ),
                       )
                     ],

@@ -6,9 +6,38 @@ class PropertyFeatures extends StatelessWidget {
     return Container(
       child: Row(
         children: [
-          Container(
-            height: 40.0,
-            decoration: BoxDecoration(),
+          Expanded(
+            child: Container(
+              height: 40.0,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(6.0),
+              ),
+            ),
+          ),
+          SizedBox(
+            width: 10.0,
+          ),
+          Expanded(
+            child: Container(
+              height: 40.0,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(6.0),
+              ),
+            ),
+          ),
+          SizedBox(
+            width: 10.0,
+          ),
+          Expanded(
+            child: Container(
+              height: 40.0,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(6.0),
+              ),
+            ),
           ),
         ],
       ),
