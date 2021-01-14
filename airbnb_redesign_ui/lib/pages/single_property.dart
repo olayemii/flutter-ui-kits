@@ -114,7 +114,7 @@ class SingleProperty extends StatelessWidget {
                       ),
                       Container(
                         width: double.infinity,
-                        padding: EdgeInsets.symmetric(horizontal: 16.0),
+                        padding: EdgeInsets.only(left: 16.0, right: 5.0),
                         height: ScreenUtil().setHeight(56.0),
                         decoration: BoxDecoration(
                           color: Constants.primaryColor,
@@ -126,13 +126,25 @@ class SingleProperty extends StatelessWidget {
                             RichText(
                               text: TextSpan(
                                 children: [
-                                  TextSpan(text: "120\$ /"),
-                                  TextSpan(text: " night"),
+                                  TextSpan(
+                                    text: "120\$ /",
+                                    style: GoogleFonts.inter(),
+                                  ),
+                                  TextSpan(
+                                      text: " night",
+                                      style: GoogleFonts.inter()),
                                 ],
                               ),
                             ),
                             Container(
-                              decoration: BoxDecoration(),
+                              height: ScreenUtil().setHeight(45.0),
+                              alignment: Alignment.center,
+                              padding: EdgeInsets.symmetric(horizontal: 16.0),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(24.0),
+                                color: Colors.white,
+                              ),
+                              child: Text("BOOK ROOM"),
                             )
                           ],
                         ),
