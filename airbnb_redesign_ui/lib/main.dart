@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
           visualDensity: VisualDensity.adaptivePlatformDensity,
           textTheme: GoogleFonts.playfairDisplayTextTheme(),
         ),
-        initialRoute: "/booking-screen",
+        initialRoute: "/",
         onGenerateRoute: _onGenerateRoute,
       ),
     );

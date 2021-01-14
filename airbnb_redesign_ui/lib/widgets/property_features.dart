@@ -8,22 +8,31 @@ class PropertyFeatures extends StatelessWidget {
     return Container(
       child: Row(
         children: [
-          item(),
+          item(
+            FlutterIcons.md_people_ion,
+            "2 Adults",
+          ),
           SizedBox(
             width: 10.0,
           ),
-          item(),
+          item(
+            FlutterIcons.bed_faw,
+            "1 Bed",
+          ),
           SizedBox(
             width: 10.0,
           ),
-          item(),
+          item(
+            FlutterIcons.wifi_fea,
+            "Free Wifi",
+          ),
         ],
       ),
     );
   }
 }
 
-Widget item() {
+Widget item(IconData icon, String text) {
   return Expanded(
     child: Container(
       height: 40.0,
@@ -35,7 +44,7 @@ Widget item() {
       child: Row(
         children: [
           Icon(
-            FlutterIcons.people_mdi,
+            icon,
             size: 16.0,
             color: Color(0xFF404A6A),
           ),
@@ -43,7 +52,7 @@ Widget item() {
             width: 5.0,
           ),
           Text(
-            "2 Adults",
+            text,
             style: GoogleFonts.inter(
               fontSize: 12.0,
               fontWeight: FontWeight.w600,

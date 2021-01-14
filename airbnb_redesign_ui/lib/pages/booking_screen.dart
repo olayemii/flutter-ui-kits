@@ -51,6 +51,9 @@ class BookingScreen extends StatelessWidget {
               ),
               BookingDetails(),
               BookingPropertyFeatures(),
+              SizedBox(
+                height: 15.0,
+              ),
               PrimaryButton(
                 text: "BOOK ROOM",
                 onPressed: () {},
