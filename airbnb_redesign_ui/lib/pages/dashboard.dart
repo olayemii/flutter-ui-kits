@@ -13,12 +13,44 @@ class Dashboard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(12.0),
         child: Container(
-          height: ScreenUtil().setHeight(60.0),
+          padding: EdgeInsets.symmetric(
+            horizontal: 8.0,
+            vertical: 5.0,
+          ),
+          height: ScreenUtil().setHeight(65.0),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20.0),
             color: Colors.white,
+          ),
+          child: Row(
+            children: [
+              Container(
+                height: ScreenUtil().setHeight(62),
+                width: ScreenUtil().setWidth(62),
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Constants.primaryColor,
+                ),
+                child: Column(
+                  children: [
+                    Icon(
+                      FlutterIcons.home_fea,
+                      color: Colors.white,
+                    ),
+                    Container(
+                      height: 2.0,
+                      width: 2.0,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.white,
+                      ),
+                    )
+                  ],
+                ),
+              )
+            ],
           ),
         ),
       ),
