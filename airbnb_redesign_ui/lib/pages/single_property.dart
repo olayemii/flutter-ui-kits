@@ -128,7 +128,10 @@ class SingleProperty extends StatelessWidget {
                                 children: [
                                   TextSpan(
                                     text: "120\$ /",
-                                    style: GoogleFonts.inter(),
+                                    style: GoogleFonts.inter(
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 18.0,
+                                    ),
                                   ),
                                   TextSpan(
                                       text: " night",
@@ -144,7 +147,13 @@ class SingleProperty extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(24.0),
                                 color: Colors.white,
                               ),
-                              child: Text("BOOK ROOM"),
+                              child: Text(
+                                "BOOK ROOM",
+                                style: GoogleFonts.inter(
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 12.0,
+                                ),
+                              ),
                             )
                           ],
                         ),
