@@ -6,7 +6,7 @@ class BookingPropertyFeatures extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Container(
-        margin: EdgeInsets.symmetric(vertical: 20.0),
+        margin: EdgeInsets.only(top: 10.0),
         padding: EdgeInsets.symmetric(vertical: 20.0),
         decoration: BoxDecoration(
           color: Colors.white.withOpacity(0.3),

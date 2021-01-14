@@ -6,46 +6,32 @@ class BookingDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Container(
-        margin: EdgeInsets.symmetric(vertical: 20.0),
+        margin: EdgeInsets.only(top: 10.0),
         padding: EdgeInsets.symmetric(vertical: 20.0),
         decoration: BoxDecoration(
           color: Colors.white.withOpacity(0.3),
           borderRadius: BorderRadius.circular(12.0),
         ),
-        child: Row(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            item("Room", "01"),
-            item("Adult", "02"),
-            item("Child", "0"),
+            Text(
+              "Book a Room",
+              textAlign: TextAlign.center,
+              style: GoogleFonts.inter(
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+            Row(
+              children: [
+                Column(
+                  children: [],
+                )
+              ],
+            )
           ],
         ),
       ),
     );
   }
-}
-
-Widget item(String title, String count) {
-  return Expanded(
-    child: Container(
-      decoration: BoxDecoration(
-        border: Border(
-          right: BorderSide(
-            color: Color.fromRGBO(138, 150, 190, 0.2),
-          ),
-        ),
-      ),
-      child: Column(
-        children: [
-          Text(
-            title,
-            style: GoogleFonts.inter(),
-          ),
-          Text(
-            count,
-            style: GoogleFonts.inter(),
-          ),
-        ],
-      ),
-    ),
-  );
 }
