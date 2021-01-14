@@ -1,3 +1,4 @@
+import 'package:airbnb_redesign_ui/pages/booking_screen.dart';
 import 'package:airbnb_redesign_ui/pages/dashboard.dart';
 import 'package:airbnb_redesign_ui/pages/home.dart';
 import 'package:airbnb_redesign_ui/pages/sign_up.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
           visualDensity: VisualDensity.adaptivePlatformDensity,
           textTheme: GoogleFonts.playfairDisplayTextTheme(),
         ),
-        initialRoute: "/single-property",
+        initialRoute: "/booking-screen",
         onGenerateRoute: _onGenerateRoute,
       ),
     );
@@ -50,6 +51,10 @@ Route<dynamic> _onGenerateRoute(RouteSettings settings) {
     case "/single-property":
       return MaterialPageRoute(builder: (BuildContext context) {
         return SingleProperty();
+      });
+    case "/booking-screen":
+      return MaterialPageRoute(builder: (BuildContext context) {
+        return BookingScreen();
       });
     default:
       return MaterialPageRoute(builder: (BuildContext context) {

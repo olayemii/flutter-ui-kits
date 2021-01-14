@@ -27,6 +27,7 @@ dependencies:
   google_fonts: ^1.1.1
   flutter_icons: ^1.1.0
   flutter_svg: ^0.19.1
+  syncfusion_flutter_datepicker: ^18.4.34-beta
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.

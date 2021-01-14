@@ -1,5 +1,8 @@
+import 'package:airbnb_redesign_ui/widgets/booking_property_features.dart';
+import 'package:airbnb_redesign_ui/widgets/primary_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 
 class BookingScreen extends StatelessWidget {
   @override
@@ -20,7 +23,7 @@ class BookingScreen extends StatelessWidget {
           ),
         ),
         title: Text(
-          "Sign Up",
+          "Select Dates",
           style: TextStyle(
             color: Color.fromRGBO(33, 45, 82, 1),
           ),
@@ -31,6 +34,26 @@ class BookingScreen extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 24.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
+            children: [
+              Container(
+                height: 400.0,
+                decoration: BoxDecoration(
+                  color: Colors.white.withOpacity(0.3),
+                  borderRadius: BorderRadius.circular(12.0),
+                ),
+                child: SfDateRangePicker(
+                  selectionMode: DateRangePickerSelectionMode.range,
+                  headerStyle: DateRangePickerHeaderStyle(
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+              ),
+              BookingPropertyFeatures(),
+              PrimaryButton(
+                text: "BOOK ROOM",
+                onPressed: () {},
+              )
+            ],
           ),
         ),
       ),
