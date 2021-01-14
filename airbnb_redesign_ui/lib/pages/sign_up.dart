@@ -45,9 +45,11 @@ class SignUp extends StatelessWidget {
                       runAlignment: WrapAlignment.center,
                       children: [
                         Container(
-                          padding: EdgeInsets.all(12.0),
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 16.0, vertical: 30.0),
                           decoration: BoxDecoration(
                             color: Color.fromRGBO(255, 255, 255, 0.5),
+                            borderRadius: BorderRadius.circular(8.0),
                           ),
                           width: double.infinity,
                           child: Column(
