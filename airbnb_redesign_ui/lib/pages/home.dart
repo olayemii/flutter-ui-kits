@@ -9,10 +9,15 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   PageController controller = PageController();
+  int currentPage = 0;
   @override
   void initState() {
     controller.addListener(() {
       print("changed!");
+      print(controller.page);
+      setState(() {
+        currentPage = controller.page.round();
+      });
     });
     super.initState();
   }
@@ -24,8 +29,15 @@ class _HomeState extends State<Home> {
         child: PageView(
           controller: controller,
           children: [
-            HomePageOne(),
-            HomePageTwo(),
+            HomePageOne(
+              activePage: currentPage,
+            ),
+            HomePageTwo(
+              activePage: currentPage,
+            ),
+            HomePageOne(
+              activePage: currentPage,
+            ),
           ],
         ),
       ),

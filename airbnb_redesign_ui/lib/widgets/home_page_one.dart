@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomePageOne extends StatelessWidget {
+  final int activePage;
+  HomePageOne({this.activePage});
   @override
   Widget build(BuildContext context) {
     Size _size = MediaQuery.of(context).size;
@@ -42,13 +44,16 @@ class HomePageOne extends StatelessWidget {
                 SizedBox(
                   height: 15.0,
                 ),
-                PageIndicator(),
+                PageIndicator(activePage: activePage),
                 SizedBox(
                   height: 50.0,
                 ),
                 PrimaryButton(
                   text: "Get Started",
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (BuildContext context) {}));
+                  },
                 ),
                 Center(
                   child: Wrap(
