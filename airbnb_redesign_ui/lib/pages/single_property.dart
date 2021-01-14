@@ -38,6 +38,9 @@ class SingleProperty extends StatelessWidget {
                       topRight: Radius.circular(40.0),
                     ),
                   ),
+                  child: Column(
+                    children: [],
+                  ),
                 ),
               ),
             ],
