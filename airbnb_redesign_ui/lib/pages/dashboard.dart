@@ -1,4 +1,5 @@
 import 'package:airbnb_redesign_ui/utils/constants.dart';
+import 'package:airbnb_redesign_ui/utils/static_data.dart';
 import 'package:airbnb_redesign_ui/widgets/home_page_two.dart';
 import 'package:airbnb_redesign_ui/widgets/house_card.dart';
 import 'package:flutter/material.dart';
@@ -133,9 +134,11 @@ class Dashboard extends StatelessWidget {
                     );
                   },
                   scrollDirection: Axis.horizontal,
-                  itemCount: 3,
+                  itemCount: StaticData.properties.length,
                   itemBuilder: (BuildContext context, int index) {
-                    return HouseCard();
+                    return HouseCard(
+                      house: StaticData.properties[index],
+                    );
                   },
                 ),
               ),
@@ -167,9 +170,11 @@ class Dashboard extends StatelessWidget {
                     );
                   },
                   scrollDirection: Axis.horizontal,
-                  itemCount: 3,
+                  itemCount: StaticData.properties.length,
                   itemBuilder: (BuildContext context, int index) {
-                    return HouseCard();
+                    return HouseCard(
+                      house: StaticData.properties[index],
+                    );
                   },
                 ),
               )

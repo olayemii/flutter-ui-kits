@@ -1,9 +1,12 @@
+import 'package:airbnb_redesign_ui/models/property.dart';
 import 'package:airbnb_redesign_ui/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HouseCard extends StatelessWidget {
+  final Property house;
+  HouseCard({this.house});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,7 +26,7 @@ class HouseCard extends StatelessWidget {
                 image: DecorationImage(
                   fit: BoxFit.cover,
                   image: AssetImage(
-                    "assets/images/house1.png",
+                    house.image,
                   ),
                 ),
               ),
@@ -35,7 +38,7 @@ class HouseCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Royal Malewane",
+                  house.name,
                   style: TextStyle(
                     fontSize: 16.0,
                     color: Color.fromRGBO(33, 45, 82, 1),
@@ -46,7 +49,7 @@ class HouseCard extends StatelessWidget {
                   height: 5.0,
                 ),
                 Text(
-                  "Are you searching for luxury hotels? This is for you !",
+                  house.description,
                   style: TextStyle(
                     fontSize: 13.0,
                     color: Color.fromRGBO(138, 150, 190, 1),
@@ -68,7 +71,7 @@ class HouseCard extends StatelessWidget {
                             ),
                           ),
                           TextSpan(
-                            text: "\$250",
+                            text: house.price,
                             style: GoogleFonts.inter(
                               color: Color.fromRGBO(33, 45, 82, 1),
                               fontWeight: FontWeight.w600,
