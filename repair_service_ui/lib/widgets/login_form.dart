@@ -11,7 +11,10 @@ class LoginForm extends StatelessWidget {
     return Container(
       child: Column(
         children: [
-          InputWidget(hintText: "Email", suffixIcon: FlutterIcons.mail_oct),
+          InputWidget(
+            hintText: "Email",
+            suffixIcon: FlutterIcons.mail_oct,
+          ),
           SizedBox(
             height: 15.0,
           ),

@@ -1,6 +1,6 @@
 import 'package:airbnb_redesign_ui/utils/constants.dart';
 import 'package:airbnb_redesign_ui/utils/static_data.dart';
-import 'package:airbnb_redesign_ui/widgets/home_page_two.dart';
+import 'package:airbnb_redesign_ui/widgets/app_bottom_bar.dart';
 import 'package:airbnb_redesign_ui/widgets/house_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
@@ -12,81 +12,7 @@ class Dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(12.0),
-        child: Container(
-          padding: EdgeInsets.symmetric(
-            horizontal: 8.0,
-            vertical: 5.0,
-          ),
-          height: ScreenUtil().setHeight(65.0),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20.0),
-            color: Colors.white,
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Container(
-                height: ScreenUtil().setHeight(62),
-                width: ScreenUtil().setWidth(62),
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Constants.primaryColor,
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(
-                      FlutterIcons.home_fea,
-                      color: Colors.white,
-                    ),
-                    SizedBox(
-                      height: 5.0,
-                    ),
-                    Container(
-                      height: 5.0,
-                      width: 5.0,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.white,
-                      ),
-                    )
-                  ],
-                ),
-              ),
-              IconButton(
-                icon: Icon(
-                  FlutterIcons.heart_ant,
-                  color: Color.fromRGBO(156, 166, 201, 1),
-                ),
-                onPressed: () {},
-              ),
-              IconButton(
-                icon: Icon(
-                  FlutterIcons.grid_fea,
-                  color: Color.fromRGBO(156, 166, 201, 1),
-                ),
-                onPressed: () {},
-              ),
-              IconButton(
-                icon: Icon(
-                  FlutterIcons.mail_fea,
-                  color: Color.fromRGBO(156, 166, 201, 1),
-                ),
-                onPressed: () {},
-              ),
-              IconButton(
-                icon: Icon(
-                  FlutterIcons.user_ant,
-                  color: Color.fromRGBO(156, 166, 201, 1),
-                ),
-                onPressed: () {},
-              ),
-            ],
-          ),
-        ),
-      ),
+      bottomNavigationBar: AppBottomBar(),
       body: SingleChildScrollView(
         child: Container(
           child: Column(

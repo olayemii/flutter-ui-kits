@@ -5,12 +5,20 @@ import 'package:airbnb_redesign_ui/widgets/primary_button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class HomePageTwo extends StatelessWidget {
+class HomePageStructure extends StatelessWidget {
   final int activePage;
-  HomePageTwo({this.activePage});
+  final String imagePath;
+  final String title;
+
+  HomePageStructure({
+    this.activePage,
+    this.imagePath,
+    this.title,
+  });
   @override
   Widget build(BuildContext context) {
     Size _size = MediaQuery.of(context).size;
+
     return Container(
       height: _size.height,
       child: Column(
@@ -21,7 +29,7 @@ class HomePageTwo extends StatelessWidget {
                 image: DecorationImage(
                   fit: BoxFit.fill,
                   image: AssetImage(
-                    "assets/images/page2.png",
+                    this.imagePath,
                   ),
                 ),
               ),
@@ -34,7 +42,7 @@ class HomePageTwo extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Text(
-                  "Let’s find Peace with Comfort.",
+                  this.title,
                   style: TextStyle(
                     fontSize: 26.0,
                     height: 1.5,

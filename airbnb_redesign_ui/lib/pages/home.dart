@@ -1,5 +1,4 @@
-import 'package:airbnb_redesign_ui/widgets/home_page_one.dart';
-import 'package:airbnb_redesign_ui/widgets/home_page_two.dart';
+import 'package:airbnb_redesign_ui/widgets/home_page_structure.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -10,11 +9,10 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   PageController controller = PageController();
   int currentPage = 0;
+
   @override
   void initState() {
     controller.addListener(() {
-      print("changed!");
-      print(controller.page);
       setState(() {
         currentPage = controller.page.round();
       });
@@ -29,14 +27,20 @@ class _HomeState extends State<Home> {
         child: PageView(
           controller: controller,
           children: [
-            HomePageOne(
+            HomePageStructure(
               activePage: currentPage,
+              title: "Let’s find Peace with Comfort.",
+              imagePath: "assets/images/page1.png",
             ),
-            HomePageTwo(
+            HomePageStructure(
               activePage: currentPage,
+              title: "Let’s find Peace with Comfort.",
+              imagePath: "assets/images/page2.png",
             ),
-            HomePageOne(
+            HomePageStructure(
               activePage: currentPage,
+              title: "Let’s find Peace with Comfort.",
+              imagePath: "assets/images/page1.png",
             ),
           ],
         ),
