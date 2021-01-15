@@ -8,8 +8,6 @@ import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 class BookingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Size _size = MediaQuery.of(context).size;
-
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,

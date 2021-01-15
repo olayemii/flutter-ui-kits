@@ -12,6 +12,7 @@ class AppBottomBar extends StatefulWidget {
 class _AppBottomBarState extends State<AppBottomBar> {
   String activePage = "home";
   void setActivePage(String page) {
+    print(page);
     setState(() {
       activePage = page;
     });
@@ -81,18 +82,56 @@ class _AppBottomBarState extends State<AppBottomBar> {
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: List.generate(length, (index) => null),
+        children: items
+            .map((BottomBarItem item) =>
+                getBottomWidgetItem(item, activePage == item.key))
+            .toList(),
       ),
     );
   }
 }
 
-Widget getBottomWidget(IconData icon, bool isActive) {
-  return IconButton(
-    icon: Icon(
-      icon,
-      color: Color.fromRGBO(156, 166, 201, 1),
+Widget getBottomWidgetItem(BottomBarItem item, bool isActive) {
+  return Container(
+    height: ScreenUtil().setHeight(62),
+    width: ScreenUtil().setWidth(62),
+    decoration: BoxDecoration(
+      shape: BoxShape.circle,
+      color: isActive ? Constants.primaryColor : Colors.transparent,
     ),
-    onPressed: () {},
+    child: AnimatedSwitcher(
+      duration: Duration(milliseconds: 450),
+      child: isActive
+          ? Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  item.icon,
+                  color: Colors.white,
+                ),
+                SizedBox(
+                  height: 5.0,
+                ),
+                Container(
+                  height: 5.0,
+                  width: 5.0,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.white,
+                  ),
+                )
+              ],
+            )
+          : Container(
+              margin: EdgeInsets.only(bottom: 10.0),
+              child: IconButton(
+                icon: Icon(
+                  item.icon,
+                  color: Color.fromRGBO(156, 166, 201, 1),
+                ),
+                onPressed: item.onPressed,
+              ),
+            ),
+    ),
   );
 }
