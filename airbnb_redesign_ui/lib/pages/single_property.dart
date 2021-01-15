@@ -1,3 +1,4 @@
+import 'package:airbnb_redesign_ui/pages/booking_screen.dart';
 import 'package:airbnb_redesign_ui/utils/constants.dart';
 import 'package:airbnb_redesign_ui/widgets/property_features.dart';
 import 'package:flutter/material.dart';
@@ -139,19 +140,30 @@ class SingleProperty extends StatelessWidget {
                                 ],
                               ),
                             ),
-                            Container(
-                              height: ScreenUtil().setHeight(45.0),
-                              alignment: Alignment.center,
-                              padding: EdgeInsets.symmetric(horizontal: 16.0),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(24.0),
-                                color: Colors.white,
-                              ),
-                              child: Text(
-                                "BOOK ROOM",
-                                style: GoogleFonts.inter(
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 12.0,
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (BuildContext context) {
+                                      return BookingScreen();
+                                    },
+                                  ),
+                                );
+                              },
+                              child: Container(
+                                height: ScreenUtil().setHeight(45.0),
+                                alignment: Alignment.center,
+                                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(24.0),
+                                  color: Colors.white,
+                                ),
+                                child: Text(
+                                  "BOOK ROOM",
+                                  style: GoogleFonts.inter(
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 12.0,
+                                  ),
                                 ),
                               ),
                             )

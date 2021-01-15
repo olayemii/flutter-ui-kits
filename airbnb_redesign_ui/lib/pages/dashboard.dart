@@ -25,6 +25,7 @@ class Dashboard extends StatelessWidget {
             color: Colors.white,
           ),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
                 height: ScreenUtil().setHeight(62),
@@ -34,14 +35,18 @@ class Dashboard extends StatelessWidget {
                   color: Constants.primaryColor,
                 ),
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Icon(
                       FlutterIcons.home_fea,
                       color: Colors.white,
                     ),
+                    SizedBox(
+                      height: 5.0,
+                    ),
                     Container(
-                      height: 2.0,
-                      width: 2.0,
+                      height: 5.0,
+                      width: 5.0,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         color: Colors.white,
@@ -49,7 +54,35 @@ class Dashboard extends StatelessWidget {
                     )
                   ],
                 ),
-              )
+              ),
+              IconButton(
+                icon: Icon(
+                  FlutterIcons.heart_ant,
+                  color: Color.fromRGBO(156, 166, 201, 1),
+                ),
+                onPressed: () {},
+              ),
+              IconButton(
+                icon: Icon(
+                  FlutterIcons.grid_fea,
+                  color: Color.fromRGBO(156, 166, 201, 1),
+                ),
+                onPressed: () {},
+              ),
+              IconButton(
+                icon: Icon(
+                  FlutterIcons.mail_fea,
+                  color: Color.fromRGBO(156, 166, 201, 1),
+                ),
+                onPressed: () {},
+              ),
+              IconButton(
+                icon: Icon(
+                  FlutterIcons.user_ant,
+                  color: Color.fromRGBO(156, 166, 201, 1),
+                ),
+                onPressed: () {},
+              ),
             ],
           ),
         ),
