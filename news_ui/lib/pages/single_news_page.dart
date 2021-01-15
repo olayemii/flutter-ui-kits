@@ -8,6 +8,12 @@ class SingleNewsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        toolbarHeight: 0.0,
+        elevation: 0.0,
+        automaticallyImplyLeading: false,
+      ),
       bottomNavigationBar: Container(
         height: ScreenUtil().setHeight(100.0),
         color: Colors.white,

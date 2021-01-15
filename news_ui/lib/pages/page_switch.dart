@@ -29,25 +29,27 @@ class _PageSwitchState extends State<PageSwitch> {
         changeIndex: changeCurrentIndex,
         currentIndex: currentIndex,
       ),
-      body: Container(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            NuAppbar(),
-            Expanded(
-              child: AnimatedSwitcher(
-                duration: Duration(milliseconds: 300),
-                child: [
-                  Home(),
-                  CategorySelection(),
-                  SizedBox(),
-                  SizedBox(),
-                  SizedBox(),
-                ][currentIndex],
-              ),
-            )
-          ],
+      body: SafeArea(
+        child: Container(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              NuAppbar(),
+              Expanded(
+                child: AnimatedSwitcher(
+                  duration: Duration(milliseconds: 300),
+                  child: [
+                    Home(),
+                    CategorySelection(),
+                    SizedBox(),
+                    SizedBox(),
+                    SizedBox(),
+                  ][currentIndex],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
