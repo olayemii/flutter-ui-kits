@@ -63,3 +63,11 @@ Our top sponsors will be listed here
 
 ![Real Estate Flutter UI Kit](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/house2.jpg)
 
+5. **[Repair Service Flutter UI Kit](https://github.com/OLayemii/flutter-ui-kits/tree/main/repair_service_ui)**
+
+![Repair Service Flutter UI Kit](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/repair-mockup.png)
+
+6. **[AirBnB Redesign Flutter UI Kit](https://github.com/OLayemii/flutter-ui-kits/tree/main/airbnb_redesign_ui)**
+
+![AirBnB Redesign Flutter UI Kit](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/airbnb-mockup.png)
+
