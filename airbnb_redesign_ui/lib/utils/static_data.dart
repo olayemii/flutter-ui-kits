@@ -6,13 +6,13 @@ class StaticData {
       name: "Royal Malewane",
       description: "Are you searching for luxury hotels? This is for you !",
       price: "\$250",
-      image: "assets/images/house1.png",
+      imagePath: "assets/images/house1.png",
     ),
     Property(
       name: "Soneve Kiri",
       description: "Are you searching for luxury hotels? This is for you !",
       price: "\$220",
-      image: "assets/images/house2.png",
-    )
+      imagePath: "assets/images/house2.png",
+    ),
   ];
 }

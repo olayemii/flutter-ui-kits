@@ -1,8 +1,9 @@
 import 'package:airbnb_redesign_ui/models/property.dart';
-import 'package:airbnb_redesign_ui/pages/single_property.dart';
+import 'package:airbnb_redesign_ui/pages/single_property_page.dart';
 import 'package:airbnb_redesign_ui/utils/constants.dart';
+import 'package:airbnb_redesign_ui/utils/helper.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/screenutil.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HouseCard extends StatelessWidget {
@@ -12,13 +13,7 @@ class HouseCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (BuildContext context) {
-              return SingleProperty();
-            },
-          ),
-        );
+        Helper.nextPage(context, SinglePropertyPage());
       },
       child: Container(
         height: ScreenUtil().setHeight(300.0),
@@ -37,7 +32,7 @@ class HouseCard extends StatelessWidget {
                   image: DecorationImage(
                     fit: BoxFit.cover,
                     image: AssetImage(
-                      house.image,
+                      house.imagePath,
                     ),
                   ),
                 ),
@@ -79,6 +74,7 @@ class HouseCard extends StatelessWidget {
                               text: "From\n",
                               style: GoogleFonts.inter(
                                 color: Color.fromRGBO(64, 74, 106, 1),
+                                fontWeight: FontWeight.w600,
                               ),
                             ),
                             TextSpan(
@@ -92,9 +88,12 @@ class HouseCard extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Icon(
-                        Icons.favorite,
-                        color: Constants.primaryColor,
+                      GestureDetector(
+                        onTap: () {},
+                        child: Icon(
+                          Icons.favorite,
+                          color: Constants.primaryColor,
+                        ),
                       )
                     ],
                   )

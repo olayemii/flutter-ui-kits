@@ -1,4 +1,4 @@
-import 'package:airbnb_redesign_ui/widgets/home_page_structure.dart';
+import 'package:airbnb_redesign_ui/widgets/home_page_template.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -26,20 +26,21 @@ class _HomeState extends State<Home> {
       body: Container(
         child: PageView(
           controller: controller,
+          // Since all pages follow same pattern, let's make a template for them
           children: [
-            HomePageStructure(
+            HomePageTemplate(
               activePage: currentPage,
-              title: "Let’s find Peace with Comfort.",
+              title: "Let's Find Peace with Comfort",
               imagePath: "assets/images/page1.png",
             ),
-            HomePageStructure(
+            HomePageTemplate(
               activePage: currentPage,
-              title: "Let’s find Peace with Comfort.",
+              title: "Let's Find Peace with Comfort",
               imagePath: "assets/images/page2.png",
             ),
-            HomePageStructure(
+            HomePageTemplate(
               activePage: currentPage,
-              title: "Let’s find Peace with Comfort.",
+              title: "Let's Find Peace with Comfort",
               imagePath: "assets/images/page1.png",
             ),
           ],

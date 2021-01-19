@@ -5,20 +5,20 @@ class BookingPropertyFeatures extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Container(
-        margin: EdgeInsets.only(top: 10.0),
-        padding: EdgeInsets.symmetric(vertical: 20.0),
-        decoration: BoxDecoration(
-          color: Colors.white.withOpacity(0.3),
-          borderRadius: BorderRadius.circular(12.0),
+      margin: EdgeInsets.only(top: 10.0),
+      padding: EdgeInsets.symmetric(vertical: 20.0),
+      decoration: BoxDecoration(
+        color: Colors.white.withOpacity(
+          0.3,
         ),
-        child: Row(
-          children: [
-            item("Room", "01"),
-            item("Adult", "02"),
-            item("Child", "0"),
-          ],
-        ),
+        borderRadius: BorderRadius.circular(12.0),
+      ),
+      child: Row(
+        children: [
+          item("Room", "01"),
+          item("Adult", "02"),
+          item("Child", "0"),
+        ],
       ),
     );
   }

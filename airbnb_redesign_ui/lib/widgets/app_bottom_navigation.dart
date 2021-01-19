@@ -4,20 +4,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class AppBottomBar extends StatefulWidget {
+class AppBottomNavigation extends StatefulWidget {
   @override
-  _AppBottomBarState createState() => _AppBottomBarState();
+  _AppBottomNavigationState createState() => _AppBottomNavigationState();
 }
 
-class _AppBottomBarState extends State<AppBottomBar> {
-  String activePage = "home";
+class _AppBottomNavigationState extends State<AppBottomNavigation> {
+  String activePage = "home"; // Track active page
+
   void setActivePage(String page) {
-    print(page);
     setState(() {
       activePage = page;
     });
   }
 
+  //LEts create a model for the items on the bar
   List<BottomBarItem> items = [];
 
   @override
@@ -59,7 +60,6 @@ class _AppBottomBarState extends State<AppBottomBar> {
         key: "profile",
       ),
     ];
-    // TODO: implement initState
     super.initState();
   }
 
@@ -71,7 +71,7 @@ class _AppBottomBarState extends State<AppBottomBar> {
         bottom: 12.0,
         right: 12.0,
       ),
-      padding: const EdgeInsets.symmetric(
+      padding: EdgeInsets.symmetric(
         horizontal: 12.0,
         vertical: 4.0,
       ),
@@ -83,8 +83,10 @@ class _AppBottomBarState extends State<AppBottomBar> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: items
-            .map((BottomBarItem item) =>
-                getBottomWidgetItem(item, activePage == item.key))
+            .map(
+              (BottomBarItem item) =>
+                  getBottomWidgetItem(item, activePage == item.key),
+            )
             .toList(),
       ),
     );
@@ -93,8 +95,8 @@ class _AppBottomBarState extends State<AppBottomBar> {
 
 Widget getBottomWidgetItem(BottomBarItem item, bool isActive) {
   return Container(
-    height: ScreenUtil().setHeight(62),
-    width: ScreenUtil().setWidth(62),
+    height: ScreenUtil().setHeight(62.0),
+    width: ScreenUtil().setWidth(62.0),
     decoration: BoxDecoration(
       shape: BoxShape.circle,
       color: isActive ? Constants.primaryColor : Colors.transparent,

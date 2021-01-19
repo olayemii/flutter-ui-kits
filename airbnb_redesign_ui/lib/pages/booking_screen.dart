@@ -32,7 +32,6 @@ class BookingScreen extends StatelessWidget {
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: 24.0),
           child: Column(
-            mainAxisSize: MainAxisSize.max,
             children: [
               Container(
                 height: 350.0,
@@ -50,7 +49,7 @@ class BookingScreen extends StatelessWidget {
               BookingDetails(),
               BookingPropertyFeatures(),
               SizedBox(
-                height: 15.0,
+                height: 10.0,
               ),
               PrimaryButton(
                 text: "BOOK ROOM",

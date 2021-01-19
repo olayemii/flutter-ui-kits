@@ -1,12 +1,15 @@
 import 'package:airbnb_redesign_ui/utils/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/screenutil.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class PrimaryButton extends StatelessWidget {
-  final String text;
+  // Our primary button widget [to be reused]
   final Function onPressed;
+  final String text;
+
   PrimaryButton({this.text, this.onPressed});
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -21,9 +24,9 @@ class PrimaryButton extends StatelessWidget {
             BoxShadow(
               color: Color.fromRGBO(169, 176, 185, 0.42),
               spreadRadius: 0,
-              blurRadius: 8,
-              offset: Offset(0, 2), // changes position of shadow
-            ),
+              blurRadius: 8.0,
+              offset: Offset(0, 2),
+            )
           ],
         ),
         child: Center(

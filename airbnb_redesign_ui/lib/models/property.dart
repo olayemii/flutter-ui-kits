@@ -1,8 +1,8 @@
 class Property {
   final String name;
   final String description;
-  final String image;
+  final String imagePath;
   final String price;
 
-  Property({this.name, this.description, this.image, this.price});
+  Property({this.name, this.description, this.imagePath, this.price});
 }

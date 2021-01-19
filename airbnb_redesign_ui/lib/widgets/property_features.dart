@@ -8,24 +8,15 @@ class PropertyFeatures extends StatelessWidget {
     return Container(
       child: Row(
         children: [
-          item(
-            FlutterIcons.md_people_ion,
-            "2 Adults",
-          ),
+          item(FlutterIcons.md_people_ion, "2 Adults"),
           SizedBox(
             width: 10.0,
           ),
-          item(
-            FlutterIcons.bed_faw,
-            "1 Bed",
-          ),
+          item(FlutterIcons.bed_faw, "1 Bed"),
           SizedBox(
             width: 10.0,
           ),
-          item(
-            FlutterIcons.wifi_fea,
-            "Free Wifi",
-          ),
+          item(FlutterIcons.wifi_fea, "Free Wifi")
         ],
       ),
     );
@@ -46,7 +37,7 @@ Widget item(IconData icon, String text) {
           Icon(
             icon,
             size: 16.0,
-            color: Color(0xFF404A6A),
+            color: Color(0xFF494A6A),
           ),
           SizedBox(
             width: 5.0,
@@ -56,7 +47,7 @@ Widget item(IconData icon, String text) {
             style: GoogleFonts.inter(
               fontSize: 12.0,
               fontWeight: FontWeight.w600,
-              color: Color(0xFF404A6A),
+              color: Color(0xFF494A6A),
             ),
           )
         ],

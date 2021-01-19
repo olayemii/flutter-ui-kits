@@ -6,7 +6,8 @@ class InputWidget extends StatelessWidget {
   final IconData suffixIcon;
   final bool obscureText;
 
-  InputWidget({this.suffixIcon, this.hintText, this.obscureText = false});
+  InputWidget({this.hintText, this.obscureText = false, this.suffixIcon});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,13 +17,16 @@ class InputWidget extends StatelessWidget {
         color: Color.fromRGBO(247, 247, 249, 1),
         borderRadius: BorderRadius.circular(12.0),
       ),
-      padding: EdgeInsets.only(
-        right: 24.0,
-        left: 24.0,
-      ),
+      padding: EdgeInsets.symmetric(horizontal: 24.0),
       child: TextFormField(
         obscureText: this.obscureText,
         decoration: InputDecoration(
+          hintText: this.hintText,
+          hintStyle: TextStyle(
+            fontSize: 14.0,
+            color: Color.fromRGBO(124, 124, 124, 1),
+            fontWeight: FontWeight.w600,
+          ),
           suffixIcon: this.suffixIcon == null
               ? null
               : Icon(
@@ -35,12 +39,6 @@ class InputWidget extends StatelessWidget {
             borderSide: BorderSide(
               color: Colors.transparent,
             ),
-          ),
-          hintText: this.hintText,
-          hintStyle: TextStyle(
-            fontSize: 14.0,
-            color: Color.fromRGBO(124, 124, 124, 1),
-            fontWeight: FontWeight.w600,
           ),
         ),
       ),

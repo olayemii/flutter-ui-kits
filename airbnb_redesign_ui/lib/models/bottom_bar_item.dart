@@ -5,5 +5,5 @@ class BottomBarItem {
   final IconData icon;
   final Function onPressed;
 
-  BottomBarItem({this.icon, this.key, this.onPressed});
+  BottomBarItem({this.onPressed, this.icon, this.key});
 }
