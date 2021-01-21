@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:laundry_app_ui/utils/constants.dart';
-import 'package:laundry_app_ui/utils/helper.dart';
 import 'package:laundry_app_ui/widgets/app_button.dart';
 import 'package:laundry_app_ui/widgets/input_widget.dart';
 
-class Login extends StatelessWidget {
+class Dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,6 +49,7 @@ class Login extends StatelessWidget {
                         SizedBox(
                           height: 20.0,
                         ),
+                        RichText(text: null)
                         Text(
                           "Log in to your account",
                           style: Theme.of(context).textTheme.headline6.copyWith(
@@ -61,7 +61,7 @@ class Login extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 40.0,
+                    height: 100.0,
                   ),
                   Expanded(
                     child: Container(
@@ -74,46 +74,6 @@ class Login extends StatelessWidget {
                         color: Colors.white,
                       ),
                       padding: EdgeInsets.all(24.0),
-                      child: Form(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.stretch,
-                          children: [
-                            InputWidget(
-                              topLabel: "Email",
-                              hintText: "Enter your email address",
-                            ),
-                            SizedBox(
-                              height: 25.0,
-                            ),
-                            InputWidget(
-                              topLabel: "Password",
-                              hintText: "Enter your email address",
-                              obscureText: true,
-                            ),
-                            SizedBox(
-                              height: 15.0,
-                            ),
-                            Text(
-                              "Forgot Password?",
-                              textAlign: TextAlign.right,
-                              style: TextStyle(
-                                color: Constants.primaryColor,
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                            SizedBox(
-                              height: 20.0,
-                            ),
-                            AppButton(
-                              type: ButtonType.PRIMARY,
-                              text: "Login",
-                              onPressed: () {
-                                nextScreen(context, "/dashboard");
-                              },
-                            )
-                          ],
-                        ),
-                      ),
                     ),
                   ),
                 ],

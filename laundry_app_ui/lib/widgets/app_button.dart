@@ -19,10 +19,10 @@ class AppButton extends StatelessWidget {
       onTap: this.onPressed,
       child: Container(
         width: double.infinity,
-        height: ScreenUtil().setHeight(50.0),
+        height: ScreenUtil().setHeight(48.0),
         decoration: BoxDecoration(
           color: getButtonColor(type),
-          borderRadius: BorderRadius.circular(12.0),
+          borderRadius: BorderRadius.circular(8.0),
           boxShadow: [
             BoxShadow(
               color: Color.fromRGBO(169, 176, 185, 0.42),
