@@ -6,7 +6,13 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Constants.primaryColor,
-      body: Container(),
+      body: SingleChildScrollView(
+        child: Container(
+          child: Column(
+            children: [],
+          ),
+        ),
+      ),
     );
   }
 }
