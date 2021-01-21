@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/screenutil.dart';
 import 'package:laundry_app_ui/utils/constants.dart';
 import 'package:laundry_app_ui/widgets/app_button.dart';
 import 'package:laundry_app_ui/widgets/input_widget.dart';
+import 'package:laundry_app_ui/widgets/latest_orders.dart';
 import 'package:laundry_app_ui/widgets/location_slider.dart';
 
 class Dashboard extends StatelessWidget {
