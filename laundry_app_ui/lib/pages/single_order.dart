@@ -171,25 +171,47 @@ class _SingleOrderState extends State<SingleOrder> {
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(8.0),
                       ),
+                      padding: EdgeInsets.all(16.0),
                       height: ScreenUtil().setHeight(127.0),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
                           Text(
                             "Your clothes are now washing.",
-                            style: TextStyle(
-                              fontWeight: FontWeight.w600,
-                              color: Color.fromRGBO(143, 148, 162, 1),
-                            ),
+                            style:
+                                Theme.of(context).textTheme.headline6.copyWith(
+                                      color: Color.fromRGBO(74, 77, 84, 1),
+                                      fontSize: 16.0,
+                                      fontWeight: FontWeight.w800,
+                                    ),
                           ),
                           SizedBox(
                             height: 5.0,
                           ),
                           Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               RichText(
-                                text: TextSpan(children: []),
-                              )
+                                text: TextSpan(
+                                  children: [
+                                    TextSpan(
+                                      text: "Estimated Delivery\n",
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(143, 148, 162, 1),
+                                        fontSize: 15.0,
+                                      ),
+                                    ),
+                                    TextSpan(
+                                      text: "21 January 2020",
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(74, 77, 84, 1),
+                                        fontSize: 15.0,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Image.asset("assets/images/washlogo.png")
                             ],
                           )
                         ],
