@@ -8,31 +8,79 @@ class Login extends StatelessWidget {
     return Scaffold(
       backgroundColor: Constants.primaryColor,
       body: SafeArea(
+        bottom: false,
         child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 16.0),
           child: Stack(
+            overflow: Overflow.visible,
             children: [
+              Positioned(
+                right: 0.0,
+                top: -20.0,
+                child: Opacity(
+                  opacity: 0.3,
+                  child: Image.asset(
+                    "assets/images/washing_machine_illustration.png",
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                    child: Icon(
-                      FlutterIcons.keyboard_backspace_mdi,
-                      color: Colors.white,
+                  Container(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 16.0,
+                      vertical: 15.0,
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.pop(context);
+                          },
+                          child: Icon(
+                            FlutterIcons.keyboard_backspace_mdi,
+                            color: Colors.white,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 20.0,
+                        ),
+                        Text(
+                          "Log in to your account",
+                          style: Theme.of(context).textTheme.headline6.copyWith(
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white,
+                              ),
+                        )
+                      ],
                     ),
                   ),
                   SizedBox(
-                    height: 20.0,
+                    height: 40.0,
                   ),
-                  Text(
-                    "Log in to your account",
-                    style: Theme.of(context).textTheme.headline6.copyWith(
-                          fontWeight: FontWeight.w600,
-                          color: Colors.white,
+                  Expanded(
+                    child: Container(
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(30.0),
+                          topRight: Radius.circular(30.0),
                         ),
+                        color: Colors.white,
+                      ),
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 16.0,
+                        vertical: 24.0,
+                      ),
+                      child: Form(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [],
+                        ),
+                      ),
+                    ),
                   )
                 ],
               ),
