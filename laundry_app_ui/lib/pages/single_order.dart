@@ -1,10 +1,8 @@
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
-import 'package:flutter_screenutil/screenutil.dart';
+import 'package:laundry_app_ui/models/order.dart';
 import 'package:laundry_app_ui/utils/constants.dart';
 import 'package:laundry_app_ui/widgets/latest_orders.dart';
-import 'package:laundry_app_ui/widgets/location_slider.dart';
 
 class SingleOrder extends StatefulWidget {
   @override
@@ -12,7 +10,7 @@ class SingleOrder extends StatefulWidget {
 }
 
 class _SingleOrderState extends State<SingleOrder> {
-  int activeIndex = 0;
+  final Order order = orders[0];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,36 +58,33 @@ class _SingleOrderState extends State<SingleOrder> {
                               color: Colors.white,
                             ),
                           ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              RichText(
-                                text: TextSpan(
-                                  children: [
-                                    TextSpan(
-                                      text: "Welcome Back,\n",
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .headline6
-                                          .copyWith(
-                                            color: Colors.white,
-                                          ),
-                                    ),
-                                    TextSpan(
-                                      text: "FlutterPanda!",
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .headline6
-                                          .copyWith(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.w600,
-                                          ),
-                                    ),
-                                  ],
+                          SizedBox(
+                            height: 20.0,
+                          ),
+                          RichText(
+                            text: TextSpan(
+                              children: [
+                                TextSpan(
+                                  text: "Details About\n",
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .headline6
+                                      .copyWith(
+                                        color: Colors.white,
+                                      ),
                                 ),
-                              ),
-                              Image.asset("assets/images/dp.png"),
-                            ],
+                                TextSpan(
+                                  text: "Order #!",
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .headline6
+                                      .copyWith(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w600,
+                                      ),
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
