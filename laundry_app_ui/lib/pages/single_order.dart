@@ -22,7 +22,7 @@ class _SingleOrderState extends State<SingleOrder> {
           children: [
             Positioned(
               right: 0.0,
-              top: -20.0,
+              top: 10.0,
               child: Opacity(
                 opacity: 0.3,
                 child: Image.asset(
@@ -75,7 +75,7 @@ class _SingleOrderState extends State<SingleOrder> {
                       ),
                     ),
                     SizedBox(
-                      height: 50.0,
+                      height: 40.0,
                     ),
                     Container(
                       width: double.infinity,
@@ -97,7 +97,7 @@ class _SingleOrderState extends State<SingleOrder> {
                                 Theme.of(context).textTheme.headline6.copyWith(
                                       color: Color.fromRGBO(74, 77, 84, 1),
                                       fontSize: 16.0,
-                                      fontWeight: FontWeight.w600,
+                                      fontWeight: FontWeight.w800,
                                     ),
                           ),
                           SizedBox(height: 10.0),
@@ -107,10 +107,62 @@ class _SingleOrderState extends State<SingleOrder> {
                               fontWeight: FontWeight.w600,
                               color: Color.fromRGBO(143, 148, 162, 1),
                             ),
+                          ),
+                          SizedBox(
+                            height: 10.0,
+                          ),
+                          getItemRow("3", "T-shirts (man)", "\$30.00"),
+                          getItemRow("2", "T-shirts (man)", "\$40.00"),
+                          getItemRow("4", "Pants (man)", "\$80.00"),
+                          getItemRow("1", "Jeans (man)", "\$20.00"),
+                          SizedBox(
+                            height: 30.0,
+                          ),
+                          Text(
+                            "IRONING".toUpperCase(),
+                            style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              color: Color.fromRGBO(143, 148, 162, 1),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 10.0,
+                          ),
+                          getItemRow("3", "T-shirts (man)", "\$30.00"),
+                          Divider(),
+                          getSubtotalRow("Subtotal", "\$200.00"),
+                          getSubtotalRow("Delivery", "\$225.00"),
+                          SizedBox(
+                            height: 10.0,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 8.0),
+                            child: Row(
+                              children: [
+                                Text(
+                                  "Total",
+                                  style: TextStyle(
+                                    color: Color.fromRGBO(19, 22, 33, 1),
+                                    fontSize: 17.0,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                                Spacer(),
+                                Text(
+                                  "\$225.0",
+                                  style: TextStyle(
+                                    color: Constants.primaryColor,
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 17.0,
+                                  ),
+                                ),
+                              ],
+                            ),
                           )
                         ],
                       ),
                     ),
+                    Container(color: Colors.white)
                   ],
                 ),
               ),
@@ -122,8 +174,62 @@ class _SingleOrderState extends State<SingleOrder> {
   }
 }
 
+Widget getSubtotalRow(String title, String price) {
+  return Padding(
+    padding: const EdgeInsets.only(bottom: 8.0),
+    child: Row(
+      children: [
+        Text(
+          title,
+          style: TextStyle(
+            color: Color.fromRGBO(74, 77, 84, 1),
+            fontSize: 15.0,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+        Spacer(),
+        Text(
+          price,
+          style: TextStyle(
+            color: Color.fromRGBO(74, 77, 84, 1),
+            fontSize: 15.0,
+          ),
+        ),
+      ],
+    ),
+  );
+}
+
 Widget getItemRow(String count, String item, String price) {
-  return Row(
-    children: [],
+  return Padding(
+    padding: const EdgeInsets.only(bottom: 8.0),
+    child: Row(
+      children: [
+        Text(
+          count,
+          style: TextStyle(
+            color: Color.fromRGBO(74, 77, 84, 1),
+            fontSize: 15.0,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+        Expanded(
+          child: Text(
+            " x $item",
+            style: TextStyle(
+              color: Color.fromRGBO(143, 148, 162, 1),
+              fontSize: 15.0,
+            ),
+          ),
+        ),
+        Text(
+          price,
+          style: TextStyle(
+            color: Color.fromRGBO(74, 77, 84, 1),
+            fontSize: 15.0,
+          ),
+        ),
+      ],
+    ),
   );
 }
