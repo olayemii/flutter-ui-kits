@@ -20,6 +20,9 @@ class Home extends StatelessWidget {
               height: 20.0,
             ),
             SingleNewsCard(),
+            SizedBox(
+              height: 30.0,
+            ),
             ListView.separated(
               shrinkWrap: true,
               physics: NeverScrollableScrollPhysics(),

@@ -74,6 +74,9 @@ class _NotificationsState extends State<Notifications> {
                       _hasContents = !_hasContents;
                     });
                   },
+                ),
+                SizedBox(
+                  height: 20.0,
                 )
               ],
             ),

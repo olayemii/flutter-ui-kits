@@ -11,7 +11,7 @@ Complete flutter projects are available on my <a href="https://codecanyon.net/us
 
 PRs are welcomed. Issues are welcomed too. 
 
-Send me UI suggestions for any uplabs project on <a href="mailto:chris2code@gmail.com">chris2code@gmail.com</a>
+Send me UI suggestions for any uplabs project on <a href="mailto:info@flutterpanda.com">info@flutterpanda.com</a>
 
 ### Support App
 
@@ -62,4 +62,12 @@ Our top sponsors will be listed here
 4. **[Real Estate Flutter UI Kit](https://github.com/OLayemii/flutter-ui-kits/tree/main/real_estate_ui)**
 
 ![Real Estate Flutter UI Kit](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/house2.jpg)
+
+5. **[Repair Service Flutter UI Kit](https://github.com/OLayemii/flutter-ui-kits/tree/main/repair_service_ui)**
+
+![Repair Service Flutter UI Kit](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/repair-mockup.png)
+
+6. **[AirBnB Redesign Flutter UI Kit](https://github.com/OLayemii/flutter-ui-kits/tree/main/airbnb_redesign_ui)**
+
+![AirBnB Redesign Flutter UI Kit](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/airbnb-mockup.png)
 

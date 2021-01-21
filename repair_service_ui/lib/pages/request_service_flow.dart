@@ -16,7 +16,6 @@ class _RequestServiceFlowState extends State<RequestServiceFlow> {
   int current = 0;
 
   void nextPage() {
-    print("Update Current");
     setState(() {
       current += 1;
     });
@@ -35,20 +34,18 @@ class _RequestServiceFlowState extends State<RequestServiceFlow> {
       HomePageTwo(nextPage: nextPage, prevPage: prevPage),
       HomePageThree(nextPage: nextPage, prevPage: prevPage),
     ];
-    Size size = MediaQuery.of(context).size;
 
     return Scaffold(
       appBar: AppBar(
         brightness: Brightness.dark,
         elevation: 0.0,
         backgroundColor: Colors.transparent,
-        // automaticallyImplyLeading: false,
         leading: current > 0
             ? GestureDetector(
                 onTap: () {
                   this.prevPage();
                 },
-                child: Icon(FlutterIcons.arrow_left_ent),
+                child: Icon(FlutterIcons.keyboard_backspace_mdi),
               )
             : null,
         iconTheme: IconThemeData(
