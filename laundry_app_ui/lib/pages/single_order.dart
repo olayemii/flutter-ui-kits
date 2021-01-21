@@ -182,6 +182,16 @@ class _SingleOrderState extends State<SingleOrder> {
                               color: Color.fromRGBO(143, 148, 162, 1),
                             ),
                           ),
+                          SizedBox(
+                            height: 5.0,
+                          ),
+                          Row(
+                            children: [
+                              RichText(
+                                text: TextSpan(children: []),
+                              )
+                            ],
+                          )
                         ],
                       ),
                     )
