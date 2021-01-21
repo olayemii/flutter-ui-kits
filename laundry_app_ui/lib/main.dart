@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:laundry_app_ui/pages/dashboard.dart';
 import 'package:laundry_app_ui/pages/home.dart';
 import 'package:laundry_app_ui/pages/login.dart';
+import 'package:laundry_app_ui/pages/single_order.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
           visualDensity: VisualDensity.adaptivePlatformDensity,
           textTheme: GoogleFonts.poppinsTextTheme(),
         ),
-        initialRoute: "/dashboard",
+        initialRoute: "/single-order",
         onGenerateRoute: _onGenerateRoute,
       ),
     );
@@ -43,6 +44,10 @@ Route<dynamic> _onGenerateRoute(RouteSettings settings) {
     case "/dashboard":
       return MaterialPageRoute(builder: (BuildContext context) {
         return Dashboard();
+      });
+    case "/single-order":
+      return MaterialPageRoute(builder: (BuildContext context) {
+        return SingleOrder();
       });
     default:
       return MaterialPageRoute(builder: (BuildContext context) {

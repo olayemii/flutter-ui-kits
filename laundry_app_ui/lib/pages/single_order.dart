@@ -16,43 +16,7 @@ class _SingleOrderState extends State<SingleOrder> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: CurvedNavigationBar(
-        backgroundColor: Color.fromRGBO(245, 247, 249, 1),
-        buttonBackgroundColor: Constants.primaryColor,
-        items: <Widget>[
-          Icon(
-            FlutterIcons.ios_home_ion,
-            size: 30,
-            color: activeIndex == 0 ? Colors.white : Color(0xFFC8C9CB),
-          ),
-          Icon(
-            FlutterIcons.map_marker_radius_mco,
-            size: 30,
-            color: activeIndex == 1 ? Colors.white : Color(0xFFC8C9CB),
-          ),
-          Icon(
-            FlutterIcons.plus_ant,
-            size: 30,
-            color: activeIndex == 2 ? Colors.white : Color(0xFFC8C9CB),
-          ),
-          Icon(
-            FlutterIcons.heart_fea,
-            size: 30,
-            color: activeIndex == 3 ? Colors.white : Color(0xFFC8C9CB),
-          ),
-          Icon(
-            FlutterIcons.setting_ant,
-            size: 30,
-            color: activeIndex == 4 ? Colors.white : Color(0xFFC8C9CB),
-          ),
-        ],
-        onTap: (index) {
-          setState(() {
-            activeIndex = index;
-          });
-        },
-      ),
-      backgroundColor: Color.fromRGBO(245, 247, 249, 1),
+      backgroundColor: Constants.primaryColor,
       body: Container(
         color: Constants.primaryColor,
         child: Stack(
@@ -146,28 +110,6 @@ class _SingleOrderState extends State<SingleOrder> {
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 24.0),
-                            child: Text(
-                              "New Locations",
-                              style: TextStyle(
-                                color: Color.fromRGBO(19, 22, 33, 1),
-                                fontSize: 18.0,
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 7.0,
-                          ),
-                          Container(
-                            height: ScreenUtil().setHeight(100.0),
-                            child: Center(
-                              child: LocationSlider(),
-                            ),
-                          ),
-                          LatestOrders()
-                        ],
                       ),
                     ),
                   ],
