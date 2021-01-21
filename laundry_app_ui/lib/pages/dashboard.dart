@@ -97,7 +97,18 @@ class Dashboard extends StatelessWidget {
                         color: Colors.white,
                       ),
                       padding: EdgeInsets.all(24.0),
-                      child: Column(),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "New Locations",
+                            style: TextStyle(
+                              color: Color.fromRGBO(19, 22, 33, 1),
+                              fontSize: 18.0,
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ],
