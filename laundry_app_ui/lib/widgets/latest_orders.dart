@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:laundry_app_ui/models/order.dart';
 import 'package:laundry_app_ui/utils/constants.dart';
+import 'package:laundry_app_ui/widgets/order_card.dart';
 
 class LatestOrders extends StatelessWidget {
   final List<Order> orders = [
