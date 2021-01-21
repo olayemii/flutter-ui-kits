@@ -6,12 +6,12 @@ import 'package:laundry_app_ui/utils/constants.dart';
 import 'package:laundry_app_ui/widgets/latest_orders.dart';
 import 'package:laundry_app_ui/widgets/location_slider.dart';
 
-class Dashboard extends StatefulWidget {
+class SingleOrder extends StatefulWidget {
   @override
-  _DashboardState createState() => _DashboardState();
+  _SingleOrderState createState() => _SingleOrderState();
 }
 
-class _DashboardState extends State<Dashboard> {
+class _SingleOrderState extends State<SingleOrder> {
   int activeIndex = 0;
   @override
   Widget build(BuildContext context) {

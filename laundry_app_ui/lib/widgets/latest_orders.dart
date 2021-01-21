@@ -6,14 +6,18 @@ import 'package:laundry_app_ui/widgets/order_card.dart';
 class LatestOrders extends StatelessWidget {
   final List<Order> orders = [
     Order(
+      id: 507,
       arrivalAddress: "New Times Square",
       status: OrderStatus.PICKING_UP,
-      arrivalDate: DateTime(2020, 01, 21),
+      arrivalDate: DateTime(2020, 1, 21),
+      placedDate: DateTime(2020, 1, 17),
     ),
     Order(
+      id: 536,
       arrivalAddress: "Victoria Square",
       status: OrderStatus.DELIVERING,
-      arrivalDate: DateTime(2020, 01, 21),
+      arrivalDate: DateTime(2020, 1, 21),
+      placedDate: DateTime(2020, 1, 17),
     ),
   ];
   @override
@@ -49,20 +53,22 @@ class LatestOrders extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 7.0,
+            height: 10.0,
           ),
-          Expanded(
-            child: ListView.separated(
-              itemBuilder: (BuildContext context, int index) {
-                return OrderCard(order: this.orders[index]);
-              },
-              separatorBuilder: (BuildContext context, int index) {
-                return SizedBox(
-                  height: 15.0,
-                );
-              },
-              itemCount: orders.length,
-              padding: EdgeInsets.symmetric(horizontal: 24.0),
+          ListView.separated(
+            shrinkWrap: true,
+            physics: NeverScrollableScrollPhysics(),
+            itemBuilder: (BuildContext context, int index) {
+              return OrderCard(order: this.orders[index]);
+            },
+            separatorBuilder: (BuildContext context, int index) {
+              return SizedBox(
+                height: 15.0,
+              );
+            },
+            itemCount: orders.length,
+            padding: EdgeInsets.symmetric(
+              horizontal: 24.0,
             ),
           ),
         ],
