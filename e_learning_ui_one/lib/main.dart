@@ -1,4 +1,4 @@
-import 'package:e_learning_ui_one/pages/home.dart';
+import 'package:e_learning_ui_one/pages/home/home.dart';
 import 'package:e_learning_ui_one/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
