@@ -51,7 +51,7 @@ class Home extends StatelessWidget {
                   vertical: 24.0,
                 ),
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: Color.fromRGBO(245, 247, 249, 1),
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(30.0),
                     topRight: Radius.circular(30.0),

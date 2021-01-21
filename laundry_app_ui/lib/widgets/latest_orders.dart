@@ -12,7 +12,7 @@ class LatestOrders extends StatelessWidget {
     ),
     Order(
       arrivalAddress: "Victoria Square",
-      status: OrderStatus.PICKING_UP,
+      status: OrderStatus.DELIVERING,
       arrivalDate: DateTime(2020, 01, 21),
     ),
   ];

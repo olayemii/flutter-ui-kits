@@ -97,7 +97,7 @@ class Dashboard extends StatelessWidget {
                           topLeft: Radius.circular(30.0),
                           topRight: Radius.circular(30.0),
                         ),
-                        color: Colors.white,
+                        color: Color.fromRGBO(245, 247, 249, 1),
                       ),
                       padding: EdgeInsets.symmetric(vertical: 24.0),
                       child: Column(
