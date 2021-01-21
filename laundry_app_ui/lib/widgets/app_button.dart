@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:laundry_app_ui/utils/constants.dart';
+
+enum ButtonType { PRIMARY, PLAIN }
 
 class AppButton extends StatelessWidget {
   // Our primary button widget [to be reused]
+  final ButtonType type;
   final Function onPressed;
   final String text;
   final Color color;
 
-  AppButton({this.text, this.onPressed, this.color});
+  AppButton({this.text, this.onPressed, this.color, this.type});
 
   @override
   Widget build(BuildContext context) {
@@ -40,5 +44,14 @@ class AppButton extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+Color getButtonColor(ButtonType type) {
+  switch (type) {
+    case ButtonType.PLAIN:
+      return Colors.white;
+    case ButtonType.PRIMARY:
+      return Constants.primaryColor;
   }
 }

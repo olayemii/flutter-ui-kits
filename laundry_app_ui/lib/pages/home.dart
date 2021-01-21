@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:laundry_app_ui/utils/constants.dart';
+import 'package:laundry_app_ui/widgets/app_button.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -81,6 +82,10 @@ class Home extends StatelessWidget {
                     SizedBox(
                       height: 40.0,
                     ),
+                    AppButton(
+                      color: Constants.primaryColor,
+                      text: "Create an Account",
+                    )
                   ],
                 ),
               ),
