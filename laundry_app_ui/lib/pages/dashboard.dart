@@ -47,21 +47,44 @@ class Dashboard extends StatelessWidget {
                           ),
                         ),
                         SizedBox(
-                          height: 20.0,
+                          height: 38.0,
                         ),
-                        RichText(text: null)
-                        Text(
-                          "Log in to your account",
-                          style: Theme.of(context).textTheme.headline6.copyWith(
-                                fontWeight: FontWeight.w600,
-                                color: Colors.white,
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            RichText(
+                              text: TextSpan(
+                                children: [
+                                  TextSpan(
+                                    text: "Welcome Back,\n",
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .headline6
+                                        .copyWith(
+                                          color: Colors.white,
+                                        ),
+                                  ),
+                                  TextSpan(
+                                    text: "FlutterPanda!",
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .headline6
+                                        .copyWith(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                  ),
+                                ],
                               ),
-                        )
+                            ),
+                            Image.asset("assets/images/dp.png"),
+                          ],
+                        ),
                       ],
                     ),
                   ),
                   SizedBox(
-                    height: 100.0,
+                    height: 10.0,
                   ),
                   Expanded(
                     child: Container(
@@ -74,6 +97,7 @@ class Dashboard extends StatelessWidget {
                         color: Colors.white,
                       ),
                       padding: EdgeInsets.all(24.0),
+                      child: Column(),
                     ),
                   ),
                 ],
