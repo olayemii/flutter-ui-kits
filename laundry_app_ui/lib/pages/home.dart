@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:laundry_app_ui/utils/constants.dart';
+import 'package:laundry_app_ui/utils/helper.dart';
 import 'package:laundry_app_ui/widgets/app_button.dart';
 
 class Home extends StatelessWidget {
@@ -83,9 +84,19 @@ class Home extends StatelessWidget {
                       height: 40.0,
                     ),
                     AppButton(
-                      color: Constants.primaryColor,
+                      text: "Log In",
+                      type: ButtonType.PLAIN,
+                      onPressed: () {
+                        nextScreen(context, "/login");
+                      },
+                    ),
+                    SizedBox(
+                      height: 15.0,
+                    ),
+                    AppButton(
                       text: "Create an Account",
-                    )
+                      type: ButtonType.PRIMARY,
+                    ),
                   ],
                 ),
               ),

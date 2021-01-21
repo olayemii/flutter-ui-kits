@@ -10,9 +10,8 @@ class AppButton extends StatelessWidget {
   final ButtonType type;
   final Function onPressed;
   final String text;
-  final Color color;
 
-  AppButton({this.text, this.onPressed, this.color, this.type});
+  AppButton({this.text, this.onPressed, this.type});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +21,7 @@ class AppButton extends StatelessWidget {
         width: double.infinity,
         height: ScreenUtil().setHeight(50.0),
         decoration: BoxDecoration(
-          color: color,
+          color: getButtonColor(type),
           borderRadius: BorderRadius.circular(12.0),
           boxShadow: [
             BoxShadow(
@@ -37,8 +36,9 @@ class AppButton extends StatelessWidget {
           child: Text(
             this.text,
             style: GoogleFonts.roboto(
-              color: Colors.white,
+              color: getTextColor(type),
               fontSize: 16.0,
+              fontWeight: FontWeight.w500,
             ),
           ),
         ),
@@ -53,5 +53,18 @@ Color getButtonColor(ButtonType type) {
       return Colors.white;
     case ButtonType.PRIMARY:
       return Constants.primaryColor;
+    default:
+      return Colors.white;
+  }
+}
+
+Color getTextColor(ButtonType type) {
+  switch (type) {
+    case ButtonType.PRIMARY:
+      return Colors.white;
+    case ButtonType.PLAIN:
+      return Constants.primaryColor;
+    default:
+      return Colors.white;
   }
 }
