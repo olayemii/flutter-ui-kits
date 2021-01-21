@@ -1,24 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:laundry_app_ui/models/order.dart';
 import 'package:laundry_app_ui/utils/constants.dart';
+import 'package:laundry_app_ui/utils/static_data.dart';
 import 'package:laundry_app_ui/widgets/order_card.dart';
-
-final List<Order> orders = [
-  Order(
-    id: 507,
-    arrivalAddress: "New Times Square",
-    status: OrderStatus.PICKING_UP,
-    arrivalDate: DateTime(2020, 1, 21),
-    placedDate: DateTime(2020, 1, 17),
-  ),
-  Order(
-    id: 536,
-    arrivalAddress: "Victoria Square",
-    status: OrderStatus.DELIVERING,
-    arrivalDate: DateTime(2020, 1, 21),
-    placedDate: DateTime(2020, 1, 17),
-  ),
-];
 
 class LatestOrders extends StatelessWidget {
   @override
@@ -60,16 +43,16 @@ class LatestOrders extends StatelessWidget {
             shrinkWrap: true,
             physics: NeverScrollableScrollPhysics(),
             itemBuilder: (BuildContext context, int index) {
-              return OrderCard(order: this.orders[index]);
+              return OrderCard(order: StaticData.orders[index]);
             },
             separatorBuilder: (BuildContext context, int index) {
               return SizedBox(
                 height: 15.0,
               );
             },
-            itemCount: orders.length,
+            itemCount: StaticData.orders.length,
             padding: EdgeInsets.symmetric(
-              horizontal: 24.0,
+              horizontal: 16.0,
             ),
           ),
         ],
