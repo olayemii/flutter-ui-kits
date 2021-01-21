@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:laundry_app_ui/models/order.dart';
 import 'package:laundry_app_ui/utils/constants.dart';
 import 'package:laundry_app_ui/utils/static_data.dart';
@@ -162,7 +163,28 @@ class _SingleOrderState extends State<SingleOrder> {
                         ],
                       ),
                     ),
-                    Container(color: Colors.white)
+                    SizedBox(
+                      height: 10.0,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                      height: ScreenUtil().setHeight(127.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          Text(
+                            "Your clothes are now washing.",
+                            style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              color: Color.fromRGBO(143, 148, 162, 1),
+                            ),
+                          ),
+                        ],
+                      ),
+                    )
                   ],
                 ),
               ),
