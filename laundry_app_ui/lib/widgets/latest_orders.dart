@@ -51,9 +51,17 @@ class LatestOrders extends StatelessWidget {
             height: 7.0,
           ),
           Expanded(
-            child: ListView(
+            child: ListView.separated(
+              itemBuilder: (BuildContext context, int index) {
+                return OrderCard(order: this.orders[index]);
+              },
+              separatorBuilder: (BuildContext context, int index) {
+                return SizedBox(
+                  height: 15.0,
+                );
+              },
+              itemCount: orders.length,
               padding: EdgeInsets.symmetric(horizontal: 24.0),
-              children: [],
             ),
           ),
         ],
