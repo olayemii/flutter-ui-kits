@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'package:flutter_screenutil/screenutil.dart';
 import 'package:laundry_app_ui/utils/constants.dart';
 import 'package:laundry_app_ui/widgets/app_button.dart';
 import 'package:laundry_app_ui/widgets/input_widget.dart';
+import 'package:laundry_app_ui/widgets/location_slider.dart';
 
 class Dashboard extends StatelessWidget {
   @override
@@ -96,16 +98,31 @@ class Dashboard extends StatelessWidget {
                         ),
                         color: Colors.white,
                       ),
-                      padding: EdgeInsets.all(24.0),
+                      padding: EdgeInsets.symmetric(vertical: 24.0),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
-                            "New Locations",
-                            style: TextStyle(
-                              color: Color.fromRGBO(19, 22, 33, 1),
-                              fontSize: 18.0,
+                          Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 24.0),
+                            child: Text(
+                              "New Locations",
+                              style: TextStyle(
+                                color: Color.fromRGBO(19, 22, 33, 1),
+                                fontSize: 18.0,
+                              ),
                             ),
+                          ),
+                          SizedBox(
+                            height: 7.0,
+                          ),
+                          Container(
+                            height: ScreenUtil().setHeight(100.0),
+                            child: Center(
+                              child: LocationSlider(),
+                            ),
+                          ),
+                          Expanded(
+                            child: LatestOrders(),
                           )
                         ],
                       ),
