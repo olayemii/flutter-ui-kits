@@ -1,0 +1,56 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "airbnb_redesign_ui",
+            "cwd": "airbnb_redesign_ui",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "e_learning_ui_one",
+            "cwd": "e_learning_ui_one",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "language_learning_ui",
+            "cwd": "language_learning_ui",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "laundry_app_ui",
+            "cwd": "laundry_app_ui",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "news_ui",
+            "cwd": "news_ui",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "real_estate_ui",
+            "cwd": "real_estate_ui",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "repair_service_ui",
+            "cwd": "repair_service_ui",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "watch_cart_ui",
+            "cwd": "watch_cart_ui",
+            "request": "launch",
+            "type": "dart"
+        }
+    ]
+}

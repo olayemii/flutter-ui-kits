@@ -62,6 +62,13 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
   }
 
   @override
+  void dispose() {
+    ballAnimationController.dispose();
+    bulbAnimationController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Constants.primaryColor,

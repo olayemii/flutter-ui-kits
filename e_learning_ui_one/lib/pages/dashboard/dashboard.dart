@@ -6,6 +6,9 @@ class Dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: BottomNavigationBar(
+        items: [],
+      ),
       body: Container(
         padding: EdgeInsets.symmetric(
           horizontal: 16.0,
@@ -13,6 +16,7 @@ class Dashboard extends StatelessWidget {
         ),
         child: SafeArea(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -26,6 +30,7 @@ class Dashboard extends StatelessWidget {
                     ),
                   ),
                   Container(
+                    clipBehavior: Clip.hardEdge,
                     height: ScreenUtil().setHeight(48.0),
                     width: ScreenUtil().setWidth(48.0),
                     decoration: BoxDecoration(
@@ -33,9 +38,39 @@ class Dashboard extends StatelessWidget {
                       borderRadius: BorderRadius.circular(14.0),
                     ),
                     child: Image.asset("assets/images/dp.png"),
-                  )
+                  ),
                 ],
               ),
+              SizedBox(
+                height: 10.0,
+              ),
+              Container(
+                width: 200.0,
+                child: RichText(
+                  text: TextSpan(
+                    children: [
+                      TextSpan(
+                        text: "What do you want to learn today?",
+                        style: TextStyle(
+                          fontSize: 26.0,
+                          height: 1.5,
+                          color: Color.fromRGBO(13, 19, 51, 1),
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      TextSpan(
+                        text: " 🔍",
+                        style: TextStyle(
+                          fontSize: 26.0,
+                          height: 1.5,
+                          color: Color.fromRGBO(13, 19, 51, 0.3),
+                          fontWeight: FontWeight.w600,
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              )
             ],
           ),
         ),
