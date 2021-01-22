@@ -62,6 +62,16 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                         child: SvgPicture.asset("assets/svgs/girl_on_book.svg"),
                       ),
                       Positioned(
+                        bottom: 225.0,
+                        left: MediaQuery.of(context).size.width / 2.0 + 20.0,
+                        child: SvgPicture.asset("assets/svgs/girl_sitting.svg"),
+                      ),
+                      Positioned(
+                        bottom: 350.0,
+                        left: MediaQuery.of(context).size.width / 2.0 + 70.0,
+                        child: SvgPicture.asset("assets/svgs/ball.svg"),
+                      ),
+                      Positioned(
                         bottom: -20.0,
                         left: MediaQuery.of(context).size.width / 2.0 - 70.0,
                         child: SvgPicture.asset("assets/svgs/guy_laptop.svg"),
