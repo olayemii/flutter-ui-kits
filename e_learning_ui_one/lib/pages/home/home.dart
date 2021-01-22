@@ -10,9 +10,25 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   AnimationController animationController;
+  Animation<double> animation;
   @override
   void initState() {
-    animationController = AnimationController(vsync: this);
+    animationController = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 1),
+    );
+    animation = Tween<double>(begin: 0.8, end: 0).animate(animationController)
+      ..addListener(() {
+        setState(() {});
+      })
+      ..addStatusListener((status) {
+        if (status == AnimationStatus.completed) {
+          animationController.reverse();
+        } else if (status == AnimationStatus.dismissed) {
+          animationController.forward();
+        }
+      });
+    animationController.forward();
     super.initState();
   }
 
@@ -65,6 +81,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                         left: -3.0,
                         child: SvgPicture.asset(
                           "assets/svgs/light.svg",
+                          color: Colors.white.withOpacity(animation.value),
                         ),
                       ),
                     ],
