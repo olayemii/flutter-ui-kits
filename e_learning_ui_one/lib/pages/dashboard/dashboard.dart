@@ -1,5 +1,6 @@
 import 'package:e_learning_ui_one/utils/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Dashboard extends StatelessWidget {
@@ -7,7 +8,37 @@ class Dashboard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
-        items: [],
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        iconSize: 30.0,
+        unselectedIconTheme: IconThemeData(
+          color: Color.fromRGBO(
+            211,
+            222,
+            250,
+            100,
+          ),
+        ),
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(
+              FlutterIcons.address_book_faw5,
+            ),
+            label: "",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              FlutterIcons.play_circle_faw,
+            ),
+            label: "",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              FlutterIcons.person_oct,
+            ),
+            label: "",
+          ),
+        ],
       ),
       body: Container(
         padding: EdgeInsets.symmetric(
