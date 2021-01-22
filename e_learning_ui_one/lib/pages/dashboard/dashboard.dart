@@ -1,3 +1,4 @@
+import 'package:e_learning_ui_one/pages/single_course/single_course.dart';
 import 'package:e_learning_ui_one/utils/constants.dart';
 import 'package:e_learning_ui_one/utils/static_data.dart';
 import 'package:e_learning_ui_one/widgets/card_tag.dart';
@@ -111,9 +112,18 @@ class Dashboard extends StatelessWidget {
                 Wrap(
                   children: List.generate(
                     StaticData.courses.length,
-                    (index) => CourseCard(
-                      index: index,
-                      course: StaticData.courses[index],
+                    (index) => GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(builder: (BuildContext context) {
+                            return SingleCourse();
+                          }),
+                        );
+                      },
+                      child: CourseCard(
+                        index: index,
+                        course: StaticData.courses[index],
+                      ),
                     ),
                   ),
                 )

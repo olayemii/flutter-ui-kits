@@ -31,22 +31,39 @@ class MyApp extends StatelessWidget {
           ),
           // initialRoute: "/",
           // onGenerateRoute: _onGenerateRoute,
-          home: LiquidSwipe(
-            positionSlideIcon: -0.3,
-            enableSlideIcon: true,
-            slideIconWidget: Icon(
-              Icons.arrow_back_ios,
-              color: Colors.white,
-            ),
-            enableLoop: false,
-            pages: [
-              Home(),
-              Dashboard(),
-              SingleCourse(),
-            ],
-          ),
+          home: AppBootstrapper(),
         ),
       ),
+    );
+  }
+}
+
+class AppBootstrapper extends StatefulWidget {
+  @override
+  _AppBootstrapperState createState() => _AppBootstrapperState();
+}
+
+class _AppBootstrapperState extends State<AppBootstrapper> {
+  int currentPage = 0;
+  @override
+  Widget build(BuildContext context) {
+    return LiquidSwipe(
+      positionSlideIcon: -0.3,
+      enableSlideIcon: currentPage == 0,
+      slideIconWidget: Icon(
+        Icons.arrow_back_ios,
+        color: Colors.white,
+      ),
+      enableLoop: false,
+      onPageChangeCallback: (val) {
+        setState(() {
+          currentPage = val;
+        });
+      },
+      pages: [
+        Home(),
+        Dashboard(),
+      ],
     );
   }
 }
