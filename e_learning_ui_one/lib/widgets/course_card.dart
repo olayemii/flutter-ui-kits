@@ -35,7 +35,7 @@ class CourseCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                CardTag(),
+                getCardTag(course),
                 SizedBox(
                   height: 10.0,
                 ),
@@ -74,6 +74,22 @@ class CourseCard extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+CardTag getCardTag(Course course) {
+  if (course.type == CardType.PRIMARY) {
+    return CardTag(
+      text: course.category,
+      backgroundColor: Colors.white.withOpacity(0.3),
+      textColor: Colors.white,
+    );
+  } else {
+    return CardTag(
+      text: course.category,
+      textColor: Constants.secondaryColor,
+      backgroundColor: Color.fromRGBO(38, 87, 206, 0.1),
     );
   }
 }

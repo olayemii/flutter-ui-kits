@@ -2,11 +2,19 @@ import 'package:e_learning_ui_one/utils/constants.dart';
 import 'package:flutter/material.dart';
 
 class CardTag extends StatelessWidget {
+  final Color backgroundColor;
+  final Color textColor;
+  final String text;
+  CardTag({
+    @required this.backgroundColor,
+    @required this.textColor,
+    @required this.text,
+  });
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Color.fromRGBO(38, 87, 206, 0.1),
+        color: backgroundColor,
         borderRadius: BorderRadius.circular(12.0),
       ),
       padding: EdgeInsets.symmetric(
@@ -14,9 +22,9 @@ class CardTag extends StatelessWidget {
         vertical: 4.0,
       ),
       child: Text(
-        "Programming",
+        text,
         style: TextStyle(
-          color: Constants.secondaryColor,
+          color: textColor,
           fontSize: 12.0,
         ),
       ),
