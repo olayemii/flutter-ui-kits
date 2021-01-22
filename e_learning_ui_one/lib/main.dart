@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/screenutil_init.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:liquid_swipe/liquid_swipe.dart';
 
 void main() {
   runApp(MyApp());
@@ -26,8 +27,20 @@ class MyApp extends StatelessWidget {
             visualDensity: VisualDensity.adaptivePlatformDensity,
             textTheme: GoogleFonts.poppinsTextTheme(),
           ),
-          initialRoute: "/",
-          onGenerateRoute: _onGenerateRoute,
+          // initialRoute: "/",
+          // onGenerateRoute: _onGenerateRoute,
+          home: LiquidSwipe(
+            positionSlideIcon: -0.3,
+            enableSlideIcon: true,
+            slideIconWidget: Icon(
+              Icons.arrow_back_ios,
+              color: Colors.white,
+            ),
+            pages: [
+              Home(),
+              SizedBox(),
+            ],
+          ),
         ),
       ),
     );
