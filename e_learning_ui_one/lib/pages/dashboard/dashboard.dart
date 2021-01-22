@@ -53,7 +53,7 @@ class Dashboard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "Hello Julia",
+                      "Hello, Julia!",
                       style: TextStyle(
                         color: Constants.secondaryColor,
                         fontSize: 20.0,
@@ -101,6 +101,9 @@ class Dashboard extends StatelessWidget {
                       ],
                     ),
                   ),
+                ),
+                SizedBox(
+                  height: 10.0,
                 ),
                 Wrap(
                   children: List.generate(
