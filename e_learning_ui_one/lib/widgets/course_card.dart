@@ -41,6 +41,8 @@ class CourseCard extends StatelessWidget {
                 ),
                 Text(
                   course.name,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     fontSize: 17.0,
                     height: 1.1,

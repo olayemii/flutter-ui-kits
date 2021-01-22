@@ -9,37 +9,6 @@ class SingleCourse extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        iconSize: 30.0,
-        unselectedIconTheme: IconThemeData(
-          color: Color.fromRGBO(211, 222, 250, 100),
-        ),
-        selectedIconTheme: IconThemeData(
-          color: Constants.secondaryColor,
-        ),
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(
-              FlutterIcons.book_oct,
-            ),
-            label: "",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              FlutterIcons.play_circle_faw,
-            ),
-            label: "",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              FlutterIcons.person_oct,
-            ),
-            label: "",
-          ),
-        ],
-      ),
       body: SingleChildScrollView(
         child: Container(
           padding: EdgeInsets.symmetric(
@@ -50,70 +19,57 @@ class SingleCourse extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Hello, Julia!",
-                      style: TextStyle(
-                        color: Constants.secondaryColor,
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                    Container(
-                      clipBehavior: Clip.hardEdge,
-                      height: ScreenUtil().setHeight(48.0),
-                      width: ScreenUtil().setWidth(48.0),
-                      decoration: BoxDecoration(
-                        color: Color.fromRGBO(225, 234, 255, 1),
-                        borderRadius: BorderRadius.circular(14.0),
-                      ),
-                      child: Image.asset("assets/images/dp.png"),
-                    ),
-                  ],
+                Container(
+                  clipBehavior: Clip.hardEdge,
+                  height: ScreenUtil().setHeight(48.0),
+                  width: ScreenUtil().setWidth(48.0),
+                  decoration: BoxDecoration(
+                    color: Color.fromRGBO(225, 234, 255, 1),
+                    borderRadius: BorderRadius.circular(14.0),
+                  ),
+                  child: Icon(
+                    FlutterIcons.chevron_left_fea,
+                    color: Constants.secondaryColor,
+                  ),
+                ),
+                SizedBox(
+                  height: 10.0,
+                ),
+                Text(
+                  "Color Theory for Designers",
+                  style: TextStyle(
+                    fontSize: 17.0,
+                    color: Color.fromRGBO(13, 19, 51, 1),
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+                SizedBox(
+                  height: 2.0,
+                ),
+                Text(
+                  "Olayemi Garuba",
+                  style: TextStyle(
+                    fontSize: 15.0,
+                    color: Color.fromRGBO(13, 19, 51, 0.6),
+                  ),
                 ),
                 SizedBox(
                   height: 10.0,
                 ),
                 Container(
-                  width: 200.0,
-                  child: RichText(
-                    text: TextSpan(
-                      children: [
-                        TextSpan(
-                          text: "What do you want to learn today?",
-                          style: TextStyle(
-                            fontSize: 26.0,
-                            height: 1.5,
-                            color: Color.fromRGBO(13, 19, 51, 1),
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                        TextSpan(
-                          text: " 🔍",
-                          style: TextStyle(
-                            fontSize: 26.0,
-                            height: 1.5,
-                            color: Color.fromRGBO(13, 19, 51, 0.3),
-                            fontWeight: FontWeight.w600,
-                          ),
+                  height: 186.0,
+                  decoration: BoxDecoration(
+                      color: Constants.primaryColor,
+                      borderRadius: BorderRadius.circular(12.0),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Color.fromRGBO(255, 89, 84, 0.38),
+                          offset: Offset(0, 4),
+                          blurRadius: 23.0,
+                          spreadRadius: 0.0,
                         )
                       ],
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 10.0,
-                ),
-                Wrap(
-                  children: List.generate(
-                    StaticData.courses.length,
-                    (index) => CourseCard(
-                      index: index,
-                      course: StaticData.courses[index],
-                    ),
-                  ),
+                      image: DecorationImage()),
                 )
               ],
             ),
