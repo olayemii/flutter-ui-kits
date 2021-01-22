@@ -8,27 +8,56 @@ class Home extends StatefulWidget {
   _HomeState createState() => _HomeState();
 }
 
-class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
-  AnimationController animationController;
-  Animation<double> animation;
+class _HomeState extends State<Home> with TickerProviderStateMixin {
+  AnimationController bulbAnimationController;
+  Animation<double> bulbAnimation;
+
+  AnimationController ballAnimationController;
+  Animation<double> ballAnimation;
+
   @override
   void initState() {
-    animationController = AnimationController(
+    bulbAnimationController = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 1),
     );
-    animation = Tween<double>(begin: 0.8, end: 0).animate(animationController)
+    bulbAnimation =
+        Tween<double>(begin: 0.8, end: 0).animate(bulbAnimationController)
+          ..addListener(() {
+            setState(() {});
+          })
+          ..addStatusListener((status) {
+            if (status == AnimationStatus.completed) {
+              bulbAnimationController.reverse();
+            } else if (status == AnimationStatus.dismissed) {
+              bulbAnimationController.forward();
+            }
+          });
+    bulbAnimationController.forward();
+
+    // Ball Animation
+
+    ballAnimationController = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 1),
+    );
+    ballAnimation = Tween<double>(begin: 0, end: 20).animate(
+      CurvedAnimation(
+        parent: ballAnimationController,
+        curve: Curves.easeInOut,
+      ),
+    )
       ..addListener(() {
         setState(() {});
       })
       ..addStatusListener((status) {
         if (status == AnimationStatus.completed) {
-          animationController.reverse();
+          ballAnimationController.reverse();
         } else if (status == AnimationStatus.dismissed) {
-          animationController.forward();
+          ballAnimationController.forward();
         }
       });
-    animationController.forward();
+    ballAnimationController.forward();
     super.initState();
   }
 
@@ -67,7 +96,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                         child: SvgPicture.asset("assets/svgs/girl_sitting.svg"),
                       ),
                       Positioned(
-                        bottom: 350.0,
+                        bottom: (350.0 + ballAnimation.value),
                         left: MediaQuery.of(context).size.width / 2.0 + 70.0,
                         child: SvgPicture.asset("assets/svgs/ball.svg"),
                       ),
@@ -101,7 +130,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                         left: -3.0,
                         child: SvgPicture.asset(
                           "assets/svgs/light.svg",
-                          color: Colors.white.withOpacity(animation.value),
+                          color: Colors.white.withOpacity(bulbAnimation.value),
                         ),
                       ),
                     ],
