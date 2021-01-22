@@ -22,14 +22,17 @@ class Dashboard extends StatelessWidget {
                     style: TextStyle(
                       color: Constants.secondaryColor,
                       fontSize: 20.0,
-                      fontWeight: FontWeight.w600,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                   Container(
                     height: ScreenUtil().setHeight(48.0),
                     width: ScreenUtil().setWidth(48.0),
-                    decoration:
-                        BoxDecoration(color: Color.fromRGBO(r, g, b, opacity)),
+                    decoration: BoxDecoration(
+                      color: Color.fromRGBO(225, 234, 255, 1),
+                      borderRadius: BorderRadius.circular(14.0),
+                    ),
+                    child: Image.asset("assets/images/dp.png"),
                   )
                 ],
               ),
