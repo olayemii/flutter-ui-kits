@@ -52,6 +52,11 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                     alignment: Alignment.bottomRight,
                     children: [
                       Positioned(
+                        bottom: -30.0,
+                        left: 0,
+                        child: SvgPicture.asset("assets/svgs/cup.svg"),
+                      ),
+                      Positioned(
                         bottom: -20.0,
                         left: -100.0,
                         child: SvgPicture.asset("assets/svgs/girl_on_book.svg"),
@@ -66,8 +71,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                         width: 180.0,
                       ),
                       Positioned(
-                        bottom: 190.0,
-                        left: 0.0,
+                        bottom: 90.0,
+                        left: MediaQuery.of(context).size.width / 2.0 - 10.0,
                         child: SvgPicture.asset("assets/svgs/doctor.svg"),
                       ),
                       Positioned(
