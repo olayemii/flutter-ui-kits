@@ -12,17 +12,15 @@ class Dashboard extends StatelessWidget {
         showUnselectedLabels: false,
         iconSize: 30.0,
         unselectedIconTheme: IconThemeData(
-          color: Color.fromRGBO(
-            211,
-            222,
-            250,
-            100,
-          ),
+          color: Color.fromRGBO(211, 222, 250, 100),
+        ),
+        selectedIconTheme: IconThemeData(
+          color: Constants.secondaryColor,
         ),
         items: [
           BottomNavigationBarItem(
             icon: Icon(
-              FlutterIcons.address_book_faw5,
+              FlutterIcons.book_oct,
             ),
             label: "",
           ),
