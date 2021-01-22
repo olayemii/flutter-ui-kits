@@ -1,5 +1,8 @@
 import 'package:e_learning_ui_one/models/course.dart';
+import 'package:e_learning_ui_one/utils/constants.dart';
 import 'package:flutter/material.dart';
+
+import 'card_tag.dart';
 
 enum CardType { PRIMARY, PLAIN, SECONDARY_FADED }
 
@@ -27,9 +30,8 @@ class CourseCard extends StatelessWidget {
             margin:
                 EdgeInsets.only(left: 5.0, right: 5.0, bottom: 5.0, top: 5.0),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12.0),
-              color: Colors.white,
-            ),
+                borderRadius: BorderRadius.circular(12.0),
+                color: getCardColor(course.type)),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -38,11 +40,13 @@ class CourseCard extends StatelessWidget {
                   height: 10.0,
                 ),
                 Text(
-                  "Python for everybody",
+                  course.name,
                   style: TextStyle(
                     fontSize: 17.0,
                     height: 1.1,
-                    color: Color.fromRGBO(13, 19, 51, 1),
+                    color: course.type == CardType.PRIMARY
+                        ? Colors.white
+                        : Color.fromRGBO(13, 19, 51, 1),
                     fontWeight: FontWeight.w500,
                   ),
                 ),
@@ -52,14 +56,50 @@ class CourseCard extends StatelessWidget {
                 ClipRRect(
                   borderRadius: BorderRadius.circular(12.0),
                   child: LinearProgressIndicator(
-                    value: 0.5,
+                    value: (course.percentage / 100.0),
+                    valueColor:
+                        AlwaysStoppedAnimation(getProgressColor(course.type)),
                   ),
                 ),
+                SizedBox(
+                  height: 10.0,
+                ),
+                Expanded(
+                  child: Image.asset(
+                    course.imagePath,
+                  ),
+                )
               ],
             ),
           ),
         ],
       ),
     );
+  }
+}
+
+Color getCardColor(CardType type) {
+  switch (type) {
+    case CardType.PRIMARY:
+      return Constants.primaryColor;
+    case CardType.PLAIN:
+      return Colors.white;
+    case CardType.SECONDARY_FADED:
+      return Color.fromRGBO(206, 218, 255, 1);
+    default:
+      return Colors.white;
+  }
+}
+
+Color getProgressColor(CardType type) {
+  switch (type) {
+    case CardType.PRIMARY:
+      return Color.fromRGBO(234, 54, 49, 1);
+    case CardType.PLAIN:
+      return Constants.secondaryColor;
+    case CardType.SECONDARY_FADED:
+      return Constants.primaryColor;
+    default:
+      return Constants.primaryColor;
   }
 }

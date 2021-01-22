@@ -1,5 +1,7 @@
 import 'package:e_learning_ui_one/utils/constants.dart';
+import 'package:e_learning_ui_one/utils/static_data.dart';
 import 'package:e_learning_ui_one/widgets/card_tag.dart';
+import 'package:e_learning_ui_one/widgets/course_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -107,7 +109,13 @@ class Dashboard extends StatelessWidget {
                   height: 10.0,
                 ),
                 Wrap(
-                  children: List.generate(4, (index) => CourseCard()),
+                  children: List.generate(
+                    StaticData.courses.length,
+                    (index) => CourseCard(
+                      index: index,
+                      course: StaticData.courses[index],
+                    ),
+                  ),
                 )
               ],
             ),
