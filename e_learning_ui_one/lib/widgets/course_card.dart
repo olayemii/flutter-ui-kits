@@ -1,8 +1,12 @@
+import 'package:e_learning_ui_one/models/course.dart';
 import 'package:flutter/material.dart';
 
 enum CardType { PRIMARY, PLAIN, SECONDARY_FADED }
 
 class CourseCard extends StatelessWidget {
+  final int index;
+  final Course course;
+  CourseCard({this.index, this.course});
   @override
   Widget build(BuildContext context) {
     return Container(
