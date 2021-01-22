@@ -4,7 +4,13 @@ class Dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(),
+      body: Container(
+        child: SafeArea(
+          child: Column(
+            children: [],
+          ),
+        ),
+      ),
     );
   }
 }

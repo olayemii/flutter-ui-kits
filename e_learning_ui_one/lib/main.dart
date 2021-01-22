@@ -1,3 +1,4 @@
+import 'package:e_learning_ui_one/pages/dashboard/dashboard.dart';
 import 'package:e_learning_ui_one/pages/home/home.dart';
 import 'package:e_learning_ui_one/utils/constants.dart';
 import 'package:flutter/material.dart';
@@ -36,9 +37,10 @@ class MyApp extends StatelessWidget {
               Icons.arrow_back_ios,
               color: Colors.white,
             ),
+            enableLoop: false,
             pages: [
               Home(),
-              SizedBox(),
+              Dashboard(),
             ],
           ),
         ),
