@@ -8,13 +8,20 @@ import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
-class Dashboard extends StatelessWidget {
+class Dashboard extends StatefulWidget {
+  @override
+  _DashboardState createState() => _DashboardState();
+}
+
+class _DashboardState extends State<Dashboard> {
+  int activeIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
         showSelectedLabels: false,
         showUnselectedLabels: false,
+        currentIndex: activeIndex,
         iconSize: 30.0,
         unselectedIconTheme: IconThemeData(
           color: Color.fromRGBO(211, 222, 250, 100),
@@ -22,6 +29,11 @@ class Dashboard extends StatelessWidget {
         selectedIconTheme: IconThemeData(
           color: Constants.secondaryColor,
         ),
+        onTap: (index) {
+          setState(() {
+            activeIndex = index;
+          });
+        },
         items: [
           BottomNavigationBarItem(
             icon: Icon(

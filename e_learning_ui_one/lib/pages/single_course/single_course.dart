@@ -1,11 +1,31 @@
+import 'package:e_learning_ui_one/models/topic.dart';
 import 'package:e_learning_ui_one/utils/constants.dart';
 import 'package:e_learning_ui_one/utils/static_data.dart';
 import 'package:e_learning_ui_one/widgets/course_card.dart';
+import 'package:e_learning_ui_one/widgets/topic_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SingleCourse extends StatelessWidget {
+  final List<Topic> topics = [
+    Topic(
+      title: "Introduction",
+      description: "Introduction to the course",
+    ),
+    Topic(
+      title: "The Language of Color",
+      description: "Learn about the language of color.",
+    ),
+    Topic(
+      title: "The Psychology of Color",
+      description: "Learn about the psychology of color.",
+    ),
+    Topic(
+      title: "The Language of Color",
+      description: "Learn about the language of color.",
+    ),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,17 +39,22 @@ class SingleCourse extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  clipBehavior: Clip.hardEdge,
-                  height: ScreenUtil().setHeight(48.0),
-                  width: ScreenUtil().setWidth(48.0),
-                  decoration: BoxDecoration(
-                    color: Color.fromRGBO(225, 234, 255, 1),
-                    borderRadius: BorderRadius.circular(14.0),
-                  ),
-                  child: Icon(
-                    FlutterIcons.chevron_left_fea,
-                    color: Constants.secondaryColor,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: Container(
+                    clipBehavior: Clip.hardEdge,
+                    height: ScreenUtil().setHeight(48.0),
+                    width: ScreenUtil().setWidth(48.0),
+                    decoration: BoxDecoration(
+                      color: Color.fromRGBO(225, 234, 255, 1),
+                      borderRadius: BorderRadius.circular(14.0),
+                    ),
+                    child: Icon(
+                      FlutterIcons.chevron_left_fea,
+                      color: Constants.secondaryColor,
+                    ),
                   ),
                 ),
                 SizedBox(
@@ -123,6 +148,12 @@ class SingleCourse extends StatelessWidget {
                       ),
                     )
                   ],
+                ),
+                SizedBox(
+                  height: 20.0,
+                ),
+                TopicList(
+                  topics: topics,
                 ),
               ],
             ),
