@@ -3,6 +3,7 @@ import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';
 import 'package:laundry_app_ui/models/order.dart';
+import 'package:laundry_app_ui/utils/helper.dart';
 
 class OrderCard extends StatelessWidget {
   final Order order;
@@ -10,46 +11,51 @@ class OrderCard extends StatelessWidget {
   final DateFormat formatter = DateFormat("yyyy MMMM dd");
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: ScreenUtil().setHeight(121.0),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(8.0),
-        border: Border.all(
-          color: Color.fromRGBO(220, 233, 245, 1),
-        ),
-      ),
-      padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 16.0),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          getOrderIconWidget(order.status),
-          SizedBox(
-            width: 15.0,
+    return GestureDetector(
+      onTap: () {
+        nextScreen(context, "/single-order");
+      },
+      child: Container(
+        height: ScreenUtil().setHeight(121.0),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(8.0),
+          border: Border.all(
+            color: Color.fromRGBO(220, 233, 245, 1),
           ),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  getOrderStatusText(order.status),
-                  style: TextStyle(
-                    color: Color.fromRGBO(19, 22, 33, 1),
-                    fontSize: 16.0,
-                  ),
-                ),
-                SizedBox(
-                  height: 10.0,
-                ),
-                textRow("Placed On", formatter.format(order.placedDate)),
-                SizedBox(
-                  height: 5.0,
-                ),
-                textRow("Delivery On", formatter.format(order.arrivalDate)),
-              ],
+        ),
+        padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 16.0),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            getOrderIconWidget(order.status),
+            SizedBox(
+              width: 15.0,
             ),
-          )
-        ],
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    getOrderStatusText(order.status),
+                    style: TextStyle(
+                      color: Color.fromRGBO(19, 22, 33, 1),
+                      fontSize: 16.0,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10.0,
+                  ),
+                  textRow("Placed On", formatter.format(order.placedDate)),
+                  SizedBox(
+                    height: 5.0,
+                  ),
+                  textRow("Delivery On", formatter.format(order.arrivalDate)),
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
