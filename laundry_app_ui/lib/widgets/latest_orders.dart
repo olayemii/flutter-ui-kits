@@ -43,7 +43,9 @@ class LatestOrders extends StatelessWidget {
             shrinkWrap: true,
             physics: NeverScrollableScrollPhysics(),
             itemBuilder: (BuildContext context, int index) {
-              return OrderCard(order: StaticData.orders[index]);
+              return OrderCard(
+                order: StaticData.orders[index],
+              );
             },
             separatorBuilder: (BuildContext context, int index) {
               return SizedBox(
