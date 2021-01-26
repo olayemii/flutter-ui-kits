@@ -63,6 +63,6 @@ Our top sponsors will be listed here
 
 ![AirBnB Redesign Flutter UI Kit](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/airbnb-mockup.png)
 
-6. **[Laundry App Flutter UI Kit](https://github.com/OLayemii/flutter-ui-kits/tree/main/laundry_app_ui)**
+7. **[Laundry App Flutter UI Kit](https://github.com/OLayemii/flutter-ui-kits/tree/main/laundry_app_ui)**
 
 ![Laundry App Flutter UI Kit](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/laundry-main.png)
