@@ -1,4 +1,4 @@
-# 🔥 🔥 Laundry App Flutter UI Kit 🔥 🔥 💫 ⭐️ ⭐️ 👨‍💻 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![Twitter Follow](https://img.shields.io/twitter/follow/iam_olayemii.svg?style=social)](https://twitter.com/iam_olayemii)
+# 🔥 🔥 Amazing Free Flutter UI Kits 🔥 🔥 💫 ⭐️ ⭐️ 👨‍💻 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![Twitter Follow](https://img.shields.io/twitter/follow/iam_olayemii.svg?style=social)](https://twitter.com/iam_olayemii)
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/olayemii/flutter-ui-kits?style=social) ![GitHub watchers](https://img.shields.io/github/watchers/olayemii/flutter-ui-kits?style=social) ![GitHub followers](https://img.shields.io/github/followers/olayemii?style=social) ![GitHub](https://img.shields.io/github/license/olayemii/flutter-ui-kits)
 
@@ -39,6 +39,30 @@ Our top sponsors will be listed here
 
 ### Screenshots
 
-![Screenshot 1](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/la001.png) ![Screenshot 2](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/la002.png) ![Screenshot 3](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/la003.png) ![Screenshot 4](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/la004.png)
+1. **[Wrist Watch Store UI Kit](https://github.com/OLayemii/flutter-ui-kits/tree/main/watch_cart_ui)**
 
-![Main Page](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/laundry-main.png)
+![Wrist Watch Store UI Kit](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/watch-2.png)
+
+2. **[Language Learning FLutter UI Kit](https://github.com/OLayemii/flutter-ui-kits/tree/main/language_learning_ui)**
+
+![Language Learning FLutter UI Kit](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/language-2.png)
+
+3. **[News UI Flutter UI Kit](https://github.com/OLayemii/flutter-ui-kits/tree/main/news_ui)**
+
+![News UI Flutter UI Kit](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/news2.jpg)
+
+4. **[Real Estate Flutter UI Kit](https://github.com/OLayemii/flutter-ui-kits/tree/main/real_estate_ui)**
+
+![Real Estate Flutter UI Kit](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/house2.jpg)
+
+5. **[Repair Service Flutter UI Kit](https://github.com/OLayemii/flutter-ui-kits/tree/main/repair_service_ui)**
+
+![Repair Service Flutter UI Kit](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/repair-mockup.png)
+
+6. **[AirBnB Redesign Flutter UI Kit](https://github.com/OLayemii/flutter-ui-kits/tree/main/airbnb_redesign_ui)**
+
+![AirBnB Redesign Flutter UI Kit](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/airbnb-mockup.png)
+
+6. **[Laundry App Flutter UI Kit](https://github.com/OLayemii/flutter-ui-kits/tree/main/laundry_app_ui)**
+
+![Laundry App Flutter UI Kit](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/laundry-main.png)
