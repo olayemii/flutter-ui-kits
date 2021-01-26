@@ -23,7 +23,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  animated_bottom_navigation_bar: ^0.2.1
   flutter_screenutil: ^4.0.2+3
   google_fonts: ^1.1.1
   flutter_icons: ^1.1.0
