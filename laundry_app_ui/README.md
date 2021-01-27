@@ -39,6 +39,6 @@ Our top sponsors will be listed here
 
 ### Screenshots
 
-![Screenshot 1](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/la001.png) ![Screenshot 2](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/la002.png) ![Screenshot 3](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/la003.png) ![Screenshot 4](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/la004.png)
+![Screenshot 1](https://res.cloudinary.com/olayemii/image/upload/v1611749846/assets/la001_yjv321.png) ![Screenshot 2](https://res.cloudinary.com/olayemii/image/upload/v1611749845/assets/la002_opw6cg.png) ![Screenshot 3](https://res.cloudinary.com/olayemii/image/upload/v1611749845/assets/la003_d1dcvd.png) ![Screenshot 4](https://res.cloudinary.com/olayemii/image/upload/v1611749845/assets/la004_ych5rr.png)
 
-![Main Page](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/laundry-main.png)
+![Main Page](https://res.cloudinary.com/olayemii/image/upload/v1611749849/assets/laundry-main_znvlqd.png)
