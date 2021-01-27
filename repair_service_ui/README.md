@@ -39,6 +39,6 @@ Our top sponsors will be listed here
 
 ### Screenshots
 
-![Screenshot 1](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/repair1.png) ![Screenshot 2](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/repair2.png) ![Screenshot 3](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/repair3.png) ![Screenshot 4](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/repair4.png)
+![Screenshot 1](https://res.cloudinary.com/olayemii/image/upload/v1611746971/assets/repair1_ltiecs.png) ![Screenshot 2](https://res.cloudinary.com/olayemii/image/upload/v1611747014/assets/repair2_w27kah.png) ![Screenshot 3](https://res.cloudinary.com/olayemii/image/upload/v1611746967/assets/repair3_autoie.png) ![Screenshot 4](https://res.cloudinary.com/olayemii/image/upload/v1611747043/assets/repair4_myhgb7.png)
 
-![Main Page](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/repair-mockup.png)
+![Main Page](https://res.cloudinary.com/olayemii/image/upload/v1611747011/assets/repair-mockup_lap0n1.png)

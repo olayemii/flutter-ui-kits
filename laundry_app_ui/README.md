@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+# laundry_app_ui
+
+A new Flutter project.
+
+## Getting Started
+
+This project is a starting point for a Flutter application.
+
+A few resources to get you started if this is your first Flutter project:
+
+- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+
+For help getting started with Flutter, view our
+[online documentation](https://flutter.dev/docs), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
+=======
 # 🔥 🔥 Laundry App Flutter UI Kit 🔥 🔥 💫 ⭐️ ⭐️ 👨‍💻 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![Twitter Follow](https://img.shields.io/twitter/follow/iam_olayemii.svg?style=social)](https://twitter.com/iam_olayemii)
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/olayemii/flutter-ui-kits?style=social) ![GitHub watchers](https://img.shields.io/github/watchers/olayemii/flutter-ui-kits?style=social) ![GitHub followers](https://img.shields.io/github/followers/olayemii?style=social) ![GitHub](https://img.shields.io/github/license/olayemii/flutter-ui-kits)
@@ -39,6 +57,7 @@ Our top sponsors will be listed here
 
 ### Screenshots
 
-![Screenshot 1](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/la001.png) ![Screenshot 2](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/la002.png) ![Screenshot 3](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/la003.png) ![Screenshot 4](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/la004.png)
+![Screenshot 1](https://res.cloudinary.com/olayemii/image/upload/v1611749846/assets/la001_yjv321.png) ![Screenshot 2](https://res.cloudinary.com/olayemii/image/upload/v1611749845/assets/la002_opw6cg.png) ![Screenshot 3](https://res.cloudinary.com/olayemii/image/upload/v1611749845/assets/la003_d1dcvd.png) ![Screenshot 4](https://res.cloudinary.com/olayemii/image/upload/v1611749845/assets/la004_ych5rr.png)
 
-![Main Page](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/laundry-main.png)
+![Main Page](https://res.cloudinary.com/olayemii/image/upload/v1611749849/assets/laundry-main_znvlqd.png)
+>>>>>>> bd39d758e17fd94402b4af15c633b6af7f5bfcf2

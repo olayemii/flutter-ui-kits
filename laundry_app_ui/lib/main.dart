@@ -50,7 +50,6 @@ Route<dynamic> _onGenerateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (BuildContext context) {
         return SingleOrder();
       });
-
     default:
       return MaterialPageRoute(builder: (BuildContext context) {
         return Home();

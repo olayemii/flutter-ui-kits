@@ -1,27 +1,21 @@
-# 🔥 🔥 News Flutter UI Kit 🔥 🔥 💫 ⭐️ ⭐️ 👨‍💻  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)  [![Twitter Follow](https://img.shields.io/twitter/follow/iam_olayemii.svg?style=social)](https://twitter.com/iam_olayemii)
+# 🔥 🔥 News Flutter UI Kit 🔥 🔥 💫 ⭐️ ⭐️ 👨‍💻 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![Twitter Follow](https://img.shields.io/twitter/follow/iam_olayemii.svg?style=social)](https://twitter.com/iam_olayemii)
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/olayemii/flutter-ui-kits?style=social) ![GitHub watchers](https://img.shields.io/github/watchers/olayemii/flutter-ui-kits?style=social) ![GitHub followers](https://img.shields.io/github/followers/olayemii?style=social) ![GitHub](https://img.shields.io/github/license/olayemii/flutter-ui-kits)
 
-
-
-Free Flutter UI Kits based on designs on UpLabs 💓. 
+Free Flutter UI Kits based on designs on UpLabs 💓.
 Repo will be updated daily with new beautiful UI Kits.
 
 Complete flutter projects are available on my <a href="https://codecanyon.net/user/chris2code/portfolio">Codecanyon.net Page</a>
 
-PRs are welcomed. Issues are welcomed too. 
+PRs are welcomed. Issues are welcomed too.
 
 Send me UI suggestions for any uplabs project on <a href="mailto:info@flutterpanda.com">info@flutterpanda.com</a>
 
 ### Support App
 
-> ⭐️  Star the repo to show support. ⭐️ 
-
-
+> ⭐️ Star the repo to show support. ⭐️
 
 > You can also support the project by buying me a cup of coffee ☕️.
-
-
 
 > <a href="https://www.buymeacoffee.com/xPGLYEr"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=xPGLYEr&button_colour=BD5FFF&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00"></a>
 
@@ -29,24 +23,22 @@ Or Support me on Patreon
 
 <a href="https://www.patreon.com/bePatron?u=48456662" data-patreon-widget-type="become-patron-button"><img src="https://raw.githubusercontent.com/codebard/patron-button-and-widgets-by-codebard/master/images/patreon-medium-button.png" alt="Become a Patreon!" /></a>
 
+### 💻 Requirements
 
-### 💻  Requirements
+- Any Operating System (MacOS, Linux, Windows)
+- Any IDE with Flutter SDK installed (Android Studio, VSCode etc)
+- A little knowledge of Dart and Flutter
 
-* Any Operating System (MacOS, Linux, Windows)
-* Any IDE with Flutter SDK installed (Android Studio, VSCode etc)
-* A little knowledge of Dart and Flutter
+### 👨‍💻 Author
 
- ### 👨‍💻  Author
+Apps were developed by Olayemi Garuba [![Twitter Follow](https://img.shields.io/twitter/follow/iam_olayemii.svg?style=social)](https://twitter.com/iam_olayemii)
 
- Apps were developed by Olayemi Garuba [![Twitter Follow](https://img.shields.io/twitter/follow/iam_olayemii.svg?style=social)](https://twitter.com/iam_olayemii)
+### 💷 Top Sponsors
 
-
- ### 💷 Top Sponsors
 Our top sponsors will be listed here
-
 
 ### Screenshots
 
-![Screenshot 1](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/n1.png) ![Screenshot 2](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/n2.png) ![Screenshot 3](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/n3.png) ![Screenshot 4](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/n4.png) ![Screenshot 5](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/n5.png)
+![Screenshot 1](https://res.cloudinary.com/olayemii/image/upload/v1611747751/assets/n1hd_gfpvud.png) ![Screenshot 2](https://res.cloudinary.com/olayemii/image/upload/v1611747676/assets/n2_yxlavl.png) ![Screenshot 3](https://res.cloudinary.com/olayemii/image/upload/v1611747601/assets/n3_miafgj.png) ![Screenshot 4](https://res.cloudinary.com/olayemii/image/upload/v1611747453/assets/n4_nzuf4l.png) ![Screenshot 5](https://res.cloudinary.com/olayemii/image/upload/v1611747445/assets/n5_xzaj4p.png)
 
-![Main Page](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/news.jpg)
+![Main Page](https://res.cloudinary.com/olayemii/image/upload/v1611746958/assets/news_rshcsx.jpg)

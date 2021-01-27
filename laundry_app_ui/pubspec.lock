@@ -70,7 +70,7 @@ packages:
       name: cupertino_icons
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.0"
+    version: "1.0.2"
   curved_navigation_bar:
     dependency: "direct main"
     description:
@@ -117,7 +117,7 @@ packages:
       name: flutter_screenutil
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "4.0.2+5"
+    version: "4.0.2+8"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -129,7 +129,7 @@ packages:
       name: google_fonts
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.1.1"
+    version: "1.1.2"
   http:
     dependency: transitive
     description:
