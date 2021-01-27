@@ -1,11 +1,4 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
-import 'package:laundry_app_ui/utils/constants.dart';
-import 'package:laundry_app_ui/utils/static_data.dart';
-import 'package:laundry_app_ui/widgets/order_card.dart';
-
-class LatestOrders extends StatelessWidget {
-=======
 import 'package:laundry_app_ui/models/order.dart';
 import 'package:laundry_app_ui/utils/constants.dart';
 import 'package:laundry_app_ui/widgets/order_card.dart';
@@ -27,7 +20,6 @@ class LatestOrders extends StatelessWidget {
       status: OrderStatus.PICKING_UP,
     )
   ];
->>>>>>> bd39d758e17fd94402b4af15c633b6af7f5bfcf2
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -38,13 +30,9 @@ class LatestOrders extends StatelessWidget {
             height: 20.0,
           ),
           Padding(
-<<<<<<< HEAD
-            padding: EdgeInsets.symmetric(horizontal: 24.0),
-=======
             padding: EdgeInsets.symmetric(
               horizontal: 24.0,
             ),
->>>>>>> bd39d758e17fd94402b4af15c633b6af7f5bfcf2
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -56,21 +44,12 @@ class LatestOrders extends StatelessWidget {
                   ),
                 ),
                 Text(
-<<<<<<< HEAD
-                  "View all",
-                  textAlign: TextAlign.right,
-=======
                   "View All",
->>>>>>> bd39d758e17fd94402b4af15c633b6af7f5bfcf2
                   style: TextStyle(
                     color: Constants.primaryColor,
                     fontWeight: FontWeight.w600,
                   ),
-<<<<<<< HEAD
-                ),
-=======
                 )
->>>>>>> bd39d758e17fd94402b4af15c633b6af7f5bfcf2
               ],
             ),
           ),
@@ -79,12 +58,6 @@ class LatestOrders extends StatelessWidget {
           ),
           ListView.separated(
             shrinkWrap: true,
-<<<<<<< HEAD
-            physics: NeverScrollableScrollPhysics(),
-            itemBuilder: (BuildContext context, int index) {
-              return OrderCard(
-                order: StaticData.orders[index],
-=======
             padding: EdgeInsets.symmetric(
               horizontal: 16.0,
               vertical: 10.0,
@@ -94,7 +67,6 @@ class LatestOrders extends StatelessWidget {
               // Lets pass the order to a new widget and render it there
               return OrderCard(
                 order: orders[index],
->>>>>>> bd39d758e17fd94402b4af15c633b6af7f5bfcf2
               );
             },
             separatorBuilder: (BuildContext context, int index) {
@@ -102,17 +74,9 @@ class LatestOrders extends StatelessWidget {
                 height: 15.0,
               );
             },
-<<<<<<< HEAD
-            itemCount: StaticData.orders.length,
-            padding: EdgeInsets.symmetric(
-              horizontal: 16.0,
-            ),
-          ),
-=======
             itemCount: orders.length,
           )
           // Let's create an order model
->>>>>>> bd39d758e17fd94402b4af15c633b6af7f5bfcf2
         ],
       ),
     );
