@@ -7,17 +7,12 @@ import 'package:laundry_app_ui/utils/helper.dart';
 
 class OrderCard extends StatelessWidget {
   final Order order;
-<<<<<<< HEAD
-  OrderCard({this.order});
-  final DateFormat formatter = DateFormat("yyyy MMMM dd");
-=======
 
   OrderCard({this.order});
 
   // For formatting date
   final DateFormat formatter = DateFormat("yyyy MM dd");
 
->>>>>>> bd39d758e17fd94402b4af15c633b6af7f5bfcf2
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -39,11 +34,7 @@ class OrderCard extends StatelessWidget {
           children: [
             getOrderIconWidget(order.status),
             SizedBox(
-<<<<<<< HEAD
-              width: 15.0,
-=======
               width: 25.0,
->>>>>>> bd39d758e17fd94402b4af15c633b6af7f5bfcf2
             ),
             Expanded(
               child: Column(
@@ -63,17 +54,10 @@ class OrderCard extends StatelessWidget {
                   SizedBox(
                     height: 5.0,
                   ),
-<<<<<<< HEAD
-                  textRow("Delivery On", formatter.format(order.arrivalDate)),
-                ],
-              ),
-            )
-=======
                   textRow("Delivery On", formatter.format(order.arrivalDate))
                 ],
               ),
             ),
->>>>>>> bd39d758e17fd94402b4af15c633b6af7f5bfcf2
           ],
         ),
       ),
@@ -105,23 +89,7 @@ Widget textRow(String textOne, String textTwo) {
   );
 }
 
-<<<<<<< HEAD
-String getOrderStatusText(OrderStatus status) {
-  switch (status) {
-    case OrderStatus.PICKING_UP:
-      return "Picking Up Order";
-    case OrderStatus.DELIVERING:
-      return "Delivering Order";
-    default:
-      return "Picking Up Order";
-  }
-}
-
 Widget getOrderIconWidget(OrderStatus status) {
-  print(status);
-=======
-Widget getOrderIconWidget(OrderStatus status) {
->>>>>>> bd39d758e17fd94402b4af15c633b6af7f5bfcf2
   switch (status) {
     case OrderStatus.PICKING_UP:
       return Container(
@@ -149,10 +117,6 @@ Widget getOrderIconWidget(OrderStatus status) {
           color: Color.fromRGBO(255, 99, 2, 1),
         ),
       );
-<<<<<<< HEAD
-
-=======
->>>>>>> bd39d758e17fd94402b4af15c633b6af7f5bfcf2
     default:
       return Container(
         width: ScreenUtil().setWidth(37.0),
@@ -168,8 +132,6 @@ Widget getOrderIconWidget(OrderStatus status) {
       );
   }
 }
-<<<<<<< HEAD
-=======
 
 String getOrderStatusText(OrderStatus status) {
   switch (status) {
@@ -181,4 +143,3 @@ String getOrderStatusText(OrderStatus status) {
       return "";
   }
 }
->>>>>>> bd39d758e17fd94402b4af15c633b6af7f5bfcf2
