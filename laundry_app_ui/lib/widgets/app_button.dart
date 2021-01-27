@@ -6,12 +6,20 @@ import 'package:laundry_app_ui/utils/constants.dart';
 enum ButtonType { PRIMARY, PLAIN }
 
 class AppButton extends StatelessWidget {
+<<<<<<< HEAD
   // Our primary button widget [to be reused]
   final ButtonType type;
   final Function onPressed;
   final String text;
 
   AppButton({this.text, this.onPressed, this.type});
+=======
+  final ButtonType type;
+  final VoidCallback onPressed;
+  final String text;
+
+  AppButton({this.type, this.onPressed, this.text});
+>>>>>>> bd39d758e17fd94402b4af15c633b6af7f5bfcf2
 
   @override
   Widget build(BuildContext context) {
@@ -49,21 +57,37 @@ class AppButton extends StatelessWidget {
 
 Color getButtonColor(ButtonType type) {
   switch (type) {
+<<<<<<< HEAD
     case ButtonType.PLAIN:
       return Colors.white;
     case ButtonType.PRIMARY:
       return Constants.primaryColor;
     default:
       return Colors.white;
+=======
+    case ButtonType.PRIMARY:
+      return Constants.primaryColor;
+    case ButtonType.PLAIN:
+      return Colors.white;
+    default:
+      return Constants.primaryColor;
+>>>>>>> bd39d758e17fd94402b4af15c633b6af7f5bfcf2
   }
 }
 
 Color getTextColor(ButtonType type) {
   switch (type) {
+<<<<<<< HEAD
     case ButtonType.PRIMARY:
       return Colors.white;
     case ButtonType.PLAIN:
       return Constants.primaryColor;
+=======
+    case ButtonType.PLAIN:
+      return Constants.primaryColor;
+    case ButtonType.PRIMARY:
+      return Colors.white;
+>>>>>>> bd39d758e17fd94402b4af15c633b6af7f5bfcf2
     default:
       return Colors.white;
   }

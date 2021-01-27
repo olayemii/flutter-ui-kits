@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+<<<<<<< HEAD
 import 'package:laundry_app_ui/models/order.dart';
 import 'package:laundry_app_ui/utils/constants.dart';
 import 'package:laundry_app_ui/utils/static_data.dart';
+=======
+import 'package:laundry_app_ui/utils/constants.dart';
+>>>>>>> bd39d758e17fd94402b4af15c633b6af7f5bfcf2
 
 class SingleOrder extends StatefulWidget {
   @override
@@ -11,13 +15,19 @@ class SingleOrder extends StatefulWidget {
 }
 
 class _SingleOrderState extends State<SingleOrder> {
+<<<<<<< HEAD
   final Order order = StaticData.orders[0];
+=======
+>>>>>>> bd39d758e17fd94402b4af15c633b6af7f5bfcf2
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Constants.primaryColor,
       body: Container(
+<<<<<<< HEAD
         color: Constants.primaryColor,
+=======
+>>>>>>> bd39d758e17fd94402b4af15c633b6af7f5bfcf2
         child: Stack(
           overflow: Overflow.visible,
           children: [
@@ -28,7 +38,10 @@ class _SingleOrderState extends State<SingleOrder> {
                 opacity: 0.3,
                 child: Image.asset(
                   "assets/images/washing_machine_illustration.png",
+<<<<<<< HEAD
                   fit: BoxFit.cover,
+=======
+>>>>>>> bd39d758e17fd94402b4af15c633b6af7f5bfcf2
                 ),
               ),
             ),
@@ -36,7 +49,10 @@ class _SingleOrderState extends State<SingleOrder> {
               child: Container(
                 padding: EdgeInsets.symmetric(horizontal: 24.0),
                 child: Column(
+<<<<<<< HEAD
                   mainAxisSize: MainAxisSize.min,
+=======
+>>>>>>> bd39d758e17fd94402b4af15c633b6af7f5bfcf2
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(
@@ -65,7 +81,11 @@ class _SingleOrderState extends State<SingleOrder> {
                                     ),
                           ),
                           TextSpan(
+<<<<<<< HEAD
                             text: "Order #${order.id}",
+=======
+                            text: "Order #521",
+>>>>>>> bd39d758e17fd94402b4af15c633b6af7f5bfcf2
                             style:
                                 Theme.of(context).textTheme.headline6.copyWith(
                                       color: Colors.white,
@@ -82,7 +102,11 @@ class _SingleOrderState extends State<SingleOrder> {
                       width: double.infinity,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8.0),
+<<<<<<< HEAD
                         color: Color.fromRGBO(245, 247, 249, 1),
+=======
+                        color: Constants.scaffoldBackgroundColor,
+>>>>>>> bd39d758e17fd94402b4af15c633b6af7f5bfcf2
                       ),
                       padding: EdgeInsets.symmetric(
                         vertical: 24.0,
@@ -101,9 +125,17 @@ class _SingleOrderState extends State<SingleOrder> {
                                       fontWeight: FontWeight.w800,
                                     ),
                           ),
+<<<<<<< HEAD
                           SizedBox(height: 10.0),
                           Text(
                             "Washing and Folding".toUpperCase(),
+=======
+                          SizedBox(
+                            height: 6.0,
+                          ),
+                          Text(
+                            "WASHING AND FOLDING",
+>>>>>>> bd39d758e17fd94402b4af15c633b6af7f5bfcf2
                             style: TextStyle(
                               fontWeight: FontWeight.w600,
                               color: Color.fromRGBO(143, 148, 162, 1),
@@ -120,7 +152,11 @@ class _SingleOrderState extends State<SingleOrder> {
                             height: 30.0,
                           ),
                           Text(
+<<<<<<< HEAD
                             "IRONING".toUpperCase(),
+=======
+                            "IRONING",
+>>>>>>> bd39d758e17fd94402b4af15c633b6af7f5bfcf2
                             style: TextStyle(
                               fontWeight: FontWeight.w600,
                               color: Color.fromRGBO(143, 148, 162, 1),
@@ -129,13 +165,18 @@ class _SingleOrderState extends State<SingleOrder> {
                           SizedBox(
                             height: 10.0,
                           ),
+<<<<<<< HEAD
                           getItemRow("3", "T-shirts (man)", "\$30.00"),
+=======
+                          getItemRow("3", "T-shirt (woman)", "\$30.00"),
+>>>>>>> bd39d758e17fd94402b4af15c633b6af7f5bfcf2
                           Divider(),
                           getSubtotalRow("Subtotal", "\$200.00"),
                           getSubtotalRow("Delivery", "\$225.00"),
                           SizedBox(
                             height: 10.0,
                           ),
+<<<<<<< HEAD
                           Padding(
                             padding: const EdgeInsets.only(bottom: 8.0),
                             child: Row(
@@ -166,6 +207,13 @@ class _SingleOrderState extends State<SingleOrder> {
                     SizedBox(
                       height: 10.0,
                     ),
+=======
+                          getTotalRow("Total", "\$225.00"),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 10.0),
+>>>>>>> bd39d758e17fd94402b4af15c633b6af7f5bfcf2
                     Container(
                       decoration: BoxDecoration(
                         color: Colors.white,
@@ -198,11 +246,18 @@ class _SingleOrderState extends State<SingleOrder> {
                                       text: "Estimated Delivery\n",
                                       style: TextStyle(
                                         color: Color.fromRGBO(143, 148, 162, 1),
+<<<<<<< HEAD
                                         fontSize: 15.0,
                                       ),
                                     ),
                                     TextSpan(
                                       text: "21 January 2020",
+=======
+                                      ),
+                                    ),
+                                    TextSpan(
+                                      text: "24 January 2021",
+>>>>>>> bd39d758e17fd94402b4af15c633b6af7f5bfcf2
                                       style: TextStyle(
                                         color: Color.fromRGBO(74, 77, 84, 1),
                                         fontSize: 15.0,
@@ -211,7 +266,13 @@ class _SingleOrderState extends State<SingleOrder> {
                                   ],
                                 ),
                               ),
+<<<<<<< HEAD
                               Image.asset("assets/images/washlogo.png")
+=======
+                              Image.asset(
+                                "assets/images/washlogo.png",
+                              ),
+>>>>>>> bd39d758e17fd94402b4af15c633b6af7f5bfcf2
                             ],
                           )
                         ],
@@ -228,9 +289,42 @@ class _SingleOrderState extends State<SingleOrder> {
   }
 }
 
+<<<<<<< HEAD
 Widget getSubtotalRow(String title, String price) {
   return Padding(
     padding: const EdgeInsets.only(bottom: 8.0),
+=======
+Widget getTotalRow(String title, String amount) {
+  return Padding(
+    padding: EdgeInsets.only(bottom: 8.0),
+    child: Row(
+      children: [
+        Text(
+          title,
+          style: TextStyle(
+            color: Color.fromRGBO(19, 22, 33, 1),
+            fontSize: 17.0,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+        Spacer(),
+        Text(
+          amount,
+          style: TextStyle(
+            color: Constants.primaryColor,
+            fontWeight: FontWeight.w600,
+            fontSize: 17.0,
+          ),
+        )
+      ],
+    ),
+  );
+}
+
+Widget getSubtotalRow(String title, String price) {
+  return Padding(
+    padding: EdgeInsets.only(bottom: 8.0),
+>>>>>>> bd39d758e17fd94402b4af15c633b6af7f5bfcf2
     child: Row(
       children: [
         Text(
@@ -248,7 +342,11 @@ Widget getSubtotalRow(String title, String price) {
             color: Color.fromRGBO(74, 77, 84, 1),
             fontSize: 15.0,
           ),
+<<<<<<< HEAD
         ),
+=======
+        )
+>>>>>>> bd39d758e17fd94402b4af15c633b6af7f5bfcf2
       ],
     ),
   );
@@ -256,7 +354,11 @@ Widget getSubtotalRow(String title, String price) {
 
 Widget getItemRow(String count, String item, String price) {
   return Padding(
+<<<<<<< HEAD
     padding: const EdgeInsets.only(bottom: 8.0),
+=======
+    padding: EdgeInsets.only(bottom: 8.0),
+>>>>>>> bd39d758e17fd94402b4af15c633b6af7f5bfcf2
     child: Row(
       children: [
         Text(
@@ -282,7 +384,11 @@ Widget getItemRow(String count, String item, String price) {
             color: Color.fromRGBO(74, 77, 84, 1),
             fontSize: 15.0,
           ),
+<<<<<<< HEAD
         ),
+=======
+        )
+>>>>>>> bd39d758e17fd94402b4af15c633b6af7f5bfcf2
       ],
     ),
   );
