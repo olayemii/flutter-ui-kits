@@ -39,6 +39,6 @@ Our top sponsors will be listed here
 
 ### Screenshots
 
-![Screenshot 1](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/airbnb1.png) ![Screenshot 2](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/airbnb2.png) ![Screenshot 3](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/airbnb3.png) ![Screenshot 4](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/airbnb4.png) ![Screenshot 5](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/airbnb5.png)
+![Screenshot 1](https://res.cloudinary.com/olayemii/image/upload/v1611746923/assets/airbnb1_p9eigs.png) ![Screenshot 2](https://res.cloudinary.com/olayemii/image/upload/v1611746923/assets/airbnb2_dduwwv.png) ![Screenshot 3](https://res.cloudinary.com/olayemii/image/upload/v1611746935/assets/airbnb3_tki0qq.png) ![Screenshot 4](https://res.cloudinary.com/olayemii/image/upload/v1611746958/assets/airbnb4_aqabuo.png) ![Screenshot 5](https://res.cloudinary.com/olayemii/image/upload/v1611746936/assets/airbnb5_hqnrpf.png)
 
-![Main Page](https://github.com/OLayemii/flutter-ui-kits/blob/main/assets/airbnb-mockup.png)
+![Main Page](https://res.cloudinary.com/olayemii/image/upload/v1611747017/assets/airbnb-mockup_bs3o3z.png)
