@@ -33,10 +33,6 @@ Or Support me on Patreon
 
 Apps were developed by Olayemi Garuba [![Twitter Follow](https://img.shields.io/twitter/follow/iam_olayemii.svg?style=social)](https://twitter.com/iam_olayemii)
 
-### 💷 Top Sponsors
-
-Our top sponsors will be listed here
-
 ### Screenshots
 
 1. **[Wrist Watch Store UI Kit](https://github.com/OLayemii/flutter-ui-kits/tree/main/watch_cart_ui)**
