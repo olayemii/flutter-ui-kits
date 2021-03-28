@@ -33,10 +33,6 @@ Or Support me on Patreon
 
 Apps were developed by Olayemi Garuba [![Twitter Follow](https://img.shields.io/twitter/follow/iam_olayemii.svg?style=social)](https://twitter.com/iam_olayemii)
 
-### 💷 Top Sponsors
-
-Our top sponsors will be listed here
-
 ### Screenshots
 
 ![Screenshot 1](https://res.cloudinary.com/olayemii/image/upload/v1611746923/assets/airbnb1_p9eigs.png) ![Screenshot 2](https://res.cloudinary.com/olayemii/image/upload/v1611746923/assets/airbnb2_dduwwv.png) ![Screenshot 3](https://res.cloudinary.com/olayemii/image/upload/v1611746935/assets/airbnb3_tki0qq.png) ![Screenshot 4](https://res.cloudinary.com/olayemii/image/upload/v1611746958/assets/airbnb4_aqabuo.png) ![Screenshot 5](https://res.cloudinary.com/olayemii/image/upload/v1611746936/assets/airbnb5_hqnrpf.png)
