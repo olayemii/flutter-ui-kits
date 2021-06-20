@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
       designSize: Size(375, 812),
       allowFontScaling: false,
-      child: MaterialApp(
+      builder: ()=> MaterialApp(
         debugShowCheckedModeBanner: false,
         title: "Flutter Laundry UI",
         theme: ThemeData(
