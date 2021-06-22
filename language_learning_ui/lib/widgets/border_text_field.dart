@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/screenutil.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BorderTextField extends StatelessWidget {
   final String hintText;

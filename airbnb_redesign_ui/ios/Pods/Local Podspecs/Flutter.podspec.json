@@ -2,7 +2,6 @@
   "name": "Flutter",
   "version": "1.0.0",
   "summary": "High-performance, high-fidelity mobile apps.",
-  "description": "Flutter provides an easy and productive way to build and deploy high-performance mobile apps for Android and iOS.",
   "homepage": "https://flutter.io",
   "license": {
     "type": "MIT"
@@ -17,5 +16,5 @@
   "platforms": {
     "ios": "8.0"
   },
-  "vendored_frameworks": "Flutter.framework"
+  "vendored_frameworks": "path/to/nothing"
 }

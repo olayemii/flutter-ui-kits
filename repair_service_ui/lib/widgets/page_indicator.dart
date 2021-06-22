@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/screenutil.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:repair_service_ui/utils/constants.dart';
 
 class PageIndicator extends StatelessWidget {

@@ -94,7 +94,7 @@ class Register extends StatelessWidget {
                           color: Color.fromRGBO(64, 74, 106, 1),
                         ),
                       ),
-                      FlatButton(
+                      TextButton(
                         onPressed: () {},
                         child: Text(
                           "Log In",

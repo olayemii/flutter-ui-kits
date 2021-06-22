@@ -1,10 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_icons/flutter_icons.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:watch_cart_ui/constants.dart';
 import 'package:watch_cart_ui/models/product.dart';
 import 'package:watch_cart_ui/pages/watch_details.dart';
 import 'package:watch_cart_ui/widgets/home_options.dart';

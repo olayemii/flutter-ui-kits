@@ -79,7 +79,7 @@ class _AuthenticationState extends State<Authentication> {
               SizedBox(
                 height: 20.0,
               ),
-              FlatButton(
+              TextButton(
                 onPressed: () {},
                 child: Text(
                   "Terms & Conditions",

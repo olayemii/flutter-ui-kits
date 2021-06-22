@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_icons/flutter_icons.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:language_learning_ui/constants.dart';
 import 'package:language_learning_ui/pages/choose_language.dart';
 import 'package:language_learning_ui/widgets/border_text_field.dart';
@@ -111,7 +108,7 @@ class _CreateAccountState extends State<CreateAccount> {
                           color: Color.fromRGBO(169, 176, 185, 1),
                         ),
                       ),
-                      FlatButton(
+                      TextButton(
                         onPressed: () {},
                         child: Text(
                           "Log In",

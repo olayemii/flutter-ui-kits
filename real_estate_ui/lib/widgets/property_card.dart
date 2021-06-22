@@ -15,7 +15,7 @@ class PropertyCard extends StatelessWidget {
         children: [
           Expanded(
             child: Stack(
-              overflow: Overflow.visible,
+              clipBehavior: Clip.none,
               children: [
                 Container(
                   decoration: BoxDecoration(

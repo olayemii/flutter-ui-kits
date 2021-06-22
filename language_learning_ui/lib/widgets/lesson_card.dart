@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
-import 'package:flutter_screenutil/screenutil.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:language_learning_ui/constants.dart';
 import 'package:language_learning_ui/models/lesson_model.dart';
 

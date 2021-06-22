@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_icons/flutter_icons.dart';
-import 'package:flutter_screenutil/screenutil.dart';
 import 'package:real_estate_ui/utils/constants.dart';
 import 'package:real_estate_ui/utils/static_data.dart';
-import 'package:real_estate_ui/widgets/input_widget.dart';
-import 'package:real_estate_ui/widgets/primary_button.dart';
 import 'package:real_estate_ui/widgets/property_card.dart';
 
 class SearchResult extends StatelessWidget {

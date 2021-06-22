@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/screenutil_init.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:language_learning_ui/pages/choose_language.dart';
 import 'package:language_learning_ui/pages/create_account.dart';
@@ -16,8 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: Size(375, 812),
-      allowFontScaling: false,
-      child: MaterialApp(
+      builder: () => MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData(

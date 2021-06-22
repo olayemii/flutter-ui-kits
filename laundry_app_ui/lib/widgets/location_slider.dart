@@ -50,7 +50,7 @@ class LocationSlider extends StatelessWidget {
                 horizontal: 12.0,
               ),
               child: Stack(
-                overflow: Overflow.visible,
+                clipBehavior: Clip.none,
                 children: [
                   Positioned(
                     right: -16.0,
