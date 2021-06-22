@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/screenutil_init.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:news_ui/pages/category_selection.dart';
-import 'package:news_ui/pages/home.dart';
 import 'package:news_ui/pages/notifications.dart';
 import 'package:news_ui/pages/page_switch.dart';
 import 'package:news_ui/pages/single_news_page.dart';
@@ -17,8 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: Size(375, 812),
-      allowFontScaling: false,
-      child: MaterialApp(
+      builder: () => MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData(

@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:news_ui/pages/category_selection.dart';
 import 'package:news_ui/pages/home.dart';
-import 'package:news_ui/utils/constants.dart';
-import 'package:news_ui/utils/static_data.dart';
 import 'package:news_ui/widgets/bottom_bar.dart';
-import 'package:news_ui/widgets/mini_news_card.dart';
 import 'package:news_ui/widgets/nu_appbar.dart';
-import 'package:news_ui/widgets/single_news_card.dart';
 
 class PageSwitch extends StatefulWidget {
   @override

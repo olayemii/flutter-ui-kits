@@ -35,7 +35,7 @@ class LoginForm extends StatelessWidget {
             SizedBox(height: 10.0),
             Align(
               alignment: Alignment.centerRight,
-              child: FlatButton(
+              child: TextButton(
                 onPressed: () {},
                 child: Text(
                   "Reset Password",

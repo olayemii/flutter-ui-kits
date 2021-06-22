@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
-import 'package:flutter_screenutil/screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:repair_service_ui/utils/constants.dart';
 import 'package:repair_service_ui/widgets/home_page_one.dart';
 import 'package:repair_service_ui/widgets/home_page_three.dart';

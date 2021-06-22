@@ -55,7 +55,7 @@ class _DashboardState extends State<Dashboard> {
       ),
       backgroundColor: Constants.primaryColor,
       body: Stack(
-        overflow: Overflow.visible,
+        clipBehavior: Clip.none,
         children: [
           Positioned(
             right: 0.0,

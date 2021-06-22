@@ -14,7 +14,7 @@ class Login extends StatelessWidget {
         bottom: false,
         child: Container(
           child: Stack(
-            overflow: Overflow.visible,
+            clipBehavior: Clip.none,
             children: [
               Positioned(
                 right: 0.0,

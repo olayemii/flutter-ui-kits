@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/screenutil.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:language_learning_ui/constants.dart';
 import 'package:language_learning_ui/models/language_model.dart';
 import 'package:language_learning_ui/pages/dashboard.dart';

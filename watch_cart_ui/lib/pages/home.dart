@@ -65,11 +65,17 @@ class Home extends StatelessWidget {
                         Container(
                           width: double.infinity,
                           height: ScreenUtil().setHeight(50.0),
-                          child: FlatButton(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(75.0),
+                          child: TextButton(
+                            style: ButtonStyle(
+                              shape: MaterialStateProperty.all(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(75.0),
+                                ),
+                              ),
+                              backgroundColor: MaterialStateProperty.all(
+                                Constants.primaryColor,
+                              ),
                             ),
-                            color: Constants.primaryColor,
                             child: Text(
                               "Get Started",
                               style: TextStyle(

@@ -15,7 +15,7 @@ class _SingleOrderState extends State<SingleOrder> {
       backgroundColor: Constants.primaryColor,
       body: Container(
         child: Stack(
-          overflow: Overflow.visible,
+          clipBehavior: Clip.none,
           children: [
             Positioned(
               right: 0.0,

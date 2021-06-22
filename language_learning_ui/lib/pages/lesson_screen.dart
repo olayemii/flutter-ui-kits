@@ -1,17 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:language_learning_ui/constants.dart';
-import 'package:language_learning_ui/models/course_model.dart';
-import 'package:language_learning_ui/models/instructor_model.dart';
 import 'package:language_learning_ui/models/lesson_model.dart';
-import 'package:language_learning_ui/models/topic_model.dart';
-import 'package:language_learning_ui/widgets/border_text_field.dart';
 import 'package:language_learning_ui/widgets/bottom_bar.dart';
-import 'package:language_learning_ui/widgets/course_card.dart';
-import 'package:language_learning_ui/widgets/instructor_card.dart';
 import 'package:language_learning_ui/widgets/lesson_card.dart';
-import 'package:language_learning_ui/widgets/topic_card.dart';
 import 'package:language_learning_ui/widgets/user_menu_bar.dart';
 
 class LessonScreen extends StatefulWidget {

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:repair_service_ui/utils/constants.dart';
 import 'package:repair_service_ui/widgets/page_indicator.dart';

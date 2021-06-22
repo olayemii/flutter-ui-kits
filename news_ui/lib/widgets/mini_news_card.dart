@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/screenutil.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:news_ui/models/news.dart';
 import 'package:news_ui/pages/single_news_page.dart';
 import 'package:news_ui/utils/helper.dart';

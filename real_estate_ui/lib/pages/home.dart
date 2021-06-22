@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
-import 'package:flutter_screenutil/screenutil.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:real_estate_ui/pages/filters.dart';
 import 'package:real_estate_ui/utils/constants.dart';
 import 'package:real_estate_ui/utils/helper.dart';
@@ -62,31 +62,43 @@ class Home extends StatelessWidget {
                     SizedBox(
                       width: 10.0,
                     ),
-                    FlatButton(
+                    Container(
                       height: ScreenUtil().setHeight(44.0),
-                      onPressed: () {
-                        Helper.nextScreen(context, Filters());
-                      },
-                      color: Constants.primaryColor,
-                      child: Row(
-                        children: [
-                          Icon(
-                            FlutterIcons.ios_options_ion,
-                            color: Colors.white,
-                          ),
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          Text(
-                            "Filters",
-                            style: TextStyle(
+                      child: TextButton(
+                        style: ButtonStyle(
+                            shape: MaterialStateProperty.all(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
+                            ),
+                            backgroundColor: MaterialStateProperty.all(
+                              Constants.primaryColor,
+                            ),
+                            padding: MaterialStateProperty.all(
+                              EdgeInsets.symmetric(
+                                horizontal: 15.0,
+                              ),
+                            )),
+                        onPressed: () {
+                          Helper.nextScreen(context, Filters());
+                        },
+                        child: Row(
+                          children: [
+                            Icon(
+                              FlutterIcons.ios_options_ion,
                               color: Colors.white,
                             ),
-                          ),
-                        ],
-                      ),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8.0),
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            Text(
+                              "Filters",
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     )
                   ],
