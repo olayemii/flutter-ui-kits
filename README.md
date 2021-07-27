@@ -19,7 +19,7 @@ Send me UI suggestions for any uplabs project on <a href="mailto:info@flutterpan
 
 > <a href="https://www.buymeacoffee.com/xPGLYEr"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=xPGLYEr&button_colour=BD5FFF&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00"></a>
 
-Or Support me on Patreon
+Or Support me on Patreon. 
 
 <a href="https://www.patreon.com/bePatron?u=48456662" data-patreon-widget-type="become-patron-button"><img src="https://raw.githubusercontent.com/codebard/patron-button-and-widgets-by-codebard/master/images/patreon-medium-button.png" alt="Become a Patreon!" /></a>
 
