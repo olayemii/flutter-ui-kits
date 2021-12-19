@@ -1,4 +1,5 @@
 import 'package:airbnb_redesign_ui/pages/register.dart';
+import 'package:airbnb_redesign_ui/pages/login.dart';
 import 'package:airbnb_redesign_ui/utils/constants.dart';
 import 'package:airbnb_redesign_ui/utils/helper.dart';
 import 'package:airbnb_redesign_ui/widgets/page_indicator.dart';
@@ -76,7 +77,9 @@ class HomePageTemplate extends StatelessWidget {
                   ),
                 ),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Helper.nextPage(context, Login());
+                  },
                   child: Text(
                     "Log In",
                     style: GoogleFonts.inter(

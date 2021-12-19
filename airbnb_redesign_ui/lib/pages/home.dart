@@ -30,17 +30,22 @@ class _HomeState extends State<Home> {
           children: [
             HomePageTemplate(
               activePage: currentPage,
-              title: "Let's Find Peace with Comfort",
+              title: "Let's Find Peace with GOLDEN 111",
               imagePath: "assets/images/page1.png",
             ),
             HomePageTemplate(
               activePage: currentPage,
-              title: "Let's Find Peace with Comfort",
+              title: "Let's Find Peace with Shah",
               imagePath: "assets/images/page2.png",
             ),
             HomePageTemplate(
               activePage: currentPage,
-              title: "Let's Find Peace with Comfort",
+              title: "Let's Find Peace with HOGAN",
+              imagePath: "assets/images/page1.png",
+            ),
+            HomePageTemplate(
+              activePage: currentPage,
+              title: "Let's Find Peace with HOGAN",
               imagePath: "assets/images/page1.png",
             ),
           ],

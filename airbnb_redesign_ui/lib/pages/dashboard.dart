@@ -40,10 +40,10 @@ class Dashboard extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 24.0),
                 child: Text(
-                  "Let's Find Your\nApartments",
+                  "Let's Find Your Sport Events",
                   style: TextStyle(
                     fontSize: 26.0,
-                    height: 1.5,
+                    height: 1,
                     color: Color.fromRGBO(33, 45, 82, 1),
                     fontWeight: FontWeight.w600,
                   ),
@@ -55,7 +55,7 @@ class Dashboard extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 24.0),
                 child: Container(
-                  height: ScreenUtil().setHeight(59.0),
+                  height: ScreenUtil().setHeight(20.0),
                   decoration: BoxDecoration(
                     color: Color.fromRGBO(251, 251, 251, 1),
                     borderRadius: BorderRadius.circular(8.0),
@@ -67,15 +67,15 @@ class Dashboard extends StatelessWidget {
                         child: TextField(
                           decoration: InputDecoration(
                               border: InputBorder.none,
-                              hintText: "Search your apartments...",
+                              hintText: "Search events near you...",
                               hintStyle: GoogleFonts.inter(
                                 color: Color.fromRGBO(153, 163, 196, 1),
                               )),
                         ),
                       ),
                       Container(
-                        height: ScreenUtil().setHeight(50.0),
-                        width: ScreenUtil().setWidth(50.0),
+                        height: ScreenUtil().setHeight(20.0),
+                        width: ScreenUtil().setWidth(20.0),
                         decoration: BoxDecoration(
                           color: Constants.primaryColor,
                           borderRadius: BorderRadius.circular(10.0),
@@ -97,7 +97,7 @@ class Dashboard extends StatelessWidget {
                   horizontal: 24.0,
                 ),
                 child: Text(
-                  "Popular",
+                  "This Weeks events",
                   style: TextStyle(
                     fontSize: 18.0,
                     height: 1.5,
@@ -127,7 +127,7 @@ class Dashboard extends StatelessWidget {
                     );
                   },
                   // Make the length our static data length
-                  itemCount: StaticData.properties.length,
+                  itemCount: StaticData.properties.length - 4,
                 ),
               ),
               SizedBox(
@@ -138,7 +138,7 @@ class Dashboard extends StatelessWidget {
                   horizontal: 24.0,
                 ),
                 child: Text(
-                  "Trending",
+                  "Most Trending Events this month",
                   style: TextStyle(
                     fontSize: 18.0,
                     height: 1.5,

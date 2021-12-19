@@ -1,5 +1,8 @@
 import 'package:airbnb_redesign_ui/models/bottom_bar_item.dart';
+import 'package:airbnb_redesign_ui/pages/dashboard.dart';
 import 'package:airbnb_redesign_ui/utils/constants.dart';
+import 'package:airbnb_redesign_ui/utils/helper.dart';
+import 'package:airbnb_redesign_ui/pages/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -27,6 +30,7 @@ class _AppBottomNavigationState extends State<AppBottomNavigation> {
       BottomBarItem(
         icon: FlutterIcons.home_fea,
         onPressed: () {
+          Helper.nextPage(context, Dashboard());
           setActivePage("home");
         },
         key: "home",
@@ -55,6 +59,7 @@ class _AppBottomNavigationState extends State<AppBottomNavigation> {
       BottomBarItem(
         icon: FlutterIcons.user_ant,
         onPressed: () {
+          Helper.nextPage(context, Profile());
           setActivePage("profile");
         },
         key: "profile",

@@ -8,7 +8,7 @@ class PropertyFeatures extends StatelessWidget {
     return Container(
       child: Row(
         children: [
-          item(FlutterIcons.md_people_ion, "2 Adults"),
+          item(FlutterIcons.md_people_ion, "1 Adult"),
           SizedBox(
             width: 10.0,
           ),

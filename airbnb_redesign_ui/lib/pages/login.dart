@@ -1,14 +1,14 @@
 import 'package:airbnb_redesign_ui/pages/dashboard.dart';
-import 'package:airbnb_redesign_ui/pages/login.dart';
+import 'package:airbnb_redesign_ui/pages/register.dart';
 import 'package:airbnb_redesign_ui/utils/constants.dart';
 import 'package:airbnb_redesign_ui/utils/helper.dart';
 import 'package:airbnb_redesign_ui/widgets/primary_button.dart';
-import 'package:airbnb_redesign_ui/widgets/register_form.dart';
+import 'package:airbnb_redesign_ui/widgets/login_form.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Register extends StatelessWidget {
+class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size _size = MediaQuery.of(context).size;
@@ -26,7 +26,7 @@ class Register extends StatelessWidget {
           ),
         ),
         title: Text(
-          "Sign Up",
+          "Login",
           style: TextStyle(
             color: Color.fromRGBO(33, 45, 82, 1),
           ),
@@ -57,7 +57,7 @@ class Register extends StatelessWidget {
                       child: Column(
                         children: [
                           Text(
-                            "Sign Up",
+                            "Login",
                             style: TextStyle(
                               fontSize: 22.0,
                               color: Color.fromRGBO(33, 45, 82, 1),
@@ -68,7 +68,7 @@ class Register extends StatelessWidget {
                             height: 15.0,
                           ),
                           //Leta take the form to a new page
-                          RegisterForm(),
+                          LoginForm(),
                         ],
                       ),
                     ),
@@ -89,7 +89,7 @@ class Register extends StatelessWidget {
                     crossAxisAlignment: WrapCrossAlignment.center,
                     children: [
                       Text(
-                        "Already have an account?",
+                        "Don't have an account?",
                         style: GoogleFonts.inter(
                           fontSize: 14.0,
                           color: Color.fromRGBO(64, 74, 106, 1),
@@ -97,10 +97,10 @@ class Register extends StatelessWidget {
                       ),
                       TextButton(
                         onPressed: () {
-                          Helper.nextPage(context, Login());
+                          Helper.nextPage(context, Register());
                         },
                         child: Text(
-                          "Log In",
+                          "Sign Up",
                           style: GoogleFonts.inter(
                             fontWeight: FontWeight.w600,
                             fontSize: 14.0,
