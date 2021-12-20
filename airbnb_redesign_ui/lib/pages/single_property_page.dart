@@ -17,7 +17,7 @@ class SinglePropertyPage extends StatelessWidget {
     return Scaffold(
       body: Builder(builder: (BuildContext context) {
         double heightFromWhiteBg =
-            size.height - 300.0; // height for white section
+            size.height + 300; // height for white section
         return Container(
           height: size.height,
           child: Stack(
@@ -25,7 +25,7 @@ class SinglePropertyPage extends StatelessWidget {
               Positioned(
                 width: size.width,
                 child: Container(
-                  height: size.height,
+                  height: size.height + 600,
                   padding: EdgeInsets.symmetric(horizontal: 24.0),
                   decoration: BoxDecoration(
                     image: DecorationImage(
@@ -97,41 +97,16 @@ class SinglePropertyPage extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 5.0,
-                      ),
+                      SizedBox(height: 5.0),
                       //Property features
                       PropertyFeatures(),
-                      SizedBox(
-                        height: 10.0,
-                      ),
-                      Text(
-                        "This is one of the best events you can get around the vicinity, check in to experience pleasure.",
-                        maxLines: 3,
-                        overflow: TextOverflow.ellipsis,
-                        style: GoogleFonts.inter(
-                          fontSize: 15.0,
-                          height: 1.5,
-                          color: Color.fromRGBO(138, 150, 190, 1),
-                        ),
-                      ),
-
-
-
-
-
-
-
-                    
-                      SizedBox(
-                        height: 10.0,
-                      ),
+                      SizedBox(height: 10.0),
                       Container(
                         width: double.infinity,
                         padding: EdgeInsets.only(left: 16.0, right: 5.0),
                         height: ScreenUtil().setHeight(26.0),
                         decoration: BoxDecoration(
-                          color:Colors.cyan,
+                          color: Colors.cyan,
                           borderRadius: BorderRadius.circular(30.0),
                         ),
                         child: Row(
@@ -179,14 +154,6 @@ class SinglePropertyPage extends StatelessWidget {
                         ),
                       ),
 
-
-
-                    
-
-
-
-
-                    
                       SizedBox(
                         height: 10.0,
                       ),
@@ -195,7 +162,7 @@ class SinglePropertyPage extends StatelessWidget {
                         padding: EdgeInsets.only(left: 16.0, right: 5.0),
                         height: ScreenUtil().setHeight(26.0),
                         decoration: BoxDecoration(
-                          color:Colors.cyan,
+                          color: Colors.cyan,
                           borderRadius: BorderRadius.circular(30.0),
                         ),
                         child: Row(
@@ -243,30 +210,17 @@ class SinglePropertyPage extends StatelessWidget {
                         ),
                       ),
 
-
-
-
-
-
-
-
-
-
-
-
-                     SizedBox(
-                        height: 20.0,
+                      SizedBox(
+                        height: 10.0,
                       ),
 
-
-                     Text(
-                              "Selects tickets for booking",
-                              style: GoogleFonts.inter(
-                                fontSize: 25.0,
-                                color: Color.fromRGBO(64, 74, 104, 1),
-                              ),
-                            ),
-
+                      Text(
+                        "  Selects tickets type",
+                        style: GoogleFonts.inter(
+                          fontSize: 20.0,
+                          color: Color.fromRGBO(64, 74, 104, 1),
+                        ),
+                      ),
 
                       SizedBox(
                         height: 5.0,
@@ -274,7 +228,7 @@ class SinglePropertyPage extends StatelessWidget {
                       Container(
                         width: double.infinity,
                         padding: EdgeInsets.only(left: 16.0, right: 5.0),
-                        height: ScreenUtil().setHeight(56.0),
+                        height: ScreenUtil().setHeight(36.0),
                         decoration: BoxDecoration(
                           color: Constants.primaryColor,
                           borderRadius: BorderRadius.circular(30.0),
@@ -304,7 +258,7 @@ class SinglePropertyPage extends StatelessWidget {
                                 Helper.nextPage(context, BookingScreen());
                               },
                               child: Container(
-                                height: ScreenUtil().setHeight(45.0),
+                                height: ScreenUtil().setHeight(30.0),
                                 alignment: Alignment.center,
                                 padding: EdgeInsets.symmetric(horizontal: 16.0),
                                 decoration: BoxDecoration(
@@ -330,7 +284,7 @@ class SinglePropertyPage extends StatelessWidget {
                       Container(
                         width: double.infinity,
                         padding: EdgeInsets.only(left: 16.0, right: 5.0),
-                        height: ScreenUtil().setHeight(56.0),
+                        height: ScreenUtil().setHeight(36.0),
                         decoration: BoxDecoration(
                           color: Constants.primaryColor,
                           borderRadius: BorderRadius.circular(30.0),
@@ -360,7 +314,7 @@ class SinglePropertyPage extends StatelessWidget {
                                 Helper.nextPage(context, BookingScreen());
                               },
                               child: Container(
-                                height: ScreenUtil().setHeight(45.0),
+                                height: ScreenUtil().setHeight(30.0),
                                 alignment: Alignment.center,
                                 padding: EdgeInsets.symmetric(horizontal: 16.0),
                                 decoration: BoxDecoration(
@@ -379,15 +333,14 @@ class SinglePropertyPage extends StatelessWidget {
                           ],
                         ),
                       ),
-                    
 
-                    SizedBox(
+                      SizedBox(
                         height: 15.0,
                       ),
                       Container(
                         width: double.infinity,
                         padding: EdgeInsets.only(left: 16.0, right: 5.0),
-                        height: ScreenUtil().setHeight(56.0),
+                        height: ScreenUtil().setHeight(36.0),
                         decoration: BoxDecoration(
                           color: Constants.primaryColor,
                           borderRadius: BorderRadius.circular(30.0),
@@ -417,7 +370,7 @@ class SinglePropertyPage extends StatelessWidget {
                                 Helper.nextPage(context, BookingScreen());
                               },
                               child: Container(
-                                height: ScreenUtil().setHeight(45.0),
+                                height: ScreenUtil().setHeight(30.0),
                                 alignment: Alignment.center,
                                 padding: EdgeInsets.symmetric(horizontal: 16.0),
                                 decoration: BoxDecoration(
@@ -436,7 +389,6 @@ class SinglePropertyPage extends StatelessWidget {
                           ],
                         ),
                       ),
-                  
                     ],
                   ),
                 ),
