@@ -6,29 +6,29 @@ class StaticData {
       name: "Malaysia Super League:\Johor vs Selangor\(23rd Nov)",
       description:
           "Johor is leading with 7th wins will they still hold their title!",
-      price: "\RM79.99",
+      price: "\RM99.99",
       imagePath: "assets/images/jvs.jpg",
     ),
     Property(
-      name: "Malaysia Super League:\Johor vs Selangor\(23rd Nov)",
+      name: "KL TENNIS TEAM LEAGUES:\\(25rd Nov)",
       description:
           "Johor is leading with 7th wins will they still hold their title!",
-      price: "\RM199.99",
-      imagePath: "assets/images/jvs.jpg",
+      price: "\RM59.99",
+      imagePath: "assets/images/ten.jpg",
     ),
     Property(
-      name: "Malaysia Super League:\Johor vs Selangor\(23rd Nov)",
+      name: "KERIS CONLAY:\FINALS\(25th Nov)",
       description:
           "Johor is leading with 7th wins will they still hold their title!",
-      price: "\RM399.99",
-      imagePath: "assets/images/jvs.jpg",
+      price: "\RM69.99",
+      imagePath: "assets/images/rug.jpg",
     ),
     Property(
-      name: "Malaysia Super League: \Johor vs Selangor \(23rd Nov)",
+      name: "TNB MALAYSIAN HOKEY LEAGUE:(Nov - Dec 2021)",
       description:
           "Johor is leading with 7th wins will they still hold their title!",
-      price: "\RM999.99",
-      imagePath: "assets/images/jvs.jpg",
+      price: "\RM49.99",
+      imagePath: "assets/images/hok.jpg",
     ),
     Property(
       name: "Malaysia Super League:\Johor vs Selangor\(23rd Nov)",

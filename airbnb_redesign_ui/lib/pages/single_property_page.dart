@@ -29,7 +29,7 @@ class SinglePropertyPage extends StatelessWidget {
                     image: DecorationImage(
                       fit: BoxFit.contain,
                       alignment: Alignment.topCenter,
-                      image: AssetImage("assets/images/jvs.jpg"),
+                      image: AssetImage("assets/images/ten.jpg"),
                     ),
                   ),
                 ),
@@ -72,7 +72,7 @@ class SinglePropertyPage extends StatelessWidget {
                         ],
                       ),
                       SizedBox(
-                        height: 10.0,
+                        height: 5.0,
                       ),
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
@@ -96,7 +96,7 @@ class SinglePropertyPage extends StatelessWidget {
                         ],
                       ),
                       SizedBox(
-                        height: 10.0,
+                        height: 5.0,
                       ),
                       //Property features
                       PropertyFeatures(),
@@ -131,14 +131,70 @@ class SinglePropertyPage extends StatelessWidget {
                               text: TextSpan(
                                 children: [
                                   TextSpan(
-                                    text: "RM79.99 per ",
+                                    text: "RM259.99 per ",
                                     style: GoogleFonts.inter(
                                       fontWeight: FontWeight.w600,
                                       fontSize: 18.0,
                                     ),
                                   ),
                                   TextSpan(
-                                    text: " adult",
+                                    text: "First row seats",
+                                    style: GoogleFonts.inter(),
+                                  )
+                                ],
+                              ),
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                Helper.nextPage(context, BookingScreen());
+                              },
+                              child: Container(
+                                height: ScreenUtil().setHeight(45.0),
+                                alignment: Alignment.center,
+                                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(24.0),
+                                  color: Colors.white,
+                                ),
+                                child: Text(
+                                  "Book Seats",
+                                  style: GoogleFonts.inter(
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 12.0,
+                                  ),
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+
+                      SizedBox(
+                        height: 15.0,
+                      ),
+                      Container(
+                        width: double.infinity,
+                        padding: EdgeInsets.only(left: 16.0, right: 5.0),
+                        height: ScreenUtil().setHeight(56.0),
+                        decoration: BoxDecoration(
+                          color: Constants.primaryColor,
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            RichText(
+                              text: TextSpan(
+                                children: [
+                                  TextSpan(
+                                    text: "RM159.99 per ",
+                                    style: GoogleFonts.inter(
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 18.0,
+                                    ),
+                                  ),
+                                  TextSpan(
+                                    text: "Second row seats",
                                     style: GoogleFonts.inter(),
                                   )
                                 ],
@@ -167,7 +223,65 @@ class SinglePropertyPage extends StatelessWidget {
                             )
                           ],
                         ),
-                      )
+                      ),
+                    
+
+                    SizedBox(
+                        height: 15.0,
+                      ),
+                      Container(
+                        width: double.infinity,
+                        padding: EdgeInsets.only(left: 16.0, right: 5.0),
+                        height: ScreenUtil().setHeight(56.0),
+                        decoration: BoxDecoration(
+                          color: Constants.primaryColor,
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            RichText(
+                              text: TextSpan(
+                                children: [
+                                  TextSpan(
+                                    text: "RM99.99 per ",
+                                    style: GoogleFonts.inter(
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 18.0,
+                                    ),
+                                  ),
+                                  TextSpan(
+                                    text: " Third row seats",
+                                    style: GoogleFonts.inter(),
+                                  )
+                                ],
+                              ),
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                Helper.nextPage(context, BookingScreen());
+                              },
+                              child: Container(
+                                height: ScreenUtil().setHeight(45.0),
+                                alignment: Alignment.center,
+                                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(24.0),
+                                  color: Colors.white,
+                                ),
+                                child: Text(
+                                  "Book Tickets",
+                                  style: GoogleFonts.inter(
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 12.0,
+                                  ),
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                  
                     ],
                   ),
                 ),

@@ -5,7 +5,7 @@ import 'package:airbnb_redesign_ui/widgets/house_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 
 class Dashboard extends StatelessWidget {
@@ -20,47 +20,18 @@ class Dashboard extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               SafeArea(child: SizedBox()),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 24.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    SvgPicture.asset("assets/svg/menu.svg"),
-                    CircleAvatar(
-                      backgroundColor: Colors.transparent,
-                      radius: 20.0,
-                      backgroundImage: AssetImage("assets/images/dp.png"),
-                    )
-                  ],
-                ),
-              ),
               SizedBox(
                 height: 15.0,
               ),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 24.0),
-                child: Text(
-                  "Let's Find Your Sport Events",
-                  style: TextStyle(
-                    fontSize: 26.0,
-                    height: 1,
-                    color: Color.fromRGBO(33, 45, 82, 1),
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 15.0,
-              ),
-              Padding(
+            Padding(
                 padding: EdgeInsets.symmetric(horizontal: 24.0),
                 child: Container(
-                  height: ScreenUtil().setHeight(20.0),
+                  height: ScreenUtil().setHeight(50.0),
                   decoration: BoxDecoration(
                     color: Color.fromRGBO(251, 251, 251, 1),
-                    borderRadius: BorderRadius.circular(8.0),
+                    borderRadius: BorderRadius.circular(25.0),
                   ),
-                  padding: EdgeInsets.only(left: 16.0, right: 8.0),
+                  padding: EdgeInsets.only(left: 16.0, right: 8.0,bottom: 1),
                   child: Row(
                     children: [
                       Expanded(
@@ -70,15 +41,18 @@ class Dashboard extends StatelessWidget {
                               hintText: "Search events near you...",
                               hintStyle: GoogleFonts.inter(
                                 color: Color.fromRGBO(153, 163, 196, 1),
+                                
                               )),
+                              
                         ),
+                        
                       ),
                       Container(
-                        height: ScreenUtil().setHeight(20.0),
-                        width: ScreenUtil().setWidth(20.0),
+                        height: ScreenUtil().setHeight(25.0),
+                        width: ScreenUtil().setWidth(25.0),
                         decoration: BoxDecoration(
                           color: Constants.primaryColor,
-                          borderRadius: BorderRadius.circular(10.0),
+                          borderRadius: BorderRadius.circular(50.0),
                         ),
                         child: Icon(
                           FlutterIcons.search1_ant,
@@ -88,6 +62,9 @@ class Dashboard extends StatelessWidget {
                     ],
                   ),
                 ),
+              ),
+              SizedBox(
+                height: 15.0,
               ),
               SizedBox(
                 height: 15.0,

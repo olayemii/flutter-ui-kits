@@ -1,7 +1,7 @@
 import 'package:airbnb_redesign_ui/pages/booking_screen.dart';
 import 'package:airbnb_redesign_ui/utils/constants.dart';
 import 'package:airbnb_redesign_ui/utils/helper.dart';
-import 'package:airbnb_redesign_ui/widgets/app_bottom_navigation.dart';
+import 'package:airbnb_redesign_ui/widgets/app_bottom_navigation_profile.dart';
 import 'package:airbnb_redesign_ui/widgets/property_features.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
@@ -14,7 +14,7 @@ class Profile extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      bottomNavigationBar: AppBottomNavigation(),
+      bottomNavigationBar: AppBottomNavigationProfile(),
       body: Builder(builder: (BuildContext context) {
         double heightFromWhiteBg =
             size.height - 300.0; // height for white section
@@ -31,7 +31,7 @@ class Profile extends StatelessWidget {
                     image: DecorationImage(
                       fit: BoxFit.contain,
                       alignment: Alignment.topCenter,
-                      image: AssetImage("assets/images/jvs.jpg"),
+                      image: AssetImage("assets/images/user.png"),
                     ),
                   ),
                 ),
@@ -59,7 +59,7 @@ class Profile extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            "Malaysia Super League Johor vs Selangor",
+                            "Your Profile",
                             style: TextStyle(
                               fontSize: 18.0,
                               height: 1.5,
@@ -68,7 +68,7 @@ class Profile extends StatelessWidget {
                             ),
                           ),
                           Icon(
-                            Icons.favorite,
+                            Icons.verified_user,
                             color: Constants.primaryColor,
                           )
                         ],
@@ -76,38 +76,17 @@ class Profile extends StatelessWidget {
                       SizedBox(
                         height: 10.0,
                       ),
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Icon(
-                            FlutterIcons.map_pin_fea,
-                            color: Color.fromRGBO(138, 150, 190, 1),
-                          ),
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          Expanded(
-                            child: Text(
-                              "Stadidum Bukit Jalil, Selangor",
-                              style: GoogleFonts.inter(
-                                fontSize: 16.0,
-                                color: Color.fromRGBO(64, 74, 104, 1),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
+                    
                       SizedBox(
                         height: 10.0,
                       ),
-                      //Property features
-                      PropertyFeatures(),
+                 
                       SizedBox(
                         height: 10.0,
                       ),
                       Text(
-                        "This is one of the best events you can get around the vicinity, check in to experience pleasure.",
-                        maxLines: 3,
+                        "Your Profile Information",
+                        maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                         style: GoogleFonts.inter(
                           fontSize: 15.0,
@@ -126,21 +105,21 @@ class Profile extends StatelessWidget {
                           color: Constants.primaryColor,
                           borderRadius: BorderRadius.circular(30.0),
                         ),
-                        child: Row(
+                       child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             RichText(
                               text: TextSpan(
                                 children: [
                                   TextSpan(
-                                    text: "RM79.99 per ",
+                                    text: "Username:",
                                     style: GoogleFonts.inter(
                                       fontWeight: FontWeight.w600,
                                       fontSize: 18.0,
                                     ),
                                   ),
                                   TextSpan(
-                                    text: " adult",
+                                    text: " MyKBSUser",
                                     style: GoogleFonts.inter(),
                                   )
                                 ],
@@ -159,7 +138,7 @@ class Profile extends StatelessWidget {
                                   color: Colors.white,
                                 ),
                                 child: Text(
-                                  "Book Tickets",
+                                  "Edit",
                                   style: GoogleFonts.inter(
                                     fontWeight: FontWeight.w600,
                                     fontSize: 12.0,
@@ -167,6 +146,43 @@ class Profile extends StatelessWidget {
                                 ),
                               ),
                             )
+                          ],
+                        ),
+                      ),
+
+                      SizedBox(
+                        height: 40.0,
+                      ),
+
+                      Container(
+                        width: double.infinity,
+                        padding: EdgeInsets.only(left: 16.0, right: 5.0),
+                        height: ScreenUtil().setHeight(56.0),
+                        decoration: BoxDecoration(
+                          color: Constants.primaryColor,
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                   child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            RichText(
+                              text: TextSpan(
+                                children: [
+                                  TextSpan(
+                                    text: "Email",
+                                    style: GoogleFonts.inter(
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 18.0,
+                                    ),
+                                  ),
+                                  TextSpan(
+                                    text: " myKbsUser@gmail.com",
+                                    style: GoogleFonts.inter(),
+                                  )
+                                ],
+                              ),
+                            ),
+                            
                           ],
                         ),
                       )

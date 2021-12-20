@@ -32,6 +32,8 @@ class _HomeState extends State<Home> {
               activePage: currentPage,
               title: "Let's Find Peace with GOLDEN 111",
               imagePath: "assets/images/page1.png",
+              
+              
             ),
             HomePageTemplate(
               activePage: currentPage,

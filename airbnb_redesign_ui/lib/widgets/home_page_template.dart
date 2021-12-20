@@ -25,7 +25,7 @@ class HomePageTemplate extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  fit: BoxFit.fill,
+                  fit: BoxFit.scaleDown,
                   image: AssetImage(
                     this.imagePath,
                   ),

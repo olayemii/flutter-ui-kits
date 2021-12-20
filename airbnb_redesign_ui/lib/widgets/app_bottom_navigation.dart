@@ -1,11 +1,13 @@
 import 'package:airbnb_redesign_ui/models/bottom_bar_item.dart';
 import 'package:airbnb_redesign_ui/pages/dashboard.dart';
+import 'package:airbnb_redesign_ui/pages/menu.dart';
 import 'package:airbnb_redesign_ui/utils/constants.dart';
 import 'package:airbnb_redesign_ui/utils/helper.dart';
 import 'package:airbnb_redesign_ui/pages/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:airbnb_redesign_ui/pages/favourites.dart';
 
 class AppBottomNavigation extends StatefulWidget {
   @override
@@ -39,6 +41,8 @@ class _AppBottomNavigationState extends State<AppBottomNavigation> {
         icon: FlutterIcons.heart_ant,
         onPressed: () {
           setActivePage("favorites");
+           Helper.nextPage(context, Favourites());
+         
         },
         key: "favorites",
       ),
@@ -46,6 +50,7 @@ class _AppBottomNavigationState extends State<AppBottomNavigation> {
         icon: FlutterIcons.grid_fea,
         onPressed: () {
           setActivePage("menu");
+          Helper.nextPage(context, Menu());
         },
         key: "menu",
       ),
