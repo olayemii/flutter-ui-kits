@@ -1,22 +1,21 @@
 import 'package:airbnb_redesign_ui/models/bottom_bar_item.dart';
 import 'package:airbnb_redesign_ui/pages/dashboard.dart';
+import 'package:airbnb_redesign_ui/pages/favourites.dart';
 import 'package:airbnb_redesign_ui/pages/menu.dart';
-import 'package:airbnb_redesign_ui/pages/ticket.dart';
 import 'package:airbnb_redesign_ui/utils/constants.dart';
 import 'package:airbnb_redesign_ui/utils/helper.dart';
 import 'package:airbnb_redesign_ui/pages/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:airbnb_redesign_ui/pages/favourites.dart';
 
-class AppBottomNavigationProfile extends StatefulWidget {
+class AppBottomNavigationTicket extends StatefulWidget {
   @override
-  _AppBottomNavigationProfileState createState() => _AppBottomNavigationProfileState();
+  _AppBottomNavigationTicketState createState() => _AppBottomNavigationTicketState();
 }
 
-class _AppBottomNavigationProfileState extends State<AppBottomNavigationProfile> {
-  String activePage = "profile"; // Track active page
+class _AppBottomNavigationTicketState extends State<AppBottomNavigationTicket> {
+  String activePage = "messages"; // Track active page
 
   void setActivePage(String page) {
     setState(() {
@@ -50,7 +49,7 @@ class _AppBottomNavigationProfileState extends State<AppBottomNavigationProfile>
         icon: FlutterIcons.grid_fea,
         onPressed: () {
           setActivePage("menu");
-          Helper.nextPage(context, Menu());
+            Helper.nextPage(context, Menu());
         },
         key: "menu",
       ),
@@ -58,7 +57,6 @@ class _AppBottomNavigationProfileState extends State<AppBottomNavigationProfile>
         icon: FlutterIcons.mail_fea,
         onPressed: () {
           setActivePage("messages");
-           Helper.nextPage(context, Ticket());
         },
         key: "messages",
       ),

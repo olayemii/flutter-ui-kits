@@ -8,15 +8,19 @@ class PropertyFeatures extends StatelessWidget {
     return Container(
       child: Row(
         children: [
-          item(FlutterIcons.md_people_ion, "1 Adult"),
+          item(FlutterIcons.md_people_ion, "1500"),
           SizedBox(
-            width: 10.0,
+            width: 5.0,
           ),
-          item(FlutterIcons.bed_faw, "1 Bed"),
+          item(FlutterIcons.parking_faw5s, "1000+"),
           SizedBox(
-            width: 10.0,
+            width: 5.0,
           ),
-          item(FlutterIcons.wifi_fea, "Free Wifi")
+           item(FlutterIcons.bus_faw, "Shuttle"),
+          SizedBox(
+            width: 5.0,
+          ),
+          item(FlutterIcons.wifi_fea, "Wifi")
         ],
       ),
     );

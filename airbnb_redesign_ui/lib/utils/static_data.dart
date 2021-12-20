@@ -1,4 +1,5 @@
 import 'package:airbnb_redesign_ui/models/property.dart';
+import 'package:flutter/cupertino.dart';
 
 class StaticData {
   static final List<Property> properties = [

@@ -30,7 +30,7 @@ class _HomeState extends State<Home> {
           children: [
             HomePageTemplate(
               activePage: currentPage,
-              title: "Let's Find Peace with GOLDEN 111",
+              title: "Welcome to KBS all-in-one Sports Events booking App",
               imagePath: "assets/images/page1.png",
               
               

@@ -1,4 +1,6 @@
 import 'package:airbnb_redesign_ui/pages/booking_screen.dart';
+import 'package:airbnb_redesign_ui/pages/players.dart';
+import 'package:airbnb_redesign_ui/pages/venue.dart';
 import 'package:airbnb_redesign_ui/utils/constants.dart';
 import 'package:airbnb_redesign_ui/utils/helper.dart';
 import 'package:airbnb_redesign_ui/widgets/property_features.dart';
@@ -29,7 +31,7 @@ class SinglePropertyPage extends StatelessWidget {
                     image: DecorationImage(
                       fit: BoxFit.contain,
                       alignment: Alignment.topCenter,
-                      image: AssetImage("assets/images/ten.jpg"),
+                      image: AssetImage("assets/images/jvs.jpg"),
                     ),
                   ),
                 ),
@@ -113,8 +115,161 @@ class SinglePropertyPage extends StatelessWidget {
                           color: Color.fromRGBO(138, 150, 190, 1),
                         ),
                       ),
+
+
+
+
+
+
+
+                    
                       SizedBox(
-                        height: 40.0,
+                        height: 10.0,
+                      ),
+                      Container(
+                        width: double.infinity,
+                        padding: EdgeInsets.only(left: 16.0, right: 5.0),
+                        height: ScreenUtil().setHeight(26.0),
+                        decoration: BoxDecoration(
+                          color:Colors.cyan,
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            RichText(
+                              text: TextSpan(
+                                children: [
+                                  TextSpan(
+                                    text: "Venue Seat Layout",
+                                    style: GoogleFonts.inter(
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 18.0,
+                                    ),
+                                  ),
+                                  TextSpan(
+                                    text: "",
+                                    style: GoogleFonts.inter(),
+                                  )
+                                ],
+                              ),
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                Helper.nextPage(context, Venue());
+                              },
+                              child: Container(
+                                height: ScreenUtil().setHeight(24.0),
+                                alignment: Alignment.center,
+                                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(24.0),
+                                  color: Colors.white,
+                                ),
+                                child: Text(
+                                  "View",
+                                  style: GoogleFonts.inter(
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 12.0,
+                                  ),
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+
+
+
+                    
+
+
+
+
+                    
+                      SizedBox(
+                        height: 10.0,
+                      ),
+                      Container(
+                        width: double.infinity,
+                        padding: EdgeInsets.only(left: 16.0, right: 5.0),
+                        height: ScreenUtil().setHeight(26.0),
+                        decoration: BoxDecoration(
+                          color:Colors.cyan,
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            RichText(
+                              text: TextSpan(
+                                children: [
+                                  TextSpan(
+                                    text: "Event Information",
+                                    style: GoogleFonts.inter(
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 18.0,
+                                    ),
+                                  ),
+                                  TextSpan(
+                                    text: " Teams Information",
+                                    style: GoogleFonts.inter(),
+                                  )
+                                ],
+                              ),
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                Helper.nextPage(context, Players());
+                              },
+                              child: Container(
+                                height: ScreenUtil().setHeight(24.0),
+                                alignment: Alignment.center,
+                                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(24.0),
+                                  color: Colors.white,
+                                ),
+                                child: Text(
+                                  "View",
+                                  style: GoogleFonts.inter(
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 12.0,
+                                  ),
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+
+
+
+
+
+
+
+
+
+
+
+
+                     SizedBox(
+                        height: 20.0,
+                      ),
+
+
+                     Text(
+                              "Selects tickets for booking",
+                              style: GoogleFonts.inter(
+                                fontSize: 25.0,
+                                color: Color.fromRGBO(64, 74, 104, 1),
+                              ),
+                            ),
+
+
+                      SizedBox(
+                        height: 5.0,
                       ),
                       Container(
                         width: double.infinity,
@@ -157,7 +312,7 @@ class SinglePropertyPage extends StatelessWidget {
                                   color: Colors.white,
                                 ),
                                 child: Text(
-                                  "Book Seats",
+                                  "Book Tickets",
                                   style: GoogleFonts.inter(
                                     fontWeight: FontWeight.w600,
                                     fontSize: 12.0,

@@ -1,6 +1,8 @@
 import 'package:airbnb_redesign_ui/models/bottom_bar_item.dart';
 import 'package:airbnb_redesign_ui/pages/dashboard.dart';
 import 'package:airbnb_redesign_ui/pages/favourites.dart';
+import 'package:airbnb_redesign_ui/pages/menu.dart';
+import 'package:airbnb_redesign_ui/pages/ticket.dart';
 import 'package:airbnb_redesign_ui/utils/constants.dart';
 import 'package:airbnb_redesign_ui/utils/helper.dart';
 import 'package:airbnb_redesign_ui/pages/profile.dart';
@@ -48,6 +50,7 @@ class _AppBottomNavigationProfileFavoritesState extends State<AppBottomNavigatio
         icon: FlutterIcons.grid_fea,
         onPressed: () {
           setActivePage("menu");
+            Helper.nextPage(context, Menu());
         },
         key: "menu",
       ),
@@ -55,6 +58,7 @@ class _AppBottomNavigationProfileFavoritesState extends State<AppBottomNavigatio
         icon: FlutterIcons.mail_fea,
         onPressed: () {
           setActivePage("messages");
+           Helper.nextPage(context, Ticket());
         },
         key: "messages",
       ),
