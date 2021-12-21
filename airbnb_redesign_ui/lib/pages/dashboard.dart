@@ -17,6 +17,7 @@ class Dashboard extends StatelessWidget {
         child: Container(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
+    
             mainAxisSize: MainAxisSize.min,
             children: [
               SafeArea(child: SizedBox()),

@@ -88,7 +88,7 @@ class SinglePropertyPage extends StatelessWidget {
                           ),
                           Expanded(
                             child: Text(
-                              "Stadidum Bukit Jalil, Selangor",
+                              "Stadium Bukit Jalil, Selangor",
                               style: GoogleFonts.inter(
                                 fontSize: 16.0,
                                 color: Color.fromRGBO(64, 74, 104, 1),
@@ -215,7 +215,7 @@ class SinglePropertyPage extends StatelessWidget {
                       ),
 
                       Text(
-                        "  Selects tickets type",
+                        "  Select ticket type",
                         style: GoogleFonts.inter(
                           fontSize: 20.0,
                           color: Color.fromRGBO(64, 74, 104, 1),
