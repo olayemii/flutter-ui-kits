@@ -25,7 +25,7 @@ class SinglePropertyPage extends StatelessWidget {
               Positioned(
                 width: size.width,
                 child: Container(
-                  height: size.height + 600,
+                  height: size.height ,
                   padding: EdgeInsets.symmetric(horizontal: 24.0),
                   decoration: BoxDecoration(
                     image: DecorationImage(
@@ -37,7 +37,7 @@ class SinglePropertyPage extends StatelessWidget {
                 ),
               ),
               Positioned(
-                top: 450.0,
+                top: 300.0,
                 width: size.width,
                 child: Container(
                   height: heightFromWhiteBg,
@@ -243,11 +243,11 @@ class SinglePropertyPage extends StatelessWidget {
                                     text: "RM259.99 per ",
                                     style: GoogleFonts.inter(
                                       fontWeight: FontWeight.w600,
-                                      fontSize: 18.0,
+                                      fontSize: 15.0,
                                     ),
                                   ),
                                   TextSpan(
-                                    text: "First row seats",
+                                    text: "First row",
                                     style: GoogleFonts.inter(),
                                   )
                                 ],
@@ -266,7 +266,7 @@ class SinglePropertyPage extends StatelessWidget {
                                   color: Colors.white,
                                 ),
                                 child: Text(
-                                  "Book Tickets",
+                                  "Book",
                                   style: GoogleFonts.inter(
                                     fontWeight: FontWeight.w600,
                                     fontSize: 12.0,
@@ -299,11 +299,11 @@ class SinglePropertyPage extends StatelessWidget {
                                     text: "RM159.99 per ",
                                     style: GoogleFonts.inter(
                                       fontWeight: FontWeight.w600,
-                                      fontSize: 18.0,
+                                      fontSize: 15.0,
                                     ),
                                   ),
                                   TextSpan(
-                                    text: "Second row seats",
+                                    text: "Second row",
                                     style: GoogleFonts.inter(),
                                   )
                                 ],
@@ -322,7 +322,7 @@ class SinglePropertyPage extends StatelessWidget {
                                   color: Colors.white,
                                 ),
                                 child: Text(
-                                  "Book Tickets",
+                                  "Book",
                                   style: GoogleFonts.inter(
                                     fontWeight: FontWeight.w600,
                                     fontSize: 12.0,
@@ -352,14 +352,14 @@ class SinglePropertyPage extends StatelessWidget {
                               text: TextSpan(
                                 children: [
                                   TextSpan(
-                                    text: "RM99.99 per ",
+                                    text: "RM99.99 per",
                                     style: GoogleFonts.inter(
                                       fontWeight: FontWeight.w600,
                                       fontSize: 18.0,
                                     ),
                                   ),
                                   TextSpan(
-                                    text: " Third row seats",
+                                    text: " Third row",
                                     style: GoogleFonts.inter(),
                                   )
                                 ],
@@ -378,7 +378,7 @@ class SinglePropertyPage extends StatelessWidget {
                                   color: Colors.white,
                                 ),
                                 child: Text(
-                                  "Book Tickets",
+                                  "Book",
                                   style: GoogleFonts.inter(
                                     fontWeight: FontWeight.w600,
                                     fontSize: 12.0,

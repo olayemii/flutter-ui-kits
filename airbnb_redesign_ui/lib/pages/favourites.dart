@@ -43,7 +43,7 @@ class Favourites extends StatelessWidget {
               
               Container(
                 //height: ScreenUtil().setHeight(900),
-                height: ScreenUtil().setHeight(1400),
+                height: ScreenUtil().setHeight(800),
                 // Lets create a model to structure property data
                 child: ListView.separated(
                   padding: EdgeInsets.symmetric(vertical: 24.0),
