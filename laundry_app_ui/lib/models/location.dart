@@ -7,9 +7,9 @@ class Location {
   final String imagePath;
 
   Location({
-    this.address,
-    this.color,
-    this.imagePath,
-    this.state,
+    required this.address,
+    required this.color,
+    required this.imagePath,
+    required this.state,
   });
 }
