@@ -10,19 +10,23 @@ class AppButton extends StatelessWidget {
   final VoidCallback onPressed;
   final String text;
 
-  AppButton({this.type, this.onPressed, this.text});
+  const AppButton(
+      {super.key,
+      required this.type,
+      required this.onPressed,
+      required this.text});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: this.onPressed,
+      onTap: onPressed,
       child: Container(
         width: double.infinity,
         height: ScreenUtil().setHeight(48.0),
         decoration: BoxDecoration(
           color: getButtonColor(type),
           borderRadius: BorderRadius.circular(8.0),
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               color: Color.fromRGBO(169, 176, 185, 0.42),
               spreadRadius: 0,
@@ -33,7 +37,7 @@ class AppButton extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            this.text,
+            text,
             style: GoogleFonts.roboto(
               color: getTextColor(type),
               fontSize: 16.0,

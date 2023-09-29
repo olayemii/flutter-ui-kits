@@ -3,13 +3,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:laundry_app_ui/utils/constants.dart';
 
 class InputWidget extends StatelessWidget {
-  final String hintText;
-  final IconData prefixIcon;
+  final String? hintText;
+  final IconData? prefixIcon;
   final double height;
   final String topLabel;
   final bool obscureText;
 
-  InputWidget({
+  const InputWidget({
+    super.key,
     this.hintText,
     this.prefixIcon,
     this.height = 48.0,
@@ -21,8 +22,8 @@ class InputWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(this.topLabel),
-        SizedBox(height: 5.0),
+        Text(topLabel),
+        const SizedBox(height: 5.0),
         Container(
           height: ScreenUtil().setHeight(height),
           decoration: BoxDecoration(
@@ -30,15 +31,13 @@ class InputWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(8.0),
           ),
           child: TextFormField(
-            obscureText: this.obscureText,
+            obscureText: obscureText,
             decoration: InputDecoration(
-              prefixIcon: this.prefixIcon == null
-                  ? this.prefixIcon
-                  : Icon(
-                      this.prefixIcon,
-                      color: Color.fromRGBO(105, 108, 121, 1),
-                    ),
-              enabledBorder: OutlineInputBorder(
+              prefixIcon: prefixIcon == null
+                  ? null
+                  : Icon(prefixIcon,
+                      color: const Color.fromRGBO(105, 108, 121, 1)),
+              enabledBorder: const OutlineInputBorder(
                 borderSide: BorderSide(
                   color: Color.fromRGBO(74, 77, 84, 0.2),
                 ),
@@ -48,8 +47,8 @@ class InputWidget extends StatelessWidget {
                   color: Constants.primaryColor,
                 ),
               ),
-              hintText: this.hintText,
-              hintStyle: TextStyle(
+              hintText: hintText,
+              hintStyle: const TextStyle(
                 fontSize: 14.0,
                 color: Color.fromRGBO(105, 108, 121, 0.7),
               ),

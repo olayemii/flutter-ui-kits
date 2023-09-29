@@ -8,10 +8,10 @@ class Order {
   final String deliveryAddress;
 
   Order({
-    this.id,
-    this.status,
-    this.arrivalDate,
-    this.placedDate,
-    this.deliveryAddress,
+    required this.id,
+    required this.status,
+    required this.arrivalDate,
+    required this.placedDate,
+    required this.deliveryAddress,
   });
 }

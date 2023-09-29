@@ -8,15 +8,16 @@ import 'package:laundry_app_ui/pages/single_order.dart';
 import 'package:laundry_app_ui/utils/constants.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: Size(375, 812),
-      builder: () => MaterialApp(
+      designSize: const Size(375, 812),
+      builder: (context, widget) => MaterialApp(
         debugShowCheckedModeBanner: false,
         title: "Flutter Laundry UI",
         theme: ThemeData(
@@ -35,23 +36,23 @@ Route<dynamic> _onGenerateRoute(RouteSettings settings) {
   switch (settings.name) {
     case "/":
       return MaterialPageRoute(builder: (BuildContext context) {
-        return Home();
+        return const Home();
       });
     case "/login":
       return MaterialPageRoute(builder: (BuildContext context) {
-        return Login();
+        return const Login();
       });
     case "/dashboard":
       return MaterialPageRoute(builder: (BuildContext context) {
-        return Dashboard();
+        return const Dashboard();
       });
     case "/single-order":
       return MaterialPageRoute(builder: (BuildContext context) {
-        return SingleOrder();
+        return const SingleOrder();
       });
     default:
       return MaterialPageRoute(builder: (BuildContext context) {
-        return Home();
+        return const Home();
       });
   }
 }
