@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_icons/flutter_icons.dart';
+import 'package:flutter_icons_null_safety/flutter_icons_null_safety.dart';
 import 'package:laundry_app_ui/utils/constants.dart';
 import 'package:laundry_app_ui/utils/helper.dart';
 import 'package:laundry_app_ui/widgets/app_button.dart';
@@ -56,7 +56,7 @@ class Login extends StatelessWidget {
                               "Log in to your account",
                               style: Theme.of(context)
                                   .textTheme
-                                  .headline6
+                                  .titleLarge!
                                   .copyWith(
                                     fontWeight: FontWeight.w600,
                                     color: Colors.white,

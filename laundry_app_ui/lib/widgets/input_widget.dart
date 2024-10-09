@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:laundry_app_ui/utils/constants.dart';
 
 class InputWidget extends StatelessWidget {
-  final String hintText;
-  final IconData prefixIcon;
+  final String? hintText;
+  final IconData? prefixIcon;
   final double height;
   final String topLabel;
   final bool obscureText;
@@ -32,12 +32,18 @@ class InputWidget extends StatelessWidget {
           child: TextFormField(
             obscureText: this.obscureText,
             decoration: InputDecoration(
-              prefixIcon: this.prefixIcon == null
-                  ? this.prefixIcon
-                  : Icon(
-                      this.prefixIcon,
-                      color: Color.fromRGBO(105, 108, 121, 1),
-                    ),
+              prefixIcon: Icon(this.prefixIcon,
+                        color: Color.fromRGBO(105, 108, 121, 1),
+
+              ),
+
+
+              // this.prefixIcon == null
+              //     ? this.prefixIcon!
+              //     : Icon(
+              //         this.prefixIcon!,
+              //         color: Color.fromRGBO(105, 108, 121, 1),
+              //       ),
               enabledBorder: OutlineInputBorder(
                 borderSide: BorderSide(
                   color: Color.fromRGBO(74, 77, 84, 0.2),

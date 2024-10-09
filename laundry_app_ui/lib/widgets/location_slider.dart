@@ -58,7 +58,7 @@ class LocationSlider extends StatelessWidget {
                     child: Opacity(
                       opacity: 0.69,
                       child: Image.asset(
-                        locations[index].imagePath,
+                        locations[index]!.imagePath!,
                       ),
                     ),
                   ),

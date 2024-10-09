@@ -10,7 +10,7 @@ class AppButton extends StatelessWidget {
   final VoidCallback onPressed;
   final String text;
 
-  AppButton({this.type, this.onPressed, this.text});
+  AppButton({required this.type, required this.onPressed, required this.text});
 
   @override
   Widget build(BuildContext context) {

@@ -1,6 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_icons/flutter_icons.dart';
+import 'package:flutter_icons_null_safety/flutter_icons_null_safety.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:laundry_app_ui/utils/constants.dart';
 import 'package:laundry_app_ui/widgets/latest_orders.dart';
@@ -103,7 +103,7 @@ class _DashboardState extends State<Dashboard> {
                                     text: "Welcome Back,\n",
                                     style: Theme.of(context)
                                         .textTheme
-                                        .headline6
+                                        .titleLarge!
                                         .copyWith(
                                           color: Colors.white,
                                         ),
@@ -112,7 +112,7 @@ class _DashboardState extends State<Dashboard> {
                                     text: "FlutterPanda!",
                                     style: Theme.of(context)
                                         .textTheme
-                                        .headline6
+                                        .titleLarge!
                                         .copyWith(
                                           color: Colors.white,
                                           fontWeight: FontWeight.w600,
