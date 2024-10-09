@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_icons/flutter_icons.dart';
+import 'package:flutter_icons_null_safety/flutter_icons_null_safety.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';
 import 'package:laundry_app_ui/models/order.dart';
 import 'package:laundry_app_ui/utils/helper.dart';
 
 class OrderCard extends StatelessWidget {
-  final Order order;
+  final Order? order;
 
   OrderCard({this.order});
 
@@ -32,7 +32,7 @@ class OrderCard extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            getOrderIconWidget(order.status),
+            getOrderIconWidget(order!.status),
             SizedBox(
               width: 25.0,
             ),
@@ -41,7 +41,7 @@ class OrderCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    getOrderStatusText(order.status),
+                    getOrderStatusText(order!.status),
                     style: TextStyle(
                       color: Color.fromRGBO(19, 22, 33, 1),
                       fontSize: 16.0,
@@ -50,11 +50,11 @@ class OrderCard extends StatelessWidget {
                   SizedBox(
                     height: 10.0,
                   ),
-                  textRow("Placed On", formatter.format(order.placedDate)),
+                  textRow("Placed On", formatter.format(order!.placedDate!)),
                   SizedBox(
                     height: 5.0,
                   ),
-                  textRow("Delivery On", formatter.format(order.arrivalDate))
+                  textRow("Delivery On", formatter.format(order!.arrivalDate!))
                 ],
               ),
             ),

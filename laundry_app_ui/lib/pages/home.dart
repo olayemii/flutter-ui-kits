@@ -63,7 +63,7 @@ class Home extends StatelessWidget {
                     SizedBox(height: 20.0),
                     Text(
                       "Welcome to Laundree!",
-                      style: Theme.of(context).textTheme.headline6.copyWith(
+                      style: Theme.of(context).textTheme.titleLarge!.copyWith(
                             fontWeight: FontWeight.w600,
                             color: Color.fromRGBO(19, 22, 33, 1),
                           ),
@@ -95,6 +95,7 @@ class Home extends StatelessWidget {
                     AppButton(
                       text: "Create an Account",
                       type: ButtonType.PRIMARY,
+                      onPressed: ()=>{},
                     )
                   ],
                 ),

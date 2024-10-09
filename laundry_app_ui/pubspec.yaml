@@ -18,7 +18,7 @@ publish_to: "none" # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: '>=3.1.0 <4.0.0'
 
 dependencies:
   flutter:
@@ -26,10 +26,11 @@ dependencies:
   animated_bottom_navigation_bar: ^0.3.2
   cupertino_icons: ^1.0.0
   curved_navigation_bar: ^1.0.1
-  flutter_icons: ^1.1.0
+  flutter_icons_null_safety: ^1.1.0
   flutter_screenutil: ^5.0.0+2
-  google_fonts: ^2.1.0
+  google_fonts: ^6.2.1
   intl: ^0.17.0
+  path_provider: ^2.0.11  # Or the latest version
 
 dev_dependencies:
   flutter_test:
